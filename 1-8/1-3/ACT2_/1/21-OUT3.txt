@@ -1,0 +1,23 @@
+Hello!
+Welcome to Burger King!
+Burgers: $3
+Fries:   $2
+Sodas:   $1
+How many burgers do you want?
+0
+How many fries do you want?
+1
+How many sodas do you want?
+0
+
+
+     Reciept
+    =========
+0 burgers for          $0
+1 fries for            $2
+0 sodas for            $0
+
+1 items for a total of $2
+
+    =========
+Have a nice Day!

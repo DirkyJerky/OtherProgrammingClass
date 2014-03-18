@@ -1,0 +1,39 @@
+Welcome to the fine calculator
+
+Base fine?
+10
+Fine per each mph over limit?
+20
+Speeding limit?
+40
+Speeders's Speed?
+50
+The total fine is $210.00.
+
+
+2 =============================
+Welcome to the fine calculator
+
+Base fine?
+3
+Fine per each mph over limit?
+5
+Speeding limit?
+6
+Speeders's Speed?
+78
+The total fine is $363.00.
+
+
+3 ======================
+Welcome to the fine calculator
+
+Base fine?
+10
+Fine per each mph over limit?
+565005
+Speeding limit?
+303
+Speeders's Speed?
+2222
+The total fine is $1084244605.00.

@@ -1,0 +1,93 @@
+Welcome to your label printer!
+
+
+How many boxes?
+0
+Here are your labels
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to your label printer!
+
+
+How many boxes?
+3
+Here are your labels
+
+
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 1 of 3
+---------------------
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 2 of 3
+---------------------
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 3 of 3
+---------------------
+
+|||||||||||||||||||||||||||||||||||||||||||
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 2000 of 2003
+---------------------
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 2001 of 2003
+---------------------
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 2002 of 2003
+---------------------
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 2003 of 2003
+---------------------
+
+{ Geoff: 'Big numbers BAADDDD' }
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to your label printer!
+
+
+How many boxes?
+-30
+Here are your labels
+
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to your label printer!
+
+
+How many boxes?
+0003
+Here are your labels
+
+
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 1 of 3
+---------------------
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 2 of 3
+---------------------
+Amy's Garden Emporium
+243 Main Street
+Evansville, WI 53536
+    Box Number 3 of 3
+---------------------

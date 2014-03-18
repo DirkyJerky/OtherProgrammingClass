@@ -1,0 +1,120 @@
+Hello and welcome to your travel expense report generator.
+
+What is the cost of one plane ticket (Round-trip)?
+1
+What is the cost of one Car rental per day?
+2
+What is the cost of one Breakfast?
+3
+What is the cost of one Lunch?
+4
+What is the cost of one Dinner?
+5
+What is the cost of one night at the Holiday Inn?
+6
+What is the cost of one night at the Ramada Inn?
+7
+
+Please keep the following for your records
+
+One Plane ticket* 2...................$   2.00
+One Car ticket * 6....................$  12.00
+---------------------------------------------
+  Travel Total......................$  14.00
+
+One Daily Breakfast * 7...............$  21.00
+One Daily Lunch * 7...................$  28.00
+One Daily Dinner * 7..................$  35.00
+---------------------------------------------
+  Food Total........................$  84.00
+
+One Night at the Holiday Inn * 4......$  24.00
+One Night at the Ramada Inn * 4.......$  28.00
+---------------------------------------------
+  Lodging Total.....................$  52.00
+
+=============================================
+    Grand Total...................$ 150.00
+
+
+||||||||||||||||||||||||||||||||||||
+Hello and welcome to your travel expense report generator.
+
+What is the cost of one plane ticket (Round-trip)?
+12
+What is the cost of one Car rental per day?
+23
+What is the cost of one Breakfast?
+34
+What is the cost of one Lunch?
+45
+What is the cost of one Dinner?
+56
+What is the cost of one night at the Holiday Inn?
+67
+What is the cost of one night at the Ramada Inn?
+78
+
+Please keep the following for your records
+
+One Plane ticket* 2...................$  24.00
+One Car ticket * 6....................$ 138.00
+---------------------------------------------
+  Travel Total......................$ 162.00
+
+One Daily Breakfast * 7...............$ 238.00
+One Daily Lunch * 7...................$ 315.00
+One Daily Dinner * 7..................$ 392.00
+---------------------------------------------
+  Food Total........................$ 945.00
+
+One Night at the Holiday Inn * 4......$ 268.00
+One Night at the Ramada Inn * 4.......$ 312.00
+---------------------------------------------
+  Lodging Total.....................$ 580.00
+
+=============================================
+    Grand Total...................$1687.00
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Hello and welcome to your travel expense report generator.
+
+What is the cost of one plane ticket (Round-trip)?
+98
+What is the cost of one Car rental per day?
+87
+What is the cost of one Breakfast?
+76
+What is the cost of one Lunch?
+65
+What is the cost of one Dinner?
+54
+What is the cost of one night at the Holiday Inn?
+43
+What is the cost of one night at the Ramada Inn?
+32
+
+Please keep the following for your records
+
+One Plane ticket* 2...................$ 196.00
+One Car ticket * 6....................$ 522.00
+---------------------------------------------
+  Travel Total......................$ 718.00
+
+One Daily Breakfast * 7...............$ 532.00
+One Daily Lunch * 7...................$ 455.00
+One Daily Dinner * 7..................$ 378.00
+---------------------------------------------
+  Food Total........................$1365.00
+
+One Night at the Holiday Inn * 4......$ 172.00
+One Night at the Ramada Inn * 4.......$ 128.00
+---------------------------------------------
+  Lodging Total.....................$ 300.00
+
+=============================================
+    Grand Total...................$2383.00
+

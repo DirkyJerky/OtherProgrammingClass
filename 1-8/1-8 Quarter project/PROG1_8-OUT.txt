@@ -1,0 +1,44 @@
+Welcome to the Exponet Calculator!
+
+What is the base of your expression? (base ^ power)?
+30
+The power?
+-2
+
+30.00 to the power of -2 is < 1.
+||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Exponet Calculator!
+
+What is the base of your expression? (base ^ power)?
+2
+The power?
+8
+
+2.00 to the power of 8 is 256.00.
+||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Exponet Calculator!
+
+What is the base of your expression? (base ^ power)?
+-3
+The power?
+10
+
+-3.00 to the power of 10 is 59049.00.
+||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Exponet Calculator!
+
+What is the base of your expression? (base ^ power)
+20
+The power?
+0
+
+20.00 to the power of 0 is 1.00.
+||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Exponet Calculator!
+
+What is the base of your expression? (base ^ power)?
+0
+The power?
+1
+
+0.00 to the power of 1 is 0.00.

@@ -1,0 +1,28 @@
+1 ================
+Welcome to the hour calulator!
+
+How many hours does it take you to read a book?
+1
+How many books do you want to read?
+2
+It will take you 2 hours to read your books.
+
+
+2 ==================
+Welcome to the hour calulator!
+
+How many hours does it take you to read a book?
+34
+How many books do you want to read?
+65
+It will take you 2210 hours to read your books.
+
+3 ==================
+Welcome to the hour calulator!
+
+How many hours does it take you to read a book?
+-1
+How many books do you want to read?
+3
+It will take you -3 hours to read your books.
+

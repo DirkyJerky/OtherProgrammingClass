@@ -1,0 +1,54 @@
+Welcome to the coin totaler
+
+How many:
+Pennies?
+1
+Nickels?
+2
+Dimes?
+3
+Quarters?
+4
+Half-Dollars?
+5
+Dollars?
+6
+You have a total of $9.91
+
+2 ======================
+
+Welcome to the coin totaler
+
+How many:
+Pennies?
+2
+Nickels?
+34
+Dimes?
+5
+Quarters?
+3
+Half-Dollars?
+2
+Dollars?
+5
+You have a total of $8.97
+
+3 ===========================
+Welcome to the coin totaler
+
+How many:
+Pennies?
+33343
+Nickels?
+2
+Dimes?
+
+1
+Quarters?
+1
+Half-Dollars?
+22354
+Dollars?
+775
+You have a total of $12285.88

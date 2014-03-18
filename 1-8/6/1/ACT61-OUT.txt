@@ -1,0 +1,63 @@
+Welcome to the Area and Cirumference calculator!
+
+
+What is the radius of your circle?
+10
+
+Your circle with radius 10.00 has the following calculations:
+Circumference: 62.83
+Area: 314.16
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Area and Cirumference calculator!
+
+
+What is the radius of your circle?
+0
+
+Your circle with radius 0.00 has the following calculations:
+Circumference: 0.00
+Area: 0.00
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Area and Cirumference calculator!
+
+
+What is the radius of your circle?
+-10
+
+Your circle with radius -10.00 has the following calculations:
+Circumference: -62.83
+Area: 314.16
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Area and Cirumference calculator!
+
+
+What is the radius of your circle?
+100024235
+
+Your circle with radius 100024235.00 has the following calculations:
+Circumference: 628470803.60
+Area: 31431155674757120.00
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Area and Cirumference calculator!
+
+
+What is the radius of your circle?
+0000033
+
+Your circle with radius 33.00 has the following calculations:
+Circumference: 207.35
+Area: 3421.19
+
+

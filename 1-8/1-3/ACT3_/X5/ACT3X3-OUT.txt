@@ -1,0 +1,34 @@
+Welcome to the Simple Interest calulator
+
+Priciple investment?
+1
+Number of years?
+2
+Rate? (as decimal)
+3
+After 2 years you will have $7.00.
+
+2 =============================
+Welcome to the Simple Interest calulator
+
+Priciple investment?
+-2
+Number of years?
+-3
+Rate? (as decimal)
+-4
+After -3 years you will have $-26.00.
+
+
+3 ======================
+Welcome to the Simple Interest calulator
+
+Priciple investment?
+12222
+Number of years?
+23
+Rate? (as decimal)
+22
+After 23 years you will have $6196554.00.
+
+

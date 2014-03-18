@@ -1,0 +1,142 @@
+1 ===========================================
+
+Hello!
+Welcome to Burger King!
+Our prices for our items are:
+Cheeseburgers:     $  0.89
+Burgers:           $  0.79
+Small Fries:       $  0.99
+Large Fries:       $  1.29
+Coke:              $  0.99
+Chocolate Shakes:  $  1.19
+
+How many burgers do you want?
+1
+How many Small Fries do you want?
+2
+How many Large Fries do you want?
+3
+How many Cokes do you want?
+4
+How many Cheeseburgers do you want?
+5
+How many Chocolate shakes do you want?
+6
+
+
+Please insert money:
+7
+
+
+     Receipt
+    =========
+
+1 Burger(s).............$  0.79
+2 Small Frie(s).........$  1.98
+3 Large Frie(s).........$  3.87
+4 Coke(s)...............$  3.96
+5 Cheeseburger(s).......$  4.45
+6 Chococolate Shake(s)..$  7.14
+---------------------------------
+Sub Total:              $ 29.33
+Sales Tax:   6.00%      $  1.76
+---------------------------------
+Total:                  $ 31.09
+
+Paid:                   $  7.00
+Change:                 $-24.09
+
+    =========
+Have a nice Day!
+
+2 ====================================
+Hello!
+Welcome to Burger King!
+Our prices for our items are:
+Cheeseburgers:     $  0.89
+Burgers:           $  0.79
+Small Fries:       $  0.99
+Large Fries:       $  1.29
+Coke:              $  0.99
+Chocolate Shakes:  $  1.19
+
+How many burgers do you want?
+-1
+How many Small Fries do you want?
+-3
+How many Large Fries do you want?
+0
+How many Cokes do you want?
+0
+How many Cheeseburgers do you want?
+0
+How many Chocolate shakes do you want?
+1
+
+
+Please insert money:
+555
+
+
+     Receipt
+    =========
+
+-1 Burger(s).............$ -0.79
+-3 Small Frie(s).........$ -2.97
+1 Chococolate Shake(s)..$  1.19
+---------------------------------
+Sub Total:              $ -1.38
+Sales Tax:   6.00%      $ -0.08
+---------------------------------
+Total:                  $ -1.46
+
+Paid:                   $555.00
+Change:                 $556.46
+
+    =========
+Have a nice Day!
+
+3 =======================================
+Hello!
+Welcome to Burger King!
+Our prices for our items are:
+Cheeseburgers:     $  0.89
+Burgers:           $  0.79
+Small Fries:       $  0.99
+Large Fries:       $  1.29
+Coke:              $  0.99
+Chocolate Shakes:  $  1.19
+
+How many burgers do you want?
+0
+How many Small Fries do you want?
+0
+How many Large Fries do you want?
+0
+How many Cokes do you want?
+0
+How many Cheeseburgers do you want?
+0
+How many Chocolate shakes do you want?
+0
+
+
+Please insert money:
+22
+
+
+     Receipt
+    =========
+
+---------------------------------
+Sub Total:              $  0.00
+Sales Tax:   6.00%      $  0.00
+---------------------------------
+Total:                  $  0.00
+
+Paid:                   $ 22.00
+Change:                 $ 22.00
+
+    =========
+Have a nice Day!
+

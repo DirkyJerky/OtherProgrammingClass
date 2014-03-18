@@ -1,0 +1,35 @@
+Welcome to the Grade Calculator!
+
+What is the grade? (0-100)
+100
+
+Your grade is a(n) A
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Grade Calculator!
+
+What is the grade? (0-100)
+87
+
+Your grade is a(n) B.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Grade Calculator!
+
+What is the grade? (0-100)
+76
+
+Your grade is a(n) C.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Grade Calculator!
+
+What is the grade? (0-100)
+001
+
+Your grade is a(n) F.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Grade Calculator!
+
+What is the grade? (0-100)
+66
+
+Your grade is a(n) D.

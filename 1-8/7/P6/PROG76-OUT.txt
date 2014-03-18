@@ -1,0 +1,45 @@
+Welcome to the registration date finder.
+
+What is your first name?
+Geoff
+And your last name?
+Yoerger
+Dear Mr/Mrs Geoff Yoerger,
+
+Our automated system has requested to inform you that our registration
+department will be open to you in the month of October.
+
+Have a nice day,
+Metropolis Department of Motor Vecicles
+
+||||||||||||||||||||||||||||||||
+Welcome to the registration date finder.
+
+What is your first name?
+Geoff
+And your last name?
+Geoff
+Dear Mr/Mrs Geoff Geoff,
+
+Our automated system has requested to inform you that our registration
+department will be open to you in the month of March.
+
+Have a nice day,
+Metropolis Department of Motor Vecicles
+
+
+
+||||||||||||||||||||||||||||||||||||||||||
+Welcome to the registration date finder.
+
+What is your first name?
+Geoff
+And your last name?
+Heoff
+Dear Mr/Mrs Geoff Heoff,
+
+Our automated system has requested to inform you that our registration
+department will be open to you in the month of July.
+
+Have a nice day,
+Metropolis Department of Motor Vecicles

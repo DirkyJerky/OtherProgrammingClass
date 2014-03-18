@@ -1,0 +1,47 @@
+Welcome to your Budget Calculator
+
+How much take home money to you earn per month?
+1566
+Rent...........$ 313.20
+Food...........$ 313.20
+Entertainment..$ 125.28
+Car Expenses...$ 156.60
+Insurance......$ 156.60
+Clothing.......$ 281.88
+Utilities......$  78.30
+Savings........$ 140.94
+=======================
+Total..........$1566.00
+
+2 ===========================================================
+Welcome to your Budget Calculator
+
+How much take home money to you earn per month?
+111111
+Rent...........$22222.20
+Food...........$22222.20
+Entertainment..$8888.88
+Car Expenses...$11111.10
+Insurance......$11111.10
+Clothing.......$19999.98
+Utilities......$5555.55
+Savings........$9999.99
+=======================
+Total..........$111111.00
+
+3 ===========================================================
+
+Welcome to your Budget Calculator
+
+How much take home money to you earn per month?
+144423
+Rent...........$28884.60
+Food...........$28884.60
+Entertainment..$11553.84
+Car Expenses...$14442.30
+Insurance......$14442.30
+Clothing.......$25996.14
+Utilities......$7221.15
+Savings........$12998.07
+=======================
+Total..........$144423.00

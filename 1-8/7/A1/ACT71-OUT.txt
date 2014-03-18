@@ -1,0 +1,27 @@
+Welcome to the biggest number calculator
+
+What are your three numbers?
+346456
+45634564
+34565
+The biggest number is 45634564.00.
+
+=================================
+Welcome to the biggest number calculator
+
+What are your three numbers?
+3
+2
+1
+The biggest number is 3.00.
+
+
+===================================
+Welcome to the biggest number calculator
+
+What are your three numbers?
+565
+3
+222
+The biggest number is 565.00.
+

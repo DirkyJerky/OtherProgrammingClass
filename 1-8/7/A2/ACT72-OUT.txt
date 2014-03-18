@@ -1,0 +1,35 @@
+Welcome to the Triangle classifier
+
+Whats the length of your triangle's:
+First side?
+1
+Second side?
+2
+Third?
+3
+Your triangle is a Scalene
+
+====================================
+Welcome to the Triangle classifier
+
+Whats the length of your triangle's:
+First side?
+1
+Second side?
+1
+Third?
+2
+Your triangle is a Isosceles
+
+=======================================
+Welcome to the Triangle classifier
+
+Whats the length of your triangle's:
+First side?
+4
+Second side?
+4
+Third?
+4
+Your triangle is a Equilateral
+

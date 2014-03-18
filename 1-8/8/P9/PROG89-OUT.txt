@@ -1,0 +1,40 @@
+Welcome to the factorial calculator!
+
+
+What is your integer?
+10
+
+10! = 3628800
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the factorial calculator!
+
+
+What is your integer?
+4
+
+4! = 24
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the factorial calculator!
+
+
+What is your integer?
+0
+
+0! = 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the factorial calculator!
+
+
+What is your integer?
+-20
+
+-20! = UNDEFINED
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the factorial calculator!
+
+
+What is your integer?
+00025
+
+25! = 2076180480

@@ -1,0 +1,46 @@
+Welcome to the Smester grade calculator
+
+First quarter grade (40%)?
+1
+Second (40%)?
+2
+Exam (20%)?
+34
+First Quarter.....  1.00%
+Second Quarter....  2.00%
+Exam.............. 34.00%
+=========================
+Final grade.......  8.00%
+
+
+2 =======================================================
+Welcome to the Smester grade calculator
+
+First quarter grade (40%)?
+100
+Second (40%)?
+100
+Exam (20%)?
+100
+First Quarter.....100.00%
+Second Quarter....100.00%
+Exam..............100.00%
+=========================
+Final grade.......100.00%
+
+3 =====================================================
+Welcome to the Smester grade calculator
+
+First quarter grade (40%)?
+-1
+Second (40%)?
+-2
+Exam (20%)?
+3
+First Quarter..... -1.00%
+Second Quarter.... -2.00%
+Exam..............  3.00%
+=========================
+Final grade....... -0.60%
+
+

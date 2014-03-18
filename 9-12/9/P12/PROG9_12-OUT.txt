@@ -1,0 +1,49 @@
+Welcome to the Planet Weight calculator!
+
+
+What is your planet you are going to?
+sun
+What is your weight on earth?
+10
+
+On The Sun, you would weigh 279.40 pounds.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Planet Weight calculator!
+
+
+What is your planet you are going to?
+J
+What is your weight on earth?
+110
+
+On Jupiter, you would weigh 290.40 pounds.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Planet Weight calculator!
+
+
+What is your planet you are going to?
+marrrzzzz
+What is your weight on earth?
+60
+
+On Mars, you would weigh 22.80 pounds.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Planet Weight calculator!
+
+
+What is your planet you are going to?
+um
+What is your weight on earth?
+200
+
+On Uranus, you would weigh 234.00 pounds.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Planet Weight calculator!
+
+
+What is your planet you are going to?
+mostly this program is smart and it intereperits stuff
+What is your weight on earth?
+00030
+
+On The Moon, you would weigh 5.10 pounds.
