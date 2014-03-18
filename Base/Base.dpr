@@ -10,20 +10,27 @@ Due: AHEAD
 Purpose: TODO
 }
 
-
+   
 CONST
-    TODOCONST : Integer = 0;
-
-VAR
-    rows, cols, heights : integer;
-    i, j, k : Integer;
+    assignment1WEIGHT : real = 0.1;
+    assignment2WEIGHT : real = 0.1;
+    assignment3WEIGHT : real = 0.25;
+    assignment4WEIGHT : real = 0.2;
+    assignment5WEIGHT : real = 0.05;
+    assignment6WEIGHT : real = 0.3;
+TYPE
+    intArray20TYPE = array[1..20] OF Integer; // TYPEDEF: Array of 20 integers
+    scoreArray5x6TYPE = array[1..5,1..6] OF Integer; // TYPEDEF: 5 Students, 6 Assignment scores
+    CharArray3x4 = array[1..3, 1..4] OF char; // TYPEDEF: 3 Rows, 4 Columns
+    RealArray10x2TYPE = array[1..10, 1..2] of real; // TYPEDEF: 10 Columns, 2 Rows
+    IntArray4x5x3TYPE = array[1..4,1..5,1..3] OF Integer; // TYPEDEF: 4 rows, 5 columns, 3 height
 
 //**********
 // Intro
 //**********
 // Welcome the user.
 //**********
-PROCEDURE Intro (TODO : String; VAR RETURN : String); BEGIN
+PROCEDURE Intro; BEGIN
     writeln('Welcome to TODO');
 END;
 
@@ -33,7 +40,7 @@ END;
 //**********
 // Tie up loose ends and halt the console
 //**********
-PROCEDURE Outro (TODO : String; VAR RETURN : String); BEGIN
+PROCEDURE Outro; BEGIN
     // TODO: Put cleanup here
     readln; // Halt
 END;
@@ -176,10 +183,11 @@ END;
 //**********
 // Initialize an array (made for a fibonacii array)
 //**********
+PROCEDURE InitIntArray20 (VAR theArray : intArray20TYPE);
 VAR
     i : Integer;
-PROCEDURE InitIntArray20 (VAR theArray : intArray20); BEGIN
-    FOR i := 1 TO 20 DO 
+BEGIN
+    FOR i := 1 TO 20 DO
         IF((i = 1) OR (i = 2)) THEN
             theArray[i] := 1
         ELSE
@@ -192,9 +200,11 @@ END;
 //**********
 // Calc a fib number
 //**********
+PROCEDURE calcFib (VAR theArray : intArray20TYPE; VAR calcedFibNumCalc : Integer);
 VAR
-    shouldCONT : boolean;
-PROCEDURE calcFib (VAR theArray : intArray20; VAR calcedFibNumCalc : Integer); BEGIN
+  i : integer;    
+  shouldCONT : boolean;
+BEGIN
     shouldCONT := true;
     FOR i := 1 TO 20 DO BEGIN
         IF((theArray[i] = 0) AND shouldCONT) THEN BEGIN
@@ -241,9 +251,8 @@ END;
 //**********
 // arg3 = arg1 / arg2
 //**********
-VAR
-    tempCurrNum : real;
-PROCEDURE calcAverage (sumNumsCalc : real; numNumbersCalc : Integer; VAR average : real); BEGIN
+PROCEDURE calcAverage (sumNumsCalc : real; numNumbersCalc : Integer; VAR average : real);
+BEGIN 
     average := sumNumsCalc / numNumbersCalc;
 END;
 
@@ -253,9 +262,8 @@ END;
 //**********
 // Output the summary of a vector sum
 //**********
-VAR
-    tempCurrNum : real;
-PROCEDURE OutputVectorSummary (sumTotalOutVS : real; numNumbersOutVS : integer; averageOutVS : real); BEGIN
+PROCEDURE OutputVectorSummary (sumTotalOutVS : real; numNumbersOutVS : integer; averageOutVS : real);
+BEGIN
     writeln('Sum:                ', sumTotalOutVS:0:1);
     writeln('Number of numbers:  ', numNumbersOutVS);
     writeln('Average:            ', averageOutVS:0:1);
@@ -267,9 +275,8 @@ END;
 //**********
 // Output the amount of money you will recieve when you are arg2
 //**********
-VAR
-    tempCurrNum : real;
-PROCEDURE OutputMoneyAge (moneyOutMD : real; ageOutMD : Integer); BEGIN
+PROCEDURE OutputMoneyAge (moneyOutMD : real; ageOutMD : Integer);
+BEGIN
     writeln('You will recieve $', moneyOutMD:0:2, ' when you are ', ageOutMD, '.');
 END;
 
@@ -280,12 +287,13 @@ END;
 //**********
 // Output a 3x4 array of characters
 //**********
+PROCEDURE OutputCharArray3x4 (CharArrayOutCA : CharArray3x4);
 VAR
-    tempCurrNum : real;
-PROCEDURE OutputCharArray3x4 (CharArrayOutCA : CharArray3x4); BEGIN
+    i, j : integer;
+BEGIN
     FOR i := 1 TO 3 DO BEGIN
         FOR j := 1 TO 4 DO BEGIN 
-            write(CharArray[i, j]);
+            write(CharArrayOutCA[i, j]);
         END;
         writeln;
     END;
@@ -297,9 +305,8 @@ END;
 //**********
 // Get a students name corrisponding to their number
 //**********
-VAR
-    tempCurrNum : real;
-PROCEDURE GetStudentName (studentNumGetSN : Integer; VAR studentNameGetSN : String); BEGIN
+PROCEDURE GetStudentName (studentNumGetSN : Integer; VAR studentNameGetSN : String);
+BEGIN
     CASE studentNumGetSN OF
         1: studentNameGetSN := 'Baker   ';
         2: studentNameGetSN := 'Cook    ';
@@ -315,8 +322,6 @@ END;
 //**********
 // Get an assignments name corrisponding its number
 //**********
-VAR
-    tempCurrNum : real;
 PROCEDURE GetAssignmentName (assignmentNumGetSN : Integer; VAR assignmentNameGetSN : String); BEGIN
     CASE assignmentNumGetSN OF
         1: assignmentNameGetSN := 'Prog1   ';
@@ -334,9 +339,9 @@ END;
 //**********
 // Get the final grade for a student
 //**********
-VAR
-    k : Integer;
-PROCEDURE getAverageWeightedScore5x6 (studentNumber : Integer; scoreArrayGetAWS : scoreArray5x6TYPE; VAR studentAverage : real); BEGIN
+PROCEDURE getAverageWeightedScore5x6 (studentNumber : Integer; scoreArrayGetAWS : scoreArray5x6TYPE;
+        VAR studentAverage : real);
+    BEGIN
     studentAverage := 0;
     // The constants are definied in indiviual variables, this is the easiest way :/
     // Stupid pascal :(
@@ -355,12 +360,13 @@ END;
 //**********
 // Print out a labeled gradebook table
 //**********
+PROCEDURE PrintLabeledTable5x6 (scoreArrayPrintLT : scoreArray5x6TYPE);
 VAR
     i, j : integer;
     assignmentName : String;
     studentName : String;
     studentAverage : real;
-PROCEDURE PrintLabeledTable5x6 (scoreArrayPrintLT : scoreArray5x6TYPE); BEGIN
+BEGIN
     write('        '); // Fill the top left cell with nothing
     FOR i := 1 TO 6 DO BEGIN
         GetAssignmentName(i, assignmentName);
@@ -386,11 +392,12 @@ END;
 //**********
 // Prompt for grades for each student
 //**********
+PROCEDURE FillScores5x6 (scoreArrayFillS: scoreArray5x6TYPE);
 VAR
     i, j : integer;
     assignmentName : String;
     studentName : String;
-PROCEDURE FillScores5x6 (scoreArrayFillS: scoreArray5x6TYPE); BEGIN
+BEGIN
     writeln('(Please input scores as a number 0-100)');
     FOR i := 1 TO 5 DO BEGIN 
         GetStudentName(i, studentName);
@@ -414,7 +421,7 @@ END;
 VAR
     continue : boolean;
     num1, num2 : Integer;
-PROCEDURE ACT11_1
+PROCEDURE ACT11_1;
 BEGIN
     Intro;
     REPEAT BEGIN
@@ -430,10 +437,10 @@ END;
 ////////////////
 // ACT11_2
 ////////////////
+PROCEDURE ACT11_2;
 VAR
     continue : boolean;
     num1, num2 : Integer;
-PROCEDURE ACT11_2
 BEGIN
     Intro;
     continue := true;
@@ -450,15 +457,15 @@ END;
 ////////////////
 // ACT11_3
 ////////////////
+PROCEDURE ACT11_3;
 VAR
     continue : boolean;
     carModelNum : Integer;
     isDefective : boolean;
-PROCEDURE ACT11_3
 BEGIN
     Intro;
     continue := true;
-    writeln('(Enter 0 to terminate)')
+    writeln('(Enter 0 to terminate)');
     REPEAT BEGIN
         PromptModelNum(carModelNum);
         IF(carModelNum <> 0) THEN
@@ -478,17 +485,17 @@ END;
 ////////////////
 // ACT11_4
 ////////////////
+PROCEDURE ACT11_4;
 VAR
     continue : boolean;
     runningTotal : real;
     addMe : real;
-PROCEDURE ACT11_4
 BEGIN
     Intro;
     runningTotal := 0;
     REPEAT BEGIN
         PromptNumReal(addMe);
-        PlusEquals(runningTotal, addMe);
+        PlusEqualsReal(runningTotal, addMe);
         writeln('Current Total: ', runningTotal:0:3);
         testContinue(continue);
     END;
@@ -499,12 +506,10 @@ END;
 ////////////////
 // PROG11_15
 ////////////////
-TYPE
-    intArray20TYPE : array[1..20] OF Integer; // TYPEDEF: Array of 20 integers
+PROCEDURE PROG11_15;
 VAR
     intArray20 : intArray20TYPE;
     calcedFibNum : Integer;
-PROCEDURE PROG11_15
 BEGIN
     Intro;
     InitIntArray20(intArray20);
@@ -520,11 +525,11 @@ END;
 ////////////////
 // PROG11_16
 ////////////////
+PROCEDURE PROG11_16;
 VAR
     numNumbers : integer;
     sumTotal : real;
     average : real;
-PROCEDURE PROG11_16
 BEGIN
     Intro;
     PromptSum(sumTotal, numNumbers);
@@ -536,10 +541,10 @@ END;
 ////////////////
 // PROG11_17
 ////////////////
+PROCEDURE PROG11_17;
 VAR
     age : integer;
     money : real;
-PROCEDURE PROG11_17
 BEGIN
     Intro;
     age := 1;
@@ -549,20 +554,18 @@ BEGIN
         PlusEquals(age, 1);
         TimesEquals(money, 2);
         testContinue(continue);
-    UNTIL(NOT(continue))
+    UNTIL(NOT(continue));
     Outro;
 END;
 
 ////////////////
 // ACT12_1
 ////////////////
-TYPE
-    IntArray4x5x3TYPE : array[1..4,1..5,1..3] OF Integer; // TYPEDEF: 4 rows, 5 columns, 3 height
+PROCEDURE ACT12_1;
 VAR
     IntArray4x5x3 : IntArray4x5x3TYPE;
     i1, i2, i3 : integer; //Counter
     setThis : integer;
-PROCEDURE ACT12_1
 BEGIN
     Intro; 
     setThis := 1;
@@ -596,12 +599,10 @@ END;
 ////////////////
 // ACT12_2
 ////////////////
-TYPE
-    RealArray10x2TYPE :=array[1..10, 1..2] of real; // TYPEDEF: 10 Columns, 2 Rows
+PROCEDURE ACT12_2;
 VAR
     i, j : Integer;
     RealArray : RealArray10x2TYPE;
-PROCEDURE ACT12_2
 BEGIN
     Intro;
     writeln('Please enter 10 numbers');
@@ -626,13 +627,11 @@ END;
 ////////////////
 // ACT12_3
 ////////////////
-TYPE
-    CharArray3x4 = array[1..3, 1..4] OF char; // TYPEDEF: 3 Rows, 4 Columns
+PROCEDURE ACT12_3;
 VAR
     CharArray : CharArray3x4;
     i, j : Integer;
     oRowNum, oColumnNum : integer;
-PROCEDURE ACT12_3
 BEGIN
     Intro;
     // Init
@@ -657,23 +656,9 @@ END;
 ////////////////
 // PROG_18
 ////////////////
-CONST
-    assignment1WEIGHT : real = 0.1;
-    assignment2WEIGHT : real = 0.1;
-    assignment3WEIGHT : real = 0.25;
-    assignment4WEIGHT : real = 0.2;
-    assignment5WEIGHT : real = 0.05;
-    assignment6WEIGHT : real = 0.3;
-TYPE
-    scoreArray5x6TYPE = array[1..5,1..6] OF Integer; // TYPEDEF: 5 Students, 6 Assignment scores
+PROCEDURE PROG_18;   
 VAR
     scoreArray : scoreArray5x6TYPE;
-    // PROCEDURE VARS
-    i, j, k : integer;
-    assignmentName : String;
-    studentName : String;
-    // END PROCEDURE VARS
-PROCEDURE PROG_18
 BEGIN
     Intro;
     FillScores5x6(scoreArray);
@@ -681,4 +666,6 @@ BEGIN
     Outro;
 END;
 
-
+BEGIN
+  ACT11_1;
+END.
