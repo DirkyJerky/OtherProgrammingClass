@@ -1,0 +1,309 @@
+Welcome to your high school grade summarizer!
+What is your name?
+Geoff
+(Please input scores as a letter A, B, C, D, or F)
+For Freshman   year, what did you get in quarter:
+  1; in class:
+    Math      ? a
+    Science   ? a
+  2; in class:
+    Math      ? a
+    Science   ? a
+  3; in class:
+    Math      ? a
+    Science   ? a
+  4; in class:
+    Math      ? a
+    Science   ? a
+For Sophmore   year, what did you get in quarter:
+  1; in class:
+    Math      ? a
+    Science   ? a
+  2; in class:
+    Math      ? a
+    Science   ? a
+  3; in class:
+    Math      ? a
+    Science   ? a
+  4; in class:
+    Math      ? a
+    Science   ? a
+For Junior     year, what did you get in quarter:
+  1; in class:
+    Math      ? a
+    Science   ? a
+  2; in class:
+    Math      ? a
+    Science   ? a
+  3; in class:
+    Math      ? a
+    Science   ? a
+  4; in class:
+    Math      ? a
+    Science   ? a
+For Senior     year, what did you get in quarter:
+  1; in class:
+    Math      ? a
+    Science   ? a
+  2; in class:
+    Math      ? a
+    Science   ? a
+  3; in class:
+    Math      ? a
+    Science   ? a
+  4; in class:
+    Math      ? a
+    Science   ? a
+Geoff    Math      Science
+Freshman  A          A
+Sophmore  A          A
+Junior    A          A
+Senior    A          A
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to your high school grade summarizer!
+What is your name?
+Geoff
+(Please input scores as a letter A, B, C, D, or F)
+For Freshman   year, what did you get in quarter:
+  1; in class:
+    Math      ? c
+    Science   ? c
+  2; in class:
+    Math      ? c
+    Science   ? c
+  3; in class:
+    Math      ? c
+    Science   ? c
+  4; in class:
+    Math      ? c
+    Science   ? c
+For Sophmore   year, what did you get in quarter:
+  1; in class:
+    Math      ? c
+    Science   ? c
+  2; in class:
+    Math      ? c
+    Science   ? c
+  3; in class:
+    Math      ? c
+    Science   ? c
+  4; in class:
+    Math      ? c
+    Science   ? c
+For Junior     year, what did you get in quarter:
+  1; in class:
+    Math      ? c
+    Science   ? c
+  2; in class:
+    Math      ? c
+    Science   ? c
+  3; in class:
+    Math      ? c
+    Science   ? c
+  4; in class:
+    Math      ? c
+    Science   ? c
+For Senior     year, what did you get in quarter:
+  1; in class:
+    Math      ? c
+    Science   ? c
+  2; in class:
+    Math      ? c
+    Science   ? c\
+  3; in class:
+    Math      ? c
+    Science   ? c
+  4; in class:
+    Math      ? c
+    Science   ? c
+Geoff     Math      Science
+Freshman  C          C
+Sophmore  C          C
+Junior    C          C
+Senior    C          C
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to your high school grade summarizer!
+What is your name?
+Geoff
+(Please input scores as a letter A, B, C, D, or F)
+For Freshman   year, what did you get in quarter:
+  1; in class:
+    Math      ? f
+    Science   ? f
+  2; in class:
+    Math      ? f
+    Science   ? f
+  3; in class:
+    Math      ? f
+    Science   ? f
+  4; in class:
+    Math      ? f
+    Science   ? f
+For Sophmore   year, what did you get in quarter:
+  1; in class:
+    Math      ? f
+    Science   ? f
+  2; in class:
+    Math      ? f
+    Science   ? f
+  3; in class:
+    Math      ? f
+    Science   ? f
+  4; in class:
+    Math      ? f
+    Science   ? f
+For Junior     year, what did you get in quarter:
+  1; in class:
+    Math      ? f
+    Science   ? f
+  2; in class:
+    Math      ? f
+    Science   ? f
+  3; in class:
+    Math      ? f
+    Science   ? f
+  4; in class:
+    Math      ? f
+    Science   ? f
+For Senior     year, what did you get in quarter:
+  1; in class:
+    Math      ? f
+    Science   ? f
+  2; in class:
+    Math      ? f
+    Science   ? f
+  3; in class:
+    Math      ? f
+    Science   ? f
+  4; in class:
+    Math      ? f
+    Science   ? f
+Geoff    Math      Science
+Freshman  F          F
+Sophmore  F          F
+Junior    F          F
+Senior    F          F
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to your high school grade summarizer!
+What is your name?
+Geoff
+(Please input scores as a letter A, B, C, D, or F)
+For Freshman   year, what did you get in quarter:
+  1; in class:
+    Math      ? A
+    Science   ? C
+  2; in class:
+    Math      ? a
+    Science   ? c
+  3; in class:
+    Math      ? a
+    Science   ? c
+  4; in class:
+    Math      ? a
+    Science   ? c
+For Sophmore   year, what did you get in quarter:
+  1; in class:
+    Math      ? b
+    Science   ? a
+  2; in class:
+    Math      ? b
+    Science   ? a
+  3; in class:
+    Math      ? b
+    Science   ? a
+  4; in class:
+    Math      ? b
+    Science   ? a
+For Junior     year, what did you get in quarter:
+  1; in class:
+    Math      ? d
+    Science   ? f
+  2; in class:
+    Math      ? d
+    Science   ? f
+  3; in class:
+    Math      ? d
+    Science   ? f
+  4; in class:
+    Math      ? d
+    Science   ? f
+For Senior     year, what did you get in quarter:
+  1; in class:
+    Math      ? f
+    Science   ? a
+  2; in class:
+    Math      ? f
+    Science   ? a
+  3; in class:
+    Math      ? f
+    Science   ? a
+  4; in class:
+    Math      ? f
+    Science   ? a
+Geoff    Math      Science
+Freshman  A          C
+Sophmore  B          A
+Junior    D          F
+Senior    F          A
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to your high school grade summarizer!
+What is your name?
+Geoff
+(Please input scores as a letter A, B, C, D, or F)
+For Freshman   year, what did you get in quarter:
+  1; in class:
+    Math      ? a
+    Science   ? b
+  2; in class:
+    Math      ? c
+    Science   ? d
+  3; in class:
+    Math      ? f
+    Science   ? a
+  4; in class:
+    Math      ? b
+    Science   ? c
+For Sophmore   year, what did you get in quarter:
+  1; in class:
+    Math      ? d
+    Science   ? f
+  2; in class:
+    Math      ? a
+    Science   ? b
+  3; in class:
+    Math      ? c
+    Science   ? d
+  4; in class:
+    Math      ? f
+    Science   ? a
+For Junior     year, what did you get in quarter:
+  1; in class:
+    Math      ? b
+    Science   ? c
+  2; in class:
+    Math      ? d
+    Science   ? f
+  3; in class:
+    Math      ? a
+    Science   ? b
+  4; in class:
+    Math      ? c
+    Science   ? d
+For Senior     year, what did you get in quarter:
+  1; in class:
+    Math      ? f
+    Science   ? a
+  2; in class:
+    Math      ? b
+    Science   ? c
+  3; in class:
+    Math      ? d
+    Science   ? f
+  4; in class:
+    Math      ? A
+    Science   ? A
+Geoff    Math      Science
+Freshman  C          C
+Sophmore  C          C
+Junior    C          C
+Senior    C          C

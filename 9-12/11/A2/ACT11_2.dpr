@@ -1,17 +1,17 @@
-PROGRAM ACT11_1(input, output);
+PROGRAM ACT11_2(input, output);
 
 {$APPTYPE CONSOLE}
 
 {
 Geoff Yoerger
-Activity 11.1
+Activity 11.2
 Due: AHEAD
-Purpose: Multiply 2 numbers over and over until the user doesnt want to anymore
+Purpose: Add 2 numbers together for a while
 }
+      
 VAR
     continue : boolean;
     num1, num2 : Integer;
-
 
 //**********
 // Intro
@@ -19,8 +19,7 @@ VAR
 // Welcome the user.
 //**********
 PROCEDURE Intro; BEGIN
-    writeln('Welcome to the repetative number multiplyer');
-    writeln;
+    writeln('Welcome to the repetative number adder');
 END;
 
 
@@ -47,17 +46,6 @@ END;
 
 
 //**********
-// PrintProuduct
-//**********
-// Print a product of 2 numbers
-//**********
-PROCEDURE PrintProuduct (num1Calc, num2Calc : Integer); BEGIN
-    write(num1Calc, ' * ', num2Calc, ' = ');
-    writeln(num1Calc * num2Calc);
-END;
-
-
-//**********
 // testContinue
 //**********
 // See if a user wants to continue looping
@@ -73,14 +61,29 @@ PROCEDURE testContinue (VAR continueTEST : boolean); BEGIN
         continueTEST := false;
 END;
 
+
+
+//**********
+// PrintSum
+//**********
+// Print a sum of 2 numbers
+//**********
+PROCEDURE PrintSum (num1Calc, num2Calc : Integer); BEGIN
+    write(num1Calc, ' + ', num2Calc, ' = ');
+    writeln(num1Calc + num2Calc);
+END;
+
+
+
 BEGIN
     Intro;
-    REPEAT BEGIN
+    continue := true;
+    WHILE(continue)
+    DO BEGIN
         Prompt2Int(num1, num2);
-        PrintProuduct(num1, num2);
+        PrintSum(num1, num2);
         testContinue(continue);
     END;
-    UNTIL(NOT(continue));
     Outro;
 END.
 

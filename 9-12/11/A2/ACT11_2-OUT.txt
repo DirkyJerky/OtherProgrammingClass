@@ -1,0 +1,81 @@
+Welcome to the repetative number adder
+Please enter 2 integers.
+1
+2
+1 + 2 = 3
+Do you want to continue? (y/n)
+y
+Please enter 2 integers.
+4
+3
+4 + 3 = 7
+Do you want to continue? (y/n)
+N
+|||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to the repetative number adder
+Please enter 2 integers.
+1
+2
+1 + 2 = 3
+Do you want to continue? (y/n)
+Yep
+Please enter 2 integers.
+7
+8
+7 + 8 = 15
+Do you want to continue? (y/n)
+Yes please
+Please enter 2 integers.
+0
+0
+0 + 0 = 0
+Do you want to continue? (y/n)
+Yea
+Please enter 2 integers.
+5
+5
+5 + 5 = 10
+Do you want to continue? (y/n)
+No thank you
+|||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to the repetative number adder
+Please enter 2 integers.
+1
+2
+1 + 2 = 3
+Do you want to continue? (y/n)
+y
+Please enter 2 integers.
+3
+4
+3 + 4 = 7
+Do you want to continue? (y/n)
+y
+Please enter 2 integers.
+4
+5
+4 + 5 = 9
+Do you want to continue? (y/n)
+NOPE
+|||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to the repetative number adder
+Please enter 2 integers.
+555
+444
+555 + 444 = 999
+Do you want to continue? (y/n)
+Y
+Please enter 2 integers.
+2
+-005
+2 + -5 = -3
+Do you want to continue? (y/n)
+n
+|||||||||||||||||||||||||||||||||||||||||||||||
+Welcome to the repetative number adder
+Please enter 2 integers.
+1
+2
+1 + 2 = 3
+Do you want to continue? (y/n)
+n

@@ -1,4 +1,6 @@
-PROGRAM FactorMe(input, output)
+PROGRAM FactorMe(input, output);
+
+{$APPTYPE CONSOLE}
 
 {
 Geoff Yoerger
@@ -13,8 +15,6 @@ CONST
     TODOCONST : Integer = 0;
 
 VAR
-
-
     rows, cols, heights : integer;
     i, j, k : Integer;
 
@@ -23,7 +23,7 @@ VAR
 //**********
 // Welcome the user.
 //**********
-PROCEDURE Intro (TODO : String; VAR RETURN : String) BEGIN
+PROCEDURE Intro (TODO : String; VAR RETURN : String); BEGIN
     writeln('Welcome to TODO');
 END;
 
@@ -33,7 +33,7 @@ END;
 //**********
 // Tie up loose ends and halt the console
 //**********
-PROCEDURE Outro (TODO : String; VAR RETURN : String) BEGIN
+PROCEDURE Outro (TODO : String; VAR RETURN : String); BEGIN
     // TODO: Put cleanup here
     readln; // Halt
 END;
@@ -44,7 +44,7 @@ END;
 //**********
 // Prompt user for 2 integers
 //**********
-PROCEDURE Prompt2Int (VAR num1Get, num2Get : Integer) BEGIN
+PROCEDURE Prompt2Int (VAR num1Get, num2Get : Integer); BEGIN
     writeln('Please enter 2 integers.');
     read(num1Get);
     readln(num2Get);
@@ -56,7 +56,7 @@ END;
 //**********
 // Prompt user for car model number
 //**********
-PROCEDURE PromptModelNum (VAR carModelNumGet : Integer) BEGIN
+PROCEDURE PromptModelNum (VAR carModelNumGet : Integer); BEGIN
     writeln('Enter your car''s model number.');
     readln(carModelNumGet);
 END;
@@ -65,9 +65,9 @@ END;
 //**********
 // PromptNumReal
 //**********
-// Prompt user for car model number
+// Prompt user for a number (real)
 //**********
-PROCEDURE PromptNumReal (VAR numPrompt : real) BEGIN
+PROCEDURE PromptNumReal (VAR numPrompt : real); BEGIN
     writeln('Enter a number.');
     readln(numPrompt);
 END;
@@ -80,7 +80,7 @@ END;
 //**********
 VAR
     testContinueResponse : char;
-PROCEDURE testContinue (VAR continueTEST : boolean) BEGIN
+PROCEDURE testContinue (VAR continueTEST : boolean); BEGIN
     writeln('Do you want to continue? (y/n)');
     readln(testContinueResponse);
     IF(Upcase(testContinueResponse) = 'Y') THEN
@@ -93,9 +93,9 @@ END;
 //**********
 // testDefective
 //**********
-// See if a user wants to continue looping
+// See if a car model num is defective
 //**********
-PROCEDURE testDefective (carModelNumTest : Integer; VAR isDefectiveTest : boolean) BEGIN
+PROCEDURE testDefective (carModelNumTest : Integer; VAR isDefectiveTest : boolean); BEGIN
     IF(
         (carModelNumTest = 119) OR
         (carModelNumTest = 179) OR
@@ -103,7 +103,7 @@ PROCEDURE testDefective (carModelNumTest : Integer; VAR isDefectiveTest : boolea
         (carModelNumTest = 221) OR
         (carModelNumTest = 780)
     ) THEN
-        isDefectiveTest := true;
+        isDefectiveTest := true
     ELSE
         isDefectiveTest := false;
 END;
@@ -115,7 +115,7 @@ END;
 //**********
 // Print a product of 2 numbers
 //**********
-PROCEDURE PrintProuduct (num1Calc, num2Calc : Integer) BEGIN
+PROCEDURE PrintProuduct (num1Calc, num2Calc : Integer); BEGIN
     write(num1Calc, ' * ', num2Calc, ' = ');
     writeln(num1Calc * num2Calc);
 END;
@@ -126,7 +126,7 @@ END;
 //**********
 // Print a sum of 2 numbers
 //**********
-PROCEDURE PrintSum (num1Calc, num2Calc : Integer) BEGIN
+PROCEDURE PrintSum (num1Calc, num2Calc : Integer); BEGIN
     write(num1Calc, ' + ', num2Calc, ' = ');
     writeln(num1Calc + num2Calc);
 END;
@@ -137,7 +137,16 @@ END;
 //**********
 // Add arg2 to arg1
 //**********
-PROCEDURE PlusEquals (VAR totalPS : Integer; addThis : Integer) BEGIN
+PROCEDURE PlusEquals (VAR totalPS : Integer; addThis : Integer); BEGIN
+    totalPS := totalPS + addThis;
+END;
+
+//**********
+// PlusEqualsReal
+//**********
+// Add arg2 to arg1
+//**********
+PROCEDURE PlusEqualsReal (VAR totalPS : Real; addThis : Real); BEGIN
     totalPS := totalPS + addThis;
 END;
 
@@ -147,7 +156,7 @@ END;
 //**********
 // Add 1 to arg1
 //**********
-PROCEDURE Inc (VAR totalInc : Integer) BEGIN
+PROCEDURE Inc (VAR totalInc : Integer); BEGIN
     PlusEquals(totalInc, 1);
 END;
 
@@ -157,7 +166,7 @@ END;
 //**********
 // Times arg2 to arg1
 //**********
-PROCEDURE TimesEquals (VAR totalPS : real; addThis : real) BEGIN
+PROCEDURE TimesEquals (VAR totalPS : real; addThis : real); BEGIN
     totalPS := totalPS * addThis;
 END;
 
@@ -165,11 +174,11 @@ END;
 //**********
 // InitIntArray20
 //**********
-// Initialize an array
+// Initialize an array (made for a fibonacii array)
 //**********
 VAR
     i : Integer;
-PROCEDURE InitIntArray20 (VAR theArray : intArray20) BEGIN
+PROCEDURE InitIntArray20 (VAR theArray : intArray20); BEGIN
     FOR i := 1 TO 20 DO 
         IF((i = 1) OR (i = 2)) THEN
             theArray[i] := 1
@@ -184,8 +193,8 @@ END;
 // Calc a fib number
 //**********
 VAR
-    shouldCONT : boolean
-PROCEDURE calcFib (VAR theArray : intArray20, VAR calcedFibNumCalc : Integer) BEGIN
+    shouldCONT : boolean;
+PROCEDURE calcFib (VAR theArray : intArray20; VAR calcedFibNumCalc : Integer); BEGIN
     shouldCONT := true;
     FOR i := 1 TO 20 DO BEGIN
         IF((theArray[i] = 0) AND shouldCONT) THEN BEGIN
@@ -202,7 +211,7 @@ END;
 //**********
 // Output a fib number
 //**********
-PROCEDURE OutputFibNum (calcedFibNumOut : Integer) BEGIN
+PROCEDURE OutputFibNum (calcedFibNumOut : Integer); BEGIN
     write('The next Fibonacci number is ');
     write(calcedFibNumOut);
     writeln('.');
@@ -216,12 +225,12 @@ END;
 //**********
 VAR
     tempCurrNum : real;
-PROCEDURE PromptSum (VAR sumNumsPrompt : real; VAR numNumbersPrompt : Integer) BEGIN
+PROCEDURE PromptSum (VAR sumNumsPrompt : real; VAR numNumbersPrompt : Integer); BEGIN
     sumNumsPrompt := 0;
-    writeln('Enter a list of numbers seperate by spaces and ending with 0.')
+    writeln('Enter a list of numbers seperated by spaces and ending with 0.');
     REPEAT BEGIN
         read(tempCurrNum);
-        PlusEquals(sumNumsPrompt, tempCurrNum);
+        PlusEqualsReal(sumNumsPrompt, tempCurrNum);
     END;
     UNTIL(tempCurrNum = 0);
 END;
@@ -234,8 +243,8 @@ END;
 //**********
 VAR
     tempCurrNum : real;
-PROCEDURE calcAverage (sumNumsCalc : real; numNumbersCalc : Integer; VAR average : real) BEGIN
-    average = sumNumsCalc / numNumbersCalc;
+PROCEDURE calcAverage (sumNumsCalc : real; numNumbersCalc : Integer; VAR average : real); BEGIN
+    average := sumNumsCalc / numNumbersCalc;
 END;
 
 
@@ -246,9 +255,9 @@ END;
 //**********
 VAR
     tempCurrNum : real;
-PROCEDURE OutputVectorSummary (sumTotalOutVS : real; numNumbersOutVS : integer; averageOutVS : real) BEGIN
+PROCEDURE OutputVectorSummary (sumTotalOutVS : real; numNumbersOutVS : integer; averageOutVS : real); BEGIN
     writeln('Sum:                ', sumTotalOutVS:0:1);
-    writeln('Number of numbers:  ', numNumbersOutVS:0:1);
+    writeln('Number of numbers:  ', numNumbersOutVS);
     writeln('Average:            ', averageOutVS:0:1);
 END;
 
@@ -260,7 +269,7 @@ END;
 //**********
 VAR
     tempCurrNum : real;
-PROCEDURE OutputMoneyAge (moneyOutMD : real; ageOutMD : Integer) BEGIN
+PROCEDURE OutputMoneyAge (moneyOutMD : real; ageOutMD : Integer); BEGIN
     writeln('You will recieve $', moneyOutMD:0:2, ' when you are ', ageOutMD, '.');
 END;
 
@@ -269,11 +278,11 @@ END;
 //**********
 // OutputCharArray3x4
 //**********
-// Output the amount of money you will recieve when you are arg2
+// Output a 3x4 array of characters
 //**********
 VAR
     tempCurrNum : real;
-PROCEDURE OutputCharArray3x4 (CharArrayOutCA : CharArray3x4) BEGIN
+PROCEDURE OutputCharArray3x4 (CharArrayOutCA : CharArray3x4); BEGIN
     FOR i := 1 TO 3 DO BEGIN
         FOR j := 1 TO 4 DO BEGIN 
             write(CharArray[i, j]);
@@ -290,7 +299,7 @@ END;
 //**********
 VAR
     tempCurrNum : real;
-PROCEDURE GetStudentName (studentNumGetSN : Integer; VAR studentNameGetSN : String) BEGIN
+PROCEDURE GetStudentName (studentNumGetSN : Integer; VAR studentNameGetSN : String); BEGIN
     CASE studentNumGetSN OF
         1: studentNameGetSN := 'Baker   ';
         2: studentNameGetSN := 'Cook    ';
@@ -308,7 +317,7 @@ END;
 //**********
 VAR
     tempCurrNum : real;
-PROCEDURE GetAssignmentName (assignmentNumGetSN : Integer; VAR assignmentNameGetSN : String) BEGIN
+PROCEDURE GetAssignmentName (assignmentNumGetSN : Integer; VAR assignmentNameGetSN : String); BEGIN
     CASE assignmentNumGetSN OF
         1: assignmentNameGetSN := 'Prog1   ';
         2: assignmentNameGetSN := 'Prog2   ';
@@ -318,7 +327,6 @@ PROCEDURE GetAssignmentName (assignmentNumGetSN : Integer; VAR assignmentNameGet
         6: assignmentNameGetSN := 'Exam    ';
     END;
 END;
-       (i, scoreArrayPrintLT, studentAverage);
 
 
 //**********
@@ -328,16 +336,16 @@ END;
 //**********
 VAR
     k : Integer;
-PROCEDURE getAverageWeightedScore5x6 (studentNumber : Integer; scoreArrayGetAWS : scoreArray5x6TYPE; VAR studentAverage : real;) BEGIN
+PROCEDURE getAverageWeightedScore5x6 (studentNumber : Integer; scoreArrayGetAWS : scoreArray5x6TYPE; VAR studentAverage : real); BEGIN
     studentAverage := 0;
     // The constants are definied in indiviual variables, this is the easiest way :/
     // Stupid pascal :(
-    PlusEquals(studentAverage, (scoreArrayGetAWS[studentNumber, 1] * assignment1WEIGHT));
-    PlusEquals(studentAverage, (scoreArrayGetAWS[studentNumber, 2] * assignment2WEIGHT));
-    PlusEquals(studentAverage, (scoreArrayGetAWS[studentNumber, 3] * assignment3WEIGHT));
-    PlusEquals(studentAverage, (scoreArrayGetAWS[studentNumber, 4] * assignment4WEIGHT));
-    PlusEquals(studentAverage, (scoreArrayGetAWS[studentNumber, 5] * assignment5WEIGHT));
-    PlusEquals(studentAverage, (scoreArrayGetAWS[studentNumber, 6] * assignment6WEIGHT));
+    PlusEqualsReal(studentAverage, (scoreArrayGetAWS[studentNumber, 1] * assignment1WEIGHT));
+    PlusEqualsReal(studentAverage, (scoreArrayGetAWS[studentNumber, 2] * assignment2WEIGHT));
+    PlusEqualsReal(studentAverage, (scoreArrayGetAWS[studentNumber, 3] * assignment3WEIGHT));
+    PlusEqualsReal(studentAverage, (scoreArrayGetAWS[studentNumber, 4] * assignment4WEIGHT));
+    PlusEqualsReal(studentAverage, (scoreArrayGetAWS[studentNumber, 5] * assignment5WEIGHT));
+    PlusEqualsReal(studentAverage, (scoreArrayGetAWS[studentNumber, 6] * assignment6WEIGHT));
 END;
 
 
@@ -351,8 +359,9 @@ VAR
     i, j : integer;
     assignmentName : String;
     studentName : String;
-PROCEDURE PrintLabeledTable5x6 (scoreArrayPrintLT : scoreArray5x6TYPE) BEGIN
-    write('        ') // Fill the top left cell with nothing
+    studentAverage : real;
+PROCEDURE PrintLabeledTable5x6 (scoreArrayPrintLT : scoreArray5x6TYPE); BEGIN
+    write('        '); // Fill the top left cell with nothing
     FOR i := 1 TO 6 DO BEGIN
         GetAssignmentName(i, assignmentName);
         write(assignmentName);
@@ -375,14 +384,14 @@ END;
 //**********
 // FillScores5x6
 //**********
-// Output the amount of money you will recieve when you are arg2
+// Prompt for grades for each student
 //**********
 VAR
     i, j : integer;
     assignmentName : String;
     studentName : String;
-PROCEDURE FillScores5x6 (scoreArrayFillS: scoreArray5x6TYPE) BEGIN
-    writeln('(Please input scores as a number 0-100)')
+PROCEDURE FillScores5x6 (scoreArrayFillS: scoreArray5x6TYPE); BEGIN
+    writeln('(Please input scores as a number 0-100)');
     FOR i := 1 TO 5 DO BEGIN 
         GetStudentName(i, studentName);
         writeln('For student ', studentName, ', what did he get on assignment:');
@@ -394,8 +403,6 @@ PROCEDURE FillScores5x6 (scoreArrayFillS: scoreArray5x6TYPE) BEGIN
     END;
 END;
 
-
-BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END; BEGIN END;
 
 
 
@@ -658,7 +665,7 @@ CONST
     assignment5WEIGHT : real = 0.05;
     assignment6WEIGHT : real = 0.3;
 TYPE
-    scoreArray5x6TYPE : array[1..5,1..6] OF Integer; // TYPEDEF: 5 Students, 6 Assignment scores
+    scoreArray5x6TYPE = array[1..5,1..6] OF Integer; // TYPEDEF: 5 Students, 6 Assignment scores
 VAR
     scoreArray : scoreArray5x6TYPE;
     // PROCEDURE VARS
@@ -673,3 +680,5 @@ BEGIN
     PrintLabeledTable5x6(scoreArray);
     Outro;
 END;
+
+
