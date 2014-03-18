@@ -1,0 +1,127 @@
+Welcome to the car tester
+(Enter 0 to terminate)
+Enter your car's model number.
+100
+Your car is OK
+Enter your car's model number.
+100
+Your car is OK
+Enter your car's model number.
+200
+Your car is OK
+Enter your car's model number.
+300
+Your car is OK
+Enter your car's model number.
+400
+Your car is OK
+Enter your car's model number.
+500
+Your car is OK
+Enter your car's model number.
+0
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the car tester
+(Enter 0 to terminate)
+Enter your car's model number.
+115
+Your car is OK
+Enter your car's model number.
+116
+Your car is OK
+Enter your car's model number.
+117
+Your car is OK
+Enter your car's model number.
+118
+Your car is OK
+Enter your car's model number.
+119
+Your car is defective
+Enter your car's model number.
+0
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the car tester
+(Enter 0 to terminate)
+Enter your car's model number.
+178
+Your car is OK
+Enter your car's model number.
+179
+Your car is defective
+Enter your car's model number.
+180
+Your car is OK
+Enter your car's model number.
+185
+Your car is OK
+Enter your car's model number.
+189
+Your car is defective
+Enter your car's model number.
+195
+Your car is defective
+Enter your car's model number.
+190
+Your car is defective
+Enter your car's model number.
+220
+Your car is OK
+Enter your car's model number.
+0
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the car tester
+(Enter 0 to terminate)
+Enter your car's model number.
+524
+Your car is OK
+Enter your car's model number.
+5745
+Your car is OK
+Enter your car's model number.
+234234
+Your car is OK
+Enter your car's model number.
+86756
+Your car is OK
+Enter your car's model number.
+345345
+Your car is OK
+Enter your car's model number.
+7676
+Your car is OK
+Enter your car's model number.
+221
+Your car is defective
+Enter your car's model number.
+0
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the car tester
+(Enter 0 to terminate)
+Enter your car's model number.
+178
+Your car is OK
+Enter your car's model number.
+179
+Your car is defective
+Enter your car's model number.
+180
+Your car is OK
+Enter your car's model number.
+185
+Your car is OK
+Enter your car's model number.
+189
+Your car is defective
+Enter your car's model number.
+195
+Your car is defective
+Enter your car's model number.
+190
+Your car is defective
+Enter your car's model number.
+220
+Your car is OK
+Enter your car's model number.
+0

@@ -1,0 +1,107 @@
+Welcome to the fibonacci number generator
+The next Fibonacci number is 2.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 3.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 5.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 8.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 13.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 21.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 34.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 55.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 89.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 144.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 233.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 377.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 610.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 987.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 1597.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 2584.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 4181.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 6765.
+Do you want to continue? (y/n)
+y
+The first 20 Fibonacci numbers are...
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,
+ 6765
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator
+The next Fibonacci number is 2.
+Do you want to continue? (y/n)
+NOPE
+The first 3 Fibonacci numbers are...
+1, 1, 2,
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator
+The next Fibonacci number is 2.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 3.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 5.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 8.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 13.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 21.
+Do you want to continue? (y/n)
+n
+The first 8 Fibonacci numbers are...
+1, 1, 2, 3, 5, 8, 13, 21,
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator
+The next Fibonacci number is 2.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 3.
+Do you want to continue? (y/n)
+y
+The next Fibonacci number is 5.
+Do you want to continue? (y/n)
+n
+The first 5 Fibonacci numbers are...
+1, 1, 2, 3, 5,
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator
+The next Fibonacci number is 2.
+Do you want to continue? (y/n)
+m
+The first 3 Fibonacci numbers are...
+1, 1, 2,

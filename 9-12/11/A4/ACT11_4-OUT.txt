@@ -1,0 +1,95 @@
+Welcome to the running totaler
+Enter a number.
+1
+Current Total: 1.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+2
+Current Total: 3.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+3
+Current Total: 6.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+4
+Current Total: 10.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+000
+Current Total: 10.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+1234.3322
+Current Total: 1244.332
+Do you want to continue? (y/n)
+n
+The total is 1244.332
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the running totaler
+Enter a number.
+1
+Current Total: 1.000
+Do you want to continue? (y/n)
+n
+The total is 1.000
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the running totaler
+Enter a number.
+1
+Current Total: 1.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+-1
+Current Total: 0.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+2352345
+Current Total: 2352345.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+-2352345
+Current Total: 0.000
+Do you want to continue? (y/n)
+n
+The total is 0.000
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the running totaler
+Enter a number.
+20
+Current Total: 20.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+30
+Current Total: 50.000
+Do you want to continue? (y/n)
+n
+The total is 50.000
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the running totaler
+Enter a number.
+-0
+Current Total: 0.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+10
+Current Total: 10.000
+Do you want to continue? (y/n)
+y
+Enter a number.
+-9
+Current Total: 1.000
+Do you want to continue? (y/n)
+n
+The total is 1.000
