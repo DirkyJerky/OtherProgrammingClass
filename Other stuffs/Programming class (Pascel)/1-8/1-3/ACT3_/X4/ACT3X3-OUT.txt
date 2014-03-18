@@ -1,0 +1,44 @@
+Welcome to the weight calculator
+
+Hieght of containter?
+1
+Width of containter?
+
+2
+Length of containter?
+3
+Weight of containter per cubic inch?
+4
+The container's weight is  24.00.
+
+
+
+
+2 =============================
+Welcome to the weight calculator
+
+Hieght of containter?
+2
+Width of containter?
+3
+Length of containter?
+4
+Weight of containter per cubic inch?
+5
+The container's weight is 120.00.
+
+
+
+
+3 ======================
+Welcome to the weight calculator
+
+Hieght of containter?
+-1
+Width of containter?
+-2
+Length of containter?
+-3
+Weight of containter per cubic inch?
+-44
+The container's weight is 264.00.

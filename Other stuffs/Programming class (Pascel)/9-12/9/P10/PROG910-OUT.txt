@@ -1,0 +1,49 @@
+Welcome to the black jack hand score calculator!
+
+
+Ten is '0'
+What is Card 1?
+1
+What is Card 2?
+1
+Total = 2
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the black jack hand score calculator!
+
+
+Ten is '0'
+What is Card 1?
+0
+What is Card 2?
+0
+Total = 20
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the black jack hand score calculator!
+
+
+Ten is '0'
+What is Card 1?
+J
+What is Card 2?
+A
+Total = 21
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the black jack hand score calculator!
+
+
+Ten is '0'
+What is Card 1?
+A
+What is Card 2?
+A
+Total = 12
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the black jack hand score calculator!
+
+
+Ten is '0'
+What is Card 1?
+0
+What is Card 2?
+6
+Total = 16

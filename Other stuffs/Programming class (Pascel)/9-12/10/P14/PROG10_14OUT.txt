@@ -1,0 +1,144 @@
+Welcome to the fibonacci number generator!
+
+
+What is the first starting number of your series?
+1
+The second?
+1
+
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator!
+
+
+What is the first starting number of your series?
+100
+The second?
+200
+
+100
+200
+300
+500
+800
+1300
+2100
+3400
+5500
+8900
+14400
+23300
+37700
+61000
+98700
+159700
+258400
+418100
+676500
+1094600
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator!
+
+
+What is the first starting number of your series?
+0
+The second?
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator!
+
+
+What is the first starting number of your series?
+0
+The second?
+1
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the fibonacci number generator!
+
+
+What is the first starting number of your series?
+2
+The second?
+2
+
+2
+2
+4
+6
+10
+16
+26
+42
+68
+110
+178
+288
+466
+754
+1220
+1974
+3194
+5168
+8362
+13530

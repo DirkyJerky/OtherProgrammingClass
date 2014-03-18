@@ -1,0 +1,36 @@
+Welcome to Maximus Security Prison
+
+What is your last initial?
+Y
+And the last 4 digits of your phone number?
+1234
+
+Your code is:
+Z1070X
+
+2 ===============================================
+Welcome to Maximus Security Prison
+
+What is your last initial?
+H
+And the last 4 digits of your phone number?
+9999
+
+Your code is:
+I2062G
+
+3 ===============================================
+Welcome to Maximus Security Prison
+
+What is your last initial?
+F
+And the last 4 digits of your phone number?
+6666
+
+Your code is:
+G1752E
+
+
+
+
+

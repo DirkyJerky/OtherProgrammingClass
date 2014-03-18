@@ -1,0 +1,101 @@
+Welcome to Burger King 2.0!
+
+
+How many burgers do you want today?
+0
+How many fries?
+5
+Sodas?
+0
+
+     Reciept
+=================
+0 Burger(s).....
+5 Frie(s).......
+0 Soda(s).......
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to Burger King 2.0!
+
+
+How many burgers do you want today?
+1
+How many fries?
+2
+Sodas?
+3
+
+     Reciept
+=================
+1 Burger(s).....
+2 Frie(s).......
+3 Soda(s).......
+
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+
+
+Welcome to Burger King 2.0!
+
+
+How many burgers do you want today?
+13523
+How many fries?
+357645
+Sodas?
+34524
+
+     Reciept
+=================
+13523 Burger(s).....
+357645 Frie(s).......
+34524 Soda(s).......
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+
+|Welcome to Burger King 2.0!
+
+
+How many burgers do you want today?
+-23524
+How many fries?
+-43634
+Sodas?
+-5
+
+     Reciept
+=================
+-23524 Burger(s).....
+-43634 Frie(s).......
+-5 Soda(s).......
+
+||||||||||||||||||||||||||||||||||||||||||
+
+
+
+Welcome to Burger King 2.0!
+
+
+How many burgers do you want today?
+0
+How many fries?
+0
+Sodas?
+0
+
+     Reciept
+=================
+0 Burger(s).....
+0 Frie(s).......
+0 Soda(s).......
+
+

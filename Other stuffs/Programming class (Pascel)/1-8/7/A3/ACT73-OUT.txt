@@ -1,0 +1,39 @@
+Welcome to the enrolement detector
+
+What score did you get on the english portion of the SATs?
+500
+And the math section?
+400
+And what was your high school GPA?
+2.9
+Im sorry, we cant enrole you.
+
+
+
+
+========================================
+Welcome to the enrolement detector
+
+What score did you get on the english portion of the SATs?
+600
+And the math section?
+700
+And what was your high school GPA?
+2.5
+Congrats, you can enrole!
+
+
+
+
+===========================================
+Welcome to the enrolement detector
+
+What score did you get on the english portion of the SATs?
+500
+And the math section?
+400
+And what was your high school GPA?
+3.4
+Congrats, you can enrole!
+
+

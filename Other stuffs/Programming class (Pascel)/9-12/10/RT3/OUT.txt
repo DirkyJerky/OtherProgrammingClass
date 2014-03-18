@@ -1,0 +1,184 @@
+Welcome to The score summarizer!
+
+Please enter 20 scores:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+The average is 1.00
+
+Students who Scored 1: 1
+Students who Scored 2: 1
+Students who Scored 3: 1
+Students who Scored 4: 1
+Students who Scored 5: 1
+Students who Scored 6: 1
+Students who Scored 7: 1
+Students who Scored 8: 1
+Students who Scored 9: 1
+Students who Scored 10: 1
+Students who Scored 11: 1
+Students who Scored 12: 1
+Students who Scored 13: 1
+Students who Scored 14: 1
+Students who Scored 15: 1
+Students who Scored 16: 1
+Students who Scored 17: 1
+Students who Scored 18: 1
+Students who Scored 19: 1
+Students who Scored 20: 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to The score summarizer!
+
+Please enter 20 scores:
+5
+4
+6
+578
+25
+25
+58
+8
+4
+25
+2
+5
+4
+1
+2
+3
+6
+9
+55
+5
+
+The average is 0.70
+
+Students who Scored 1: 1
+Students who Scored 2: 2
+Students who Scored 3: 1
+Students who Scored 4: 3
+Students who Scored 5: 3
+Students who Scored 6: 2
+Students who Scored 8: 1
+Students who Scored 9: 1
+Students who Scored 25: 3
+Students who Scored 55: 1
+Students who Scored 58: 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to The score summarizer!
+
+Please enter 20 scores:
+34
+5
+4
+6
+5
+32
+
+6
+7
+66
+54
+5
+6
+5
+4
+645
+3
+45
+4
+3
+22
+
+The average is 0.65
+
+Students who Scored 3: 2
+Students who Scored 4: 3
+Students who Scored 5: 4
+Students who Scored 6: 3
+Students who Scored 7: 1
+Students who Scored 22: 1
+Students who Scored 32: 1
+Students who Scored 34: 1
+Students who Scored 45: 1
+Students who Scored 54: 1
+Students who Scored 66: 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to The score summarizer!
+
+Please enter 20 scores:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+01
+2
+4
+5
+67
+5
+3
+4
+
+The average is 0.35
+
+Students who Scored 1: 1
+Students who Scored 2: 1
+Students who Scored 3: 1
+Students who Scored 4: 2
+Students who Scored 5: 2
+Students who Scored 67: 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to The score summarizer!
+
+Please enter 20 scores:
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+The average is 1.00
+
+Students who Scored 1: 20

@@ -1,0 +1,64 @@
+Welcome to Shutter-Bug Camera Store's automated checkout line.
+What is your first name?
+Geoff
+What is your last name?
+Yoerger
+What is Your pre-total?
+1000
+
+
+Shutter-Bug Camera Store
+Official Reciept
+Mr/Mrs. Geoff Yoerger
+
+Pre-total: $1000.00
+  -
+Discount: $130.00
+===================
+Final Total: $870.00
+
+Have a nice day.
+
+=======================================
+Welcome to Shutter-Bug Camera Store's automated checkout line.
+What is your first name?
+Goef
+What is your last name?
+Yoerggeer
+What is Your pre-total?
+400
+
+
+Shutter-Bug Camera Store
+Official Reciept
+Mr/Mrs. Goef Yoerggeer
+
+Pre-total: $400.00
+  -
+Discount: $0.00
+===================
+Final Total: $400.00
+
+Have a nice day.
+
+=======================================
+Welcome to Shutter-Bug Camera Store's automated checkout line.
+What is your first name?
+100000
+What is your last name?
+Goeff
+What is Your pre-total?
+1000000
+
+
+Shutter-Bug Camera Store
+Official Reciept
+Mr/Mrs. 100000 Goeff
+
+Pre-total: $1000000.00
+  -
+Discount: $200000.00
+===================
+Final Total: $800000.00
+
+Have a nice day.

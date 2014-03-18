@@ -1,0 +1,48 @@
+1 ================================================
+Welcome to the Store!
+
+What item are you purchasing today?
+hat
+How much is that item?
+5.50
+And how much hat(s) do you want to buy today?
+2
+
+Purchase Summary:
+ 2 hat(s)..........$ 11.00
+ Sales Tax (6%)....$  0.66
+=====================
+Total..............$ 11.66
+
+2 ============================================
+Welcome to the Store!
+
+What item are you purchasing today?
+coat
+How much is that item?
+3.4
+And how much coat(s) do you want to buy today?
+-1
+
+Purchase Summary:
+ -1 coat(s)..........$ -3.40
+ Sales Tax (6%)....$ -0.20
+=====================
+Total..............$ -3.60
+
+
+3 ==============================================
+Welcome to the Store!
+
+What item are you purchasing today?
+giraffe
+How much is that item?
+34444.22
+And how much giraffe(s) do you want to buy today?
+90
+
+Purchase Summary:
+ 90 giraffe(s)..........$3099979.80
+ Sales Tax (6%)....$185998.79
+=====================
+Total..............$3285978.59

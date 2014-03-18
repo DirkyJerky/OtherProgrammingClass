@@ -1,0 +1,44 @@
+1 ====================
+Welcome to The age calculator
+
+What is your name?
+Geoff
+What is the year you were born?
+2045
+What is the month you were born? (a number 1 - 12)
+1
+What was the day you were born? (a number 1 - 31)
+31
+Hello, Geoff.
+On Decemeber 31st 2072 you will be 27 years old,
+11 months old, and 0 days old.
+
+2 ===============================
+Welcome to The age calculator
+
+What is your name?
+Geoff
+What is the year you were born?
+2014
+What is the month you were born? (a number 1 - 12)
+12
+What was the day you were born? (a number 1 - 31)
+1
+Hello, Geoff.
+On Decemeber 31st 2072 you will be 58 years old,
+0 months old, and 30 days old.
+
+3 ===================================
+Welcome to The age calculator
+
+What is your name?
+Geoff
+What is the year you were born?
+2067
+What is the month you were born? (a number 1 - 12)
+12
+What was the day you were born? (a number 1 - 31)
+31
+Happy birthday, Geoff!
+On Decemeber 31st 2072 you will be 5 years old,
+0 months old, and 0 days old.

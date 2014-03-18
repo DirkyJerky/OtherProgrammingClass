@@ -1,0 +1,47 @@
+Welcome to the Monitary Exchange of Banks, run and owned by me, Mr. Banks
+We will gladly change your dollars into British pounds, or even pennies,
+for No extra charge.
+
+How much dollars do you want converted this evening?
+3
+You can exchange this for:
+   300 Cents
+or
+   1.50 Pounds
+
+Have a nice day
+
+
+2 ===========================================================================
+Welcome to the Monitary Exchange of Banks, run and owned by me, Mr. Banks
+We will gladly change your dollars into British pounds, or even pennies,
+for No extra charge.
+
+How much dollars do you want converted this evening?
+5555
+You can exchange this for:
+555500 Cents
+or
+2777.50 Pounds
+
+Have a nice day
+
+
+
+
+3 ===================================================
+Welcome to the Monitary Exchange of Banks, run and owned by me, Mr. Banks
+We will gladly change your dollars into British pounds, or even pennies,
+for No extra charge.
+
+How much dollars do you want converted this evening?
+-5
+You can exchange this for:
+  -500 Cents
+or
+  -2.50 Pounds
+
+Have a nice day
+
+
+

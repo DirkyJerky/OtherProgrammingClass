@@ -1,0 +1,69 @@
+TYPE
+    month : {January, February, March, April, May, June, July, August, September, October, November, December};
+
+
+VAR
+    monthNum : byte;
+    monthName : month;
+    monthDays : byte;
+    leapYear : boolean;
+
+PROCEDURE getMonthNum(VAR monthNumGet : byte);
+BEGIN
+    writeln('Please enter the integer corresponding to the month in question');
+    readln(monthNumGet);
+END;
+
+
+PROCEDURE findMonthName(monthNumFind : byte; VAR monthNameFind : month);BEGIN
+    CASE monthNumFind OF
+        1: monthNameFind := January;
+        2: monthNameFind := February;
+        3: monthNameFind := March;
+        4: monthNameFind := April;
+        5: monthNameFind := May;
+        6: monthNameFind := June;
+        7: monthNameFind := July;
+        8: monthNameFind := August;
+        9: monthNameFind := September;
+        10: monthNameFind := October;
+        11: monthNameFind := November;
+        12: monthNameFind := December;
+    END;
+END;
+
+
+PROCEDURE evalBoolean(input : char; VAR outputBool : boolean); BEGIN
+    input := Upcase(input); // Uppercase
+    IF(input = 'Y') THEN
+        outputBool := true
+    ELSE
+        outputBool := false;
+END;
+
+PROCEDURE findMonthDays(monthNameFind : month; VAR monthDaysFind : byte); BEGIN
+    CASE monthNameFind OF
+        January, March, May, July, August, October, December:
+            monthDaysFind := 31;
+        April, June, September, November:
+            monthDaysFind := 30;
+        February: BEGIN // Find if its a leap year
+            writeln('Is it a leap year? (y/n)');
+            readln(leapYearAns);
+            evalBoolean(leapYearAns, leapYear);
+
+            IF (leapYear) THEN
+                monthDaysFind := 29
+            ELSE
+                monthDaysFind := 28;
+            //ENDIF
+        END;
+    END;//CASE
+END;
+
+
+// MAIN
+BEGIN
+    getMonthNum(monthNum);
+    findMonthName(monthNum, monthName)
+END;

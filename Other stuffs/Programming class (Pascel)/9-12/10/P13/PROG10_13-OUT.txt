@@ -1,0 +1,88 @@
+Welcome to the Character Totaler!
+
+How many characters does your string contain?
+10
+Please enter your string of 10 characters.
+asgdfhhgjg
+A: 1
+D: 1
+F: 1
+G: 3
+H: 2
+J: 1
+S: 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Character Totaler!
+
+How many characters does your string contain?
+1
+Please enter your string of 1 characters.
+as
+A: 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Character Totaler!
+
+How many characters does your string contain?
+30
+Please enter your string of 30 characters.
+klzjadfklhjsdfklghdjklfcgkljghjdfklcghnjkldfjgdkfjbg
+A: 1
+C: 1
+D: 3
+F: 3
+G: 3
+H: 3
+J: 4
+K: 5
+L: 5
+S: 1
+Z: 1
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Character Totaler!
+
+How many characters does your string contain?
+-3
+Please enter your string of -3 characters.
+ddd
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Character Totaler!
+
+How many characters does your string contain?
+629
+Please enter your string of 629 characters.
+Two households, both alike in dignity,
+In fair Verona, where we lay our scene,
+From ancient grudge break to new mutiny,
+Where civil blood makes civil hands unclean.
+From forth the fatal loins of these two foes
+A pair of star-cross'd lovers take their life;
+Whose misadventured piteous overthrows
+Do with their death bury their parents' strife.
+The fearful passage of their death-mark'd love,
+And the continuance of their parents' rage,
+Which, but their children's end, nought could remove,
+Is now the two hours' traffic of our stage;
+The which if you with patient ears attend,
+What here shall miss, our toil shall strive to mend.
+A: 35
+B: 5
+C: 13
+D: 17
+E: 58
+F: 18
+G: 7
+H: 36
+I: 36
+K: 5
+L: 20
+M: 8
+N: 26
+O: 39
+P: 6
+R: 38
+S: 31
+T: 46
+U: 17
+V: 8
+W: 15
+Y: 5

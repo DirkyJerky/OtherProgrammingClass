@@ -1,0 +1,124 @@
+Student 1: a
+Student 2: a
+Student 3:
+Student 4: a
+Student 5: a
+Student 6: a
+Student 7: a
+Student 8: a
+Student 9: a
+Student 10: a
+Student 11: a
+Student 12: a
+Student 13: a
+Student 14: a
+Student 15: a
+Student 16: a
+Student 17: a
+Student 18: a
+Student 19: a
+Student 20: a
+
+Of your 19 students,
+19 passed and
+0 failed.
+|||||||||||||||||||||||||||||||||||||||||||
+Student 1: f
+Student 2: a
+Student 3: f
+Student 4: a
+Student 5: f
+Student 6: a
+Student 7: f
+Student 8: b
+Student 9: c
+Student 10: d
+Student 11: b
+Student 12: c
+Student 13: d
+Student 14: i
+Student 15: i
+Student 16: i
+Student 17: i
+Student 18: i
+Student 19: i
+Student 20: i
+
+Of your 13 students,
+9 passed and
+4 failed.
+|||||||||||||||||||||||||||||||||||||||||||
+Student 1:
+Student 2:
+Student 3:
+Student 4:
+Student 5:
+Student 6:
+Student 7:
+Student 8:
+Student 9:
+Student 10:
+Student 11:
+Student 12:
+Student 13:
+Student 14:
+Student 15:
+Student 16:
+Student 17:
+Student 18:
+Student 19:
+Student 20: a
+
+Of your 1 students,
+1 passed and
+0 failed.
+|||||||||||||||||||||||||||||||||||||||||||
+Student 1: a
+Student 2: f
+Student 3: a
+Student 4: f
+Student 5: c
+Student 6: C
+Student 7: A
+Student 8: F
+Student 9: D
+Student 10: B
+Student 11: C
+Student 12: A
+Student 13: D
+Student 14: f
+Student 15: f
+Student 16: f
+Student 17: f
+Student 18: f
+Student 19: f
+Student 20:
+
+Of your 19 students,
+10 passed and
+9 failed.
+|||||||||||||||||||||||||||||||||||||||||||
+Student 1: t
+Student 2: t
+Student 3: t
+Student 4: t
+Student 5: t
+Student 6: t
+Student 7: t
+Student 8: t
+Student 9: t
+Student 10: t
+Student 11: t
+Student 12: t
+Student 13: t
+Student 14: t
+Student 15: t
+Student 16: t
+Student 17: A
+Student 18: F
+Student 19: B
+Student 20: d
+
+Of your 4 students,
+3 passed and
+1 failed.

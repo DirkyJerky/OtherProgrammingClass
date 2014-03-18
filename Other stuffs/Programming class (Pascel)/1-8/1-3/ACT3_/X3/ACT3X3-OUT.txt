@@ -1,0 +1,23 @@
+Welcome to the Feet converter
+
+Number of feet?
+100
+100 feet is 3050.00 centimeters and 1200 inches.
+
+
+2 =============================
+Welcome to the Feet converter
+
+Number of feet?
+33
+33 feet is 1006.50 centimeters and 396 inches.
+
+
+
+3 ======================
+Welcome to the Feet converter
+
+Number of feet?
+-20
+-20 feet is -610.00 centimeters and -240 inches.
+

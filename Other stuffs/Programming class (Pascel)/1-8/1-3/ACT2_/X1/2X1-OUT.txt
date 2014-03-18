@@ -1,0 +1,111 @@
+1 ==========================
+
+Hello and welcome to mad libs!
+Please input:
+Noun
+Abcs
+Noun
+Bat
+Noun
+Car
+Noun
+Dog
+Noun
+Elephant
+Noun
+Frog
+Adjective
+Great
+Adjective
+Huge
+Adjective
+Ideal
+Adjective
+Joyful
+Adjective
+Kipper
+Body Part
+Leg
+Body Part
+Mouth
+Plural Noun
+Nachos
+Plural Noun
+Octupuses
+Plural Noun
+Parents
+Plural Body Part
+Toes
+
+2 ===============
+
+Hello and welcome to mad libs!
+Please input:
+Noun
+
+Noun
+
+Noun
+
+Noun
+
+Noun
+
+Noun
+
+Adjective
+
+Adjective
+
+Adjective
+
+Adjective
+
+Adjective
+
+Body Part
+
+Body Part
+
+Plural Noun
+
+Plural Noun
+
+Plural Noun
+
+Plural Body Part
+
+
+
+ of all ages enjoy watching  magicians perform their  tricks.
+Every man, woman, and  loves to see a magician pull a/an  out of a hat,
+ saw a live  in half, or make a huge  disappear into  air.
+Audiences love when magicians perform sleight of  with a deck of
+ a/an  coin, or a silk .
+
+The greatest of all magicians was the  Harry Houdini,
+ who was able to escape from a locked even though his  were
+ tied behind his  and his feet were wrapped in iron .
+
+
+
+
+Nachos of all ages enjoy watching Great magicians perform their Huge tricks.
+Every man, woman, and Abcs loves to see a magician pull a/an Bat out of a hat,
+ saw a live Car in half, or make a huge Dog disappear into Ideal air.
+Audiences love when magicians perform sleight of Leg with a deck of Octupuses
+ a/an Joyful coin, or a silk Elephant.
+
+The greatest of all magicians was the Kipper Harry Houdini,
+ who was able to escape from a locked Frogeven though his Toes were
+ tied behind his Mouth and his feet were wrapped in iron Parents.
+
+
+
+
+
+
+
+
+
+

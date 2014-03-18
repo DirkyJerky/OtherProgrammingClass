@@ -1,0 +1,32 @@
+VAR
+    score : byte;
+    scoreChar : char;
+
+
+PROCEDURE getScore(VAR scoreGet : byte)
+BEGIN
+    writeln('Whats your score? ');
+    readln(scoreGet);
+END;
+
+PROCEDURE calcCharForScore(scoreCalc : byte; VAR scoreCharCalc : char)
+BEGIN
+    CASE scoreCalc OF
+        90..100:
+            scoreCharCalc := 'A';
+        80..89:
+            scoreCharCalc := 'B';
+        70..79:
+            scoreCharCalc := 'C';
+        60..69:
+            scoreCharCalc := 'D';
+        ELSE;
+            scoreCharCalc := 'F';
+    END;
+END;
+
+BEGIN
+    getScore(score);
+    calcCharForScore(score, scoreChar);
+    Output(score, scoreChar);
+END.

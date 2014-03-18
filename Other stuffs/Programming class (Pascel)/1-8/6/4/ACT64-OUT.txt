@@ -1,0 +1,56 @@
+Welcome to the Dollars 2 Pounds convert!
+
+
+How many dollars do you have?
+0
+
+You have 0.00 Dollars which is also
+0.00 Pounds.
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Dollars 2 Pounds convert!
+
+
+How many dollars do you have?
+10
+
+You have 10.00 Dollars which is also
+20.00 Pounds.
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Dollars 2 Pounds convert!
+
+
+How many dollars do you have?
+20000
+
+You have 20000.00 Dollars which is also
+40000.00 Pounds.
+
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the Dollars 2 Pounds convert!
+
+
+How many dollars do you have?
+00010
+
+You have 10.00 Dollars which is also
+20.00 Pounds.
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||
+
+
+Welcome to the Dollars 2 Pounds convert!
+
+
+How many dollars do you have?
+-200
+
+You have -200.00 Dollars which is also
+-400.00 Pounds.
+
+
