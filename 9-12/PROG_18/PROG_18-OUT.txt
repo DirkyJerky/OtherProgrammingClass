@@ -1,0 +1,219 @@
+Welcome to the gradebook
+(Please input scores as a number 0-100)
+For student Baker   , what did he get on assignment:
+Prog1   ? 92
+Prog2   ? 95
+Midterm ? 90
+Prog3   ? 84
+HW      ? 98
+Exam    ? 90
+For student Cook    , what did he get on assignment:
+Prog1   ? 70
+Prog2   ? 75
+Midterm ? 80
+Prog3   ? 75
+HW      ? 78
+Exam    ? 70
+For student Douglas , what did he get on assignment:
+Prog1   ? 99
+Prog2   ? 100
+Midterm ? 95
+Prog3   ? 98
+HW      ? 95
+Exam    ? 95
+For student Finch   , what did he get on assignment:
+Prog1   ? 80
+Prog2   ? 90
+Midterm ? 80
+Prog3   ? 82
+HW      ? 75
+Exam    ? 89
+For student Smith   , what did he get on assignment:
+Prog1   ? 60
+Prog2   ? 52
+Midterm ? 40
+Prog3   ? 80
+HW      ? 20
+Exam    ? 55
+              Prog1   Prog2   Midterm Prog3   HW      Exam    Final
+Baker         92      95      90      84      98      90      89.90
+Cook          70      75      80      75      78      70      74.40
+Douglas       99     100      95      98      95      95      96.50
+Finch         80      90      80      82      75      89      83.85
+Smith         60      52      40      80      20      55      54.70
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the gradebook
+(Please input scores as a number 0-100)
+For student Baker   , what did he get on assignment:
+Prog1   ? 60
+Prog2   ? 52
+Midterm ? 40
+Prog3   ? 80
+HW      ? 20
+Exam    ? 55
+For student Cook    , what did he get on assignment:
+Prog1   ? 80
+Prog2   ? 90
+Midterm ? 80
+Prog3   ? 82
+HW      ? 75
+Exam    ? 89
+For student Douglas , what did he get on assignment:
+Prog1   ? 99
+Prog2   ? 100
+Midterm ? 95
+Prog3   ? 98
+HW      ? 95
+Exam    ? 95
+For student Finch   , what did he get on assignment:
+Prog1   ? 70
+Prog2   ? 75
+Midterm ? 80
+Prog3   ? 75
+HW      ? 78
+Exam    ? 70
+For student Smith   , what did he get on assignment:
+Prog1   ? 92
+Prog2   ? 95
+Midterm ? 90
+Prog3   ? 84
+HW      ? 98
+Exam    ? 90
+              Prog1   Prog2   Midterm Prog3   HW      Exam    Final
+Baker         60      52      40      80      20      55      54.70
+Cook          80      90      80      82      75      89      83.85
+Douglas       99     100      95      98      95      95      96.50
+Finch         70      75      80      75      78      70      74.40
+Smith         92      95      90      84      98      90      89.90
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the gradebook
+(Please input scores as a number 0-100)
+For student Baker   , what did he get on assignment:
+Prog1   ? 1
+Prog2   ? 2
+Midterm ? 3
+Prog3   ? 4
+HW      ? 5
+Exam    ? 6
+For student Cook    , what did he get on assignment:
+Prog1   ? 7
+Prog2   ? 8
+Midterm ? 9
+Prog3   ? 10
+HW      ? 11
+Exam    ? 12
+For student Douglas , what did he get on assignment:
+Prog1   ? 13
+Prog2   ? 14
+Midterm ? 15
+Prog3   ? 16
+HW      ? 17
+Exam    ? 18
+For student Finch   , what did he get on assignment:
+Prog1   ? 19
+Prog2   ? 20
+Midterm ? 12
+Prog3   ? 22
+HW      ? 23
+Exam    ? 24
+For student Smith   , what did he get on assignment:
+Prog1   ? 25
+Prog2   ? 26
+Midterm ? 27
+Prog3   ? 28
+HW      ? 29
+Exam    ? 30
+              Prog1   Prog2   Midterm Prog3   HW      Exam    Final
+Baker          1       2       3       4       5       6       3.90
+Cook           7       8       9      10      11      12       9.90
+Douglas       13      14      15      16      17      18      15.90
+Finch         19      20      12      22      23      24      19.65
+Smith         25      26      27      28      29      30      27.90
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the gradebook
+(Please input scores as a number 0-100)
+For student Baker   , what did he get on assignment:
+Prog1   ? 0
+Prog2   ? 0
+Midterm ? 0
+Prog3   ? 0
+HW      ? 0
+Exam    ? 0
+For student Cook    , what did he get on assignment:
+Prog1   ? 1
+Prog2   ? 1
+Midterm ? 1
+Prog3   ? 1
+HW      ? 1
+Exam    ? 1
+For student Douglas , what did he get on assignment:
+Prog1   ? 0002
+Prog2   ? 0003
+Midterm ? 0004
+Prog3   ? 0002
+HW      ? 0003
+Exam    ? 0004
+For student Finch   , what did he get on assignment:
+Prog1   ? 90
+Prog2   ? 80
+Midterm ? 70
+Prog3   ? 60
+HW      ? 50
+Exam    ? 40
+For student Smith   , what did he get on assignment:
+Prog1   ? 99
+Prog2   ? 99
+Midterm ? 99
+Prog3   ? 99
+HW      ? 99
+Exam    ? 0
+              Prog1   Prog2   Midterm Prog3   HW      Exam    Final
+Baker          0       0       0       0       0       0       0.00
+Cook           1       1       1       1       1       1       1.00
+Douglas        2       3       4       2       3       4       3.25
+Finch         90      80      70      60      50      40      61.00
+Smith         99      99      99      99      99       0      69.30
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the gradebook
+(Please input scores as a number 0-100)
+For student Baker   , what did he get on assignment:
+Prog1   ? 1
+Prog2   ? 1
+Midterm ? 1
+Prog3   ? 1
+HW      ? 1
+Exam    ? 1
+For student Cook    , what did he get on assignment:
+Prog1   ? 2
+Prog2   ? 2
+Midterm ? 2
+Prog3   ? 2
+HW      ? 2
+Exam    ? 2
+For student Douglas , what did he get on assignment:
+Prog1   ? 3
+Prog2   ? 3
+Midterm ? 3
+Prog3   ? 3
+HW      ? 3
+Exam    ? 3
+For student Finch   , what did he get on assignment:
+Prog1   ? 4
+Prog2   ? 4
+Midterm ? 4
+Prog3   ? 4
+HW      ? 4
+Exam    ? 4
+For student Smith   , what did he get on assignment:
+Prog1   ? 5
+Prog2   ? 5
+Midterm ? 5
+Prog3   ? 5
+HW      ? 5
+Exam    ? 5
+              Prog1   Prog2   Midterm Prog3   HW      Exam    Final
+Baker          1       1       1       1       1       1       1.00
+Cook           2       2       2       2       2       2       2.00
+Douglas        3       3       3       3       3       3       3.00
+Finch          4       4       4       4       4       4       4.00
+Smith          5       5       5       5       5       5       5.00
