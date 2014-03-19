@@ -1,0 +1,59 @@
+Welcome to the char array modifier
+WWWW
+WWWW
+WWWW
+What row?
+1
+What column?
+4
+WWWO
+WWWW
+WWWW
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the char array modifier
+WWWW
+WWWW
+WWWW
+What row?
+3
+What column?
+4
+WWWW
+WWWW
+WWWO
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the char array modifier
+WWWW
+WWWW
+WWWW
+What row?
+4
+What column?
+3
+WWWW
+WWWW
+WWWW
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the char array modifier
+WWWW
+WWWW
+WWWW
+What row?
+2
+What column?
+2
+WWWW
+WOWW
+WWWW
+|||||||||||||||||||||||||||||||||||||||||||
+Welcome to the char array modifier
+WWWW
+WWWW
+WWWW
+What row?
+1
+What column?
+1
+OWWW
+WWWW
+WWWW
