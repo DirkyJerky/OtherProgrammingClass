@@ -1,8 +1,239 @@
-
+Welcome to the money calculator
+You will recieve $0.01 when you are 1.
+Do you want to continue? (y/n)
+y
+You will recieve $0.02 when you are 2.
+Do you want to continue? (y/n)
+y
+You will recieve $0.04 when you are 3.
+Do you want to continue? (y/n)
+y
+You will recieve $0.08 when you are 4.
+Do you want to continue? (y/n)
+y
+You will recieve $0.16 when you are 5.
+Do you want to continue? (y/n)
+y
+You will recieve $0.32 when you are 6.
+Do you want to continue? (y/n)
+y
+You will recieve $0.64 when you are 7.
+Do you want to continue? (y/n)
+y
+You will recieve $1.28 when you are 8.
+Do you want to continue? (y/n)
+y
+You will recieve $2.56 when you are 9.
+Do you want to continue? (y/n)
+y
+You will recieve $5.12 when you are 10.
+Do you want to continue? (y/n)
+y
+You will recieve $10.24 when you are 11.
+Do you want to continue? (y/n)
+y
+You will recieve $20.48 when you are 12.
+Do you want to continue? (y/n)
+y
+You will recieve $40.96 when you are 13.
+Do you want to continue? (y/n)
+y
+You will recieve $81.92 when you are 14.
+Do you want to continue? (y/n)
+y
+You will recieve $163.84 when you are 15.
+Do you want to continue? (y/n)
+y
+You will recieve $327.68 when you are 16.
+Do you want to continue? (y/n)
+y
+You will recieve $655.36 when you are 17.
+Do you want to continue? (y/n)
+y
+You will recieve $1310.72 when you are 18.
+Do you want to continue? (y/n)
+y
+You will recieve $2621.44 when you are 19.
+Do you want to continue? (y/n)
+y
+You will recieve $5242.88 when you are 20.
+Do you want to continue? (y/n)
+y
+You will recieve $10485.76 when you are 21.
+Do you want to continue? (y/n)
+y
+You will recieve $20971.52 when you are 22.
+Do you want to continue? (y/n)
+y
+You will recieve $41943.04 when you are 23.
+Do you want to continue? (y/n)
+y
+You will recieve $83886.08 when you are 24.
+Do you want to continue? (y/n)
+y
+You will recieve $167772.16 when you are 25.
+Do you want to continue? (y/n)
+y
+You will recieve $335544.32 when you are 26.
+Do you want to continue? (y/n)
+y
+You will recieve $671088.64 when you are 27.
+Do you want to continue? (y/n)
+y
+You will recieve $1342177.28 when you are 28.
+Do you want to continue? (y/n)
+n
 |||||||||||||||||||||||||||||||||||||||||||
-
+Welcome to the money calculator
+You will recieve $0.01 when you are 1.
+Do you want to continue? (y/n)
+y
+You will recieve $0.02 when you are 2.
+Do you want to continue? (y/n)
+n
 |||||||||||||||||||||||||||||||||||||||||||
-
+Welcome to the money calculator
+You will recieve $0.01 when you are 1.
+Do you want to continue? (y/n)
+y
+You will recieve $0.02 when you are 2.
+Do you want to continue? (y/n)
+y
+You will recieve $0.04 when you are 3.
+Do you want to continue? (y/n)
+y
+You will recieve $0.08 when you are 4.
+Do you want to continue? (y/n)
+y
+You will recieve $0.16 when you are 5.
+Do you want to continue? (y/n)
+y
+You will recieve $0.32 when you are 6.
+Do you want to continue? (y/n)
+y
+You will recieve $0.64 when you are 7.
+Do you want to continue? (y/n)
+y
+You will recieve $1.28 when you are 8.
+Do you want to continue? (y/n)
+y
+You will recieve $2.56 when you are 9.
+Do you want to continue? (y/n)
+y
+You will recieve $5.12 when you are 10.
+Do you want to continue? (y/n)
+y
+You will recieve $10.24 when you are 11.
+Do you want to continue? (y/n)
+y
+You will recieve $20.48 when you are 12.
+Do you want to continue? (y/n)
+y
+You will recieve $40.96 when you are 13.
+Do you want to continue? (y/n)
+y
+You will recieve $81.92 when you are 14.
+Do you want to continue? (y/n)
+y
+You will recieve $163.84 when you are 15.
+Do you want to continue? (y/n)
+y
+You will recieve $327.68 when you are 16.
+Do you want to continue? (y/n)
+y
+You will recieve $655.36 when you are 17.
+Do you want to continue? (y/n)
+y
+You will recieve $1310.72 when you are 18.
+Do you want to continue? (y/n)
+y
+You will recieve $2621.44 when you are 19.
+Do you want to continue? (y/n)
+y
+You will recieve $5242.88 when you are 20.
+Do you want to continue? (y/n)
+y
+You will recieve $10485.76 when you are 21.
+Do you want to continue? (y/n)
+y
+You will recieve $20971.52 when you are 22.
+Do you want to continue? (y/n)
+y
+You will recieve $41943.04 when you are 23.
+Do you want to continue? (y/n)
+y
+You will recieve $83886.08 when you are 24.
+Do you want to continue? (y/n)
+y
+You will recieve $167772.16 when you are 25.
+Do you want to continue? (y/n)
+y
+You will recieve $335544.32 when you are 26.
+Do you want to continue? (y/n)
+y
+You will recieve $671088.64 when you are 27.
+Do you want to continue? (y/n)
+y
+You will recieve $1342177.28 when you are 28.
+Do you want to continue? (y/n)
+y
+You will recieve $2684354.56 when you are 29.
+Do you want to continue? (y/n)
+y
+You will recieve $5368709.12 when you are 30.
+Do you want to continue? (y/n)
+y
+You will recieve $10737418.24 when you are 31.
+Do you want to continue? (y/n)
+y
+You will recieve $21474836.48 when you are 32.
+Do you want to continue? (y/n)
+y
+You will recieve $42949672.96 when you are 33.
+Do you want to continue? (y/n)
+y
+You will recieve $85899345.92 when you are 34.
+Do you want to continue? (y/n)
+y
+You will recieve $171798691.84 when you are 35.
+Do you want to continue? (y/n)
+y
+You will recieve $343597383.68 when you are 36.
+Do you want to continue? (y/n)
+y
+You will recieve $687194767.36 when you are 37.
+Do you want to continue? (y/n)
+y
+You will recieve $1374389534.72 when you are 38.
+Do you want to continue? (y/n)
+y
+You will recieve $2748779069.44 when you are 39.
+Do you want to continue? (y/n)
+y
+You will recieve $5497558138.88 when you are 40.
+Do you want to continue? (y/n)
+n
 |||||||||||||||||||||||||||||||||||||||||||
-
+Welcome to the money calculator
+You will recieve $0.01 when you are 1.
+Do you want to continue? (y/n)
+n
 |||||||||||||||||||||||||||||||||||||||||||
+Welcome to the money calculator
+You will recieve $0.01 when you are 1.
+Do you want to continue? (y/n)
+y
+You will recieve $0.02 when you are 2.
+Do you want to continue? (y/n)
+y
+You will recieve $0.04 when you are 3.
+Do you want to continue? (y/n)
+y
+You will recieve $0.08 when you are 4.
+Do you want to continue? (y/n)
+y
+You will recieve $0.16 when you are 5.
+Do you want to continue? (y/n)
+y
+You will recieve $0.32 when you are 6.
+Do you want to continue? (y/n)

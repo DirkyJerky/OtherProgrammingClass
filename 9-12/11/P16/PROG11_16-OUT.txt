@@ -1,8 +1,39 @@
+Welcome to the number summarizer
+Enter a list of numbers seperated by spaces and ending with 0.
+1 2 3 4 5 6 7 8 9 10 0
 
+Sum:                55.0
+Number of numbers:  10
+Average:            5.5
 |||||||||||||||||||||||||||||||||||||||||||
+Welcome to the number summarizer
+Enter a list of numbers seperated by spaces and ending with 0.
+3496 3469 24.3 45.34 6.54 23.2 1.2 3.4 .5 6.7 8.9 0
 
+Sum:                7085.1
+Number of numbers:  11
+Average:            644.1
 |||||||||||||||||||||||||||||||||||||||||||
+Welcome to the number summarizer
+Enter a list of numbers seperated by spaces and ending with 0.
+1 2 0
 
+Sum:                3.0
+Number of numbers:  2
+Average:            1.5
 |||||||||||||||||||||||||||||||||||||||||||
+Welcome to the number summarizer
+Enter a list of numbers seperated by spaces and ending with 0.
+-1 -2 -3 -4 -5 -6 21 0
 
+Sum:                0.0
+Number of numbers:  7
+Average:            0.0
 |||||||||||||||||||||||||||||||||||||||||||
+Welcome to the number summarizer
+Enter a list of numbers seperated by spaces and ending with 0.
+ 3 4 2 4 2 40 30 40 50 20 10 0 10000000 0
+
+Sum:                205.0
+Number of numbers:  11
+Average:            18.6
