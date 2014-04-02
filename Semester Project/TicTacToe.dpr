@@ -107,23 +107,117 @@ BEGIN
   boardPMove[rowGet, columnGet] := playerCHAR;
 END;
 
+
+PROCEDURE oppCornerCheck(rowOCC, colOCC : integer;
+      VAR boardOCC : tttBoard; VAR didntFindSpot : boolean);
+BEGIN
+  IF ((boardOCC[rowOCC, colOCC] = compCHAR) AND (boardOCC[(4 - rowOCC), (4 - colOCC)] = defaultCHAR))
+        AND didntFindSpot THEN BEGIN
+    didntFindSpot := FALSE;
+    boardOCC[(4 - rowOCC), (4 - colOCC)] := compCHAR;
+  END;
+END;
+
+
+
+
+
+
 PROCEDURE compMove(VAR boardCMove : tttBoard);
 VAR
   i, j : integer;
   // Row, Col (Iterator)
 
+  k, l, m, n : integer;
+  // More counters
+
   hasntFoundSpot : boolean;
 
 BEGIN
   hasntFoundSpot := TRUE;
+
+
+  // 1: Win if possible
   FOR i := 1 TO 3 DO BEGIN
-    FOR j := 1 TO 3 DO BEGIN
-      IF((boardCMove[i, j] = defaultCHAR) AND hasntFoundSpot) THEN
-        BEGIN
-          hasntFoundSpot := FALSE;
-          boardCMove[i, j] := compCHAR;
-        END;
-//    ENDIF
+    IF(hasntFoundSpot) THEN BEGIN
+      k := 0;
+      l := 0;
+
+      FOR j := 1 TO 3 DO BEGIN
+        IF(boardCMove[i, j] = compCHAR) THEN
+          k :=  k + 1 // Increment the filled spot counter
+        ELSE IF (boardCMove[i, j] = defaultCHAR) THEN
+          l := l + 1; // Increment the empty spot counter
+          m := i; // Track the empty spot
+          n := j;
+      END;
+
+      IF((k = 2) AND (l = 1)) THEN BEGIN
+        hasntFoundSpot := FALSE;
+        boardCMove[m, n] := compCHAR;
+      END;
+
+    END;
+
+  END;
+
+
+  // 2: Block opponet Win if possible
+  FOR i := 1 TO 3 DO BEGIN
+    IF(hasntFoundSpot) THEN BEGIN
+      k := 0;
+      l := 0;
+
+      FOR j := 1 TO 3 DO BEGIN
+        IF(boardCMove[i, j] = playerCHAR) THEN
+          k :=  k + 1 // Increment the filled spot counter
+        ELSE IF (boardCMove[i, j] = defaultCHAR) THEN
+          l := l + 1; // Increment the empty spot counter
+          m := i; // Track the empty spot
+          n := j;
+      END;
+
+      IF((k = 2) AND (l = 1)) THEN BEGIN
+        hasntFoundSpot := FALSE;
+        boardCMove[m, n] := compCHAR;
+      END;
+
+    END;
+
+  END;
+
+
+  // 3: Center
+  IF((boardCMove[2, 2] = defaultCHAR) AND hasntFoundSpot) THEN BEGIN
+    hasntFoundSpot := FALSE;
+    boardCMove[2, 2] := compCHAR;
+  END;//ENDIF
+
+
+  // 4: Opposite Corner
+  oppCornerCheck(1, 1, boardCMove, hasntFoundSpot);
+  oppCornerCheck(1, 3, boardCMove, hasntFoundSpot);
+  oppCornerCheck(3, 1, boardCMove, hasntFoundSpot);
+  oppCornerCheck(3, 3, boardCMove, hasntFoundSpot);
+
+  // 5: A Corner
+
+
+  // 6: A Side
+
+
+
+  // Fallback
+  IF(hasntFoundSpot) THEN BEGIN
+    FOR i := 1 TO 3 DO BEGIN
+      FOR j := 1 TO 3 DO BEGIN
+        IF((boardCMove[i, j] = defaultCHAR) AND hasntFoundSpot) THEN
+          BEGIN
+            hasntFoundSpot := FALSE;
+            boardCMove[i, j] := compCHAR;
+          END;
+//      ENDIF
+      END;
     END;
   END;
 END;
@@ -139,7 +233,7 @@ BEGIN
   // ENDIF
 END;
 
-PROCEDURE checkTie(boardCheckTie : tttBoard; VAR tieCT : boolean);
+PROCEDURE checkFull(boardCheckTie : tttBoard; VAR tieCT : boolean);
 VAR
   i, j : integer;
   // Counter
@@ -164,9 +258,6 @@ VAR
 
   checkTieW : boolean;
 BEGIN
-  checkTie(boardCheck, checkTieW);
-  IF(checkTieW) THEN
-    winningChar := tieCHAR;
 
   // Row checking
   FOR i := 1 TO 3 DO BEGIN
@@ -212,6 +303,12 @@ BEGIN
       checkSimilar(char1, char2, char3, winningChar);
 //  ENDIF (TOP RIGHT - BOTTOM LEFT)
     END;
+
+
+    
+  checkFull(boardCheck, checkTieW);
+  IF((checkTieW) AND (winningChar = defaultCHAR)) THEN
+    winningChar := tieCHAR;
 END; // ENDPROCEDURE (checkWin)
 
 
