@@ -12,6 +12,7 @@ const
   playerCHAR : char = 'X';
   compCHAR : char = 'O';
 
+  tieCHAR : char = '*';
 
   vertSep : char = '|';
   horizSep : char = '-';
@@ -66,7 +67,8 @@ BEGIN
     END;
   END;
   
-  writeln; // Padding
+  writeln; writeln; // Padding
+
 END;
 
 PROCEDURE PromptSafe(VAR NumGet : integer);
@@ -137,6 +139,21 @@ BEGIN
   // ENDIF
 END;
 
+PROCEDURE checkTie(boardCheckTie : tttBoard; VAR tieCT : boolean);
+VAR
+  i, j : integer;
+  // Counter
+BEGIN
+  tieCT := TRUE;
+  FOR i := 1 TO 3 DO BEGIN
+    FOR j := 1 TO 3 DO BEGIN
+      IF(boardCheckTie[i, j] = defaultCHAR) THEN
+        tieCT := FALSE;
+    //ENDIF
+    END;
+  END;
+END;
+
 PROCEDURE checkWin(boardCheck : tttBoard; VAR winningChar : char);
 VAR
   char1, char2, char3 : char;
@@ -144,7 +161,12 @@ VAR
 
   i : integer;
   // For common iterations
+
+  checkTieW : boolean;
 BEGIN
+  checkTie(boardCheck, checkTieW);
+  IF(checkTieW) THEN
+    winningChar := tieCHAR;
 
   // Row checking
   FOR i := 1 TO 3 DO BEGIN
@@ -193,29 +215,67 @@ BEGIN
 END; // ENDPROCEDURE (checkWin)
 
 
+PROCEDURE doGame(VAR BoardGAME : tttBoard; VAR winningCHAR : char);
+VAR
+  TIE : boolean;
+BEGIN
+  TIE := FALSE;
+  WHILE ((winTest = defaultCHAR) and NOT(TIE)) DO BEGIN
+    playerMove(board);
+    printBoard(board);
+    checkWin(board, winTest);
+
+    IF(winTest = tieCHAR) THEN
+      TIE := TRUE;
+
+    IF ((winTest = defaultCHAR) and NOT(TIE)) THEN BEGIN
+      writeln('Computer move:...');
+      compMove(board);
+      printBoard(board);
+      checkWin(board, winTest);
+    END; //ENDIF
+
+    IF(winTest = tieCHAR) THEN
+      TIE := TRUE;
+      
+  END; //ENDWHILEDO
+
+  IF(winTest = defaultCHAR) THEN
+    winTest := tieCHAR;
+END;
+
+PROCEDURE showWinner(winCharSW : char);
+BEGIN
+  IF (winTest <> tieCHAR) THEN BEGIN
+    writeln(winTest, winTest, winTest, winTest, winTest,
+        winTest, winTest, winTest, winTest, winTest);
+    writeln(winTest, '        ', winTest);
+    writeln(winTest, ' WINNER ', winTest);
+    writeln(winTest, '        ', winTest);
+    writeln(winTest, winTest, winTest, winTest, winTest,
+        winTest, winTest, winTest, winTest, winTest);
+  END ELSE BEGIN
+    writeln(winTest, winTest, winTest, winTest, winTest,
+        winTest, winTest, winTest, winTest, winTest);
+    writeln(winTest, '        ', winTest);
+    writeln(winTest, 'TIE GAME', winTest);
+    writeln(winTest, '        ', winTest);
+    writeln(winTest, winTest, winTest, winTest, winTest,
+        winTest, winTest, winTest, winTest, winTest);
+  END;
+END;
+
+
 //||||||||||||||||
 begin
   initBoard(board);
   printBoard(board);
 
   winTest := defaultCHAR;
-  WHILE(winTest = defaultCHAR) DO BEGIN
-    playerMove(board);
-    printBoard(board);
-    checkWin(board, winTest);
-    
-    compMove(board); 
-    printBoard(board);
-    checkWin(board, winTest);
-  END;
+  doGame(board, winTest);
 
-  writeln(winTest, winTest, winTest, winTest, winTest,
-      winTest, winTest, winTest, winTest, winTest);
-  writeln(winTest, '        ', winTest);
-  writeln(winTest, ' WINNER ', winTest);
-  writeln(winTest, '        ', winTest);
-  writeln(winTest, winTest, winTest, winTest, winTest,
-      winTest, winTest, winTest, winTest, winTest);
+  showWinner(winTest);
+
 
   readln;
 end.
