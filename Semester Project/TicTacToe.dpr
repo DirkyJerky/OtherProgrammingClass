@@ -4,10 +4,12 @@ program TicTacToe;
 
 // Geoff Yoerger
 // Semester Project
-// 4 1 2014
+// 4 1 2014 FIN: 4 2 2014
 // Make a tic tac toe game
 
 const
+  DEBUG : boolean = FALSE;
+
   defaultCHAR : char = ' ';
   playerCHAR : char = 'X';
   compCHAR : char = 'O';
@@ -114,6 +116,7 @@ BEGIN
   IF ((boardOCC[rowOCC, colOCC] = compCHAR) AND (boardOCC[(4 - rowOCC), (4 - colOCC)] = defaultCHAR))
         AND didntFindSpot THEN BEGIN
     didntFindSpot := FALSE;
+    IF (DEBUG) THEN writeln('Found: OPP CORNER');//|||||||||||||||||||||||||||||||||||||||
     boardOCC[(4 - rowOCC), (4 - colOCC)] := compCHAR;
   END;
 END;
@@ -146,14 +149,42 @@ BEGIN
       FOR j := 1 TO 3 DO BEGIN
         IF(boardCMove[i, j] = compCHAR) THEN
           k :=  k + 1 // Increment the filled spot counter
-        ELSE IF (boardCMove[i, j] = defaultCHAR) THEN
-          l := l + 1; // Increment the empty spot counter
-          m := i; // Track the empty spot
-          n := j;
+        ELSE
+          IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+            l := l + 1; // Increment the empty spot counter
+            m := i; // Track the empty spot
+            n := j;
+          END;
       END;
 
       IF((k = 2) AND (l = 1)) THEN BEGIN
         hasntFoundSpot := FALSE;
+        IF (DEBUG) THEN writeln('Found: WIN ROW');//||||||||||||||||||||||||||||||||||||||||
+        boardCMove[m, n] := compCHAR;
+      END;
+
+    END;
+
+  END;
+  FOR j := 1 TO 3 DO BEGIN
+    IF(hasntFoundSpot) THEN BEGIN
+      k := 0;
+      l := 0;
+
+      FOR i := 1 TO 3 DO BEGIN
+        IF(boardCMove[i, j] = compCHAR) THEN
+          k :=  k + 1 // Increment the filled spot counter
+        ELSE
+          IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+            l := l + 1; // Increment the empty spot counter
+            m := i; // Track the empty spot
+            n := j;
+          END;
+      END;
+
+      IF((k = 2) AND (l = 1)) THEN BEGIN
+        hasntFoundSpot := FALSE;
+        IF (DEBUG) THEN writeln('Found: WIN COL');//||||||||||||||||||||||||||||||||||||||||
         boardCMove[m, n] := compCHAR;
       END;
 
@@ -171,14 +202,42 @@ BEGIN
       FOR j := 1 TO 3 DO BEGIN
         IF(boardCMove[i, j] = playerCHAR) THEN
           k :=  k + 1 // Increment the filled spot counter
-        ELSE IF (boardCMove[i, j] = defaultCHAR) THEN
-          l := l + 1; // Increment the empty spot counter
-          m := i; // Track the empty spot
-          n := j;
+        ELSE
+          IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+            l := l + 1; // Increment the empty spot counter
+            m := i; // Track the empty spot
+            n := j;
+          END;
       END;
 
       IF((k = 2) AND (l = 1)) THEN BEGIN
         hasntFoundSpot := FALSE;
+        IF (DEBUG) THEN writeln('Found: BLOCK ROW');//||||||||||||||||||||||||||||||||||||||||
+        boardCMove[m, n] := compCHAR;
+      END;
+
+    END;
+
+  END;
+  FOR j := 1 TO 3 DO BEGIN
+    IF(hasntFoundSpot) THEN BEGIN
+      k := 0;
+      l := 0;
+
+      FOR i := 1 TO 3 DO BEGIN
+        IF(boardCMove[i, j] = playerCHAR) THEN
+          k :=  k + 1 // Increment the filled spot counter
+        ELSE
+          IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+            l := l + 1; // Increment the empty spot counter
+            m := i; // Track the empty spot
+            n := j;
+          END;
+      END;
+
+      IF((k = 2) AND (l = 1)) THEN BEGIN
+        hasntFoundSpot := FALSE;
+        IF (DEBUG) THEN writeln('Found: BLOCK COL');//||||||||||||||||||||||||||||||||||||||||
         boardCMove[m, n] := compCHAR;
       END;
 
@@ -190,6 +249,7 @@ BEGIN
   // 3: Center
   IF((boardCMove[2, 2] = defaultCHAR) AND hasntFoundSpot) THEN BEGIN
     hasntFoundSpot := FALSE;
+    IF (DEBUG) THEN writeln('Found: CENTER');//||||||||||||||||||||||||||||||||||||||||
     boardCMove[2, 2] := compCHAR;
   END;//ENDIF
 
@@ -201,10 +261,34 @@ BEGIN
   oppCornerCheck(3, 3, boardCMove, hasntFoundSpot);
 
   // 5: A Corner
-
+  IF(hasntFoundSpot) THEN BEGIN
+    FOR i := 1 TO 3 DO BEGIN
+      FOR j := 1 TO 3 DO BEGIN
+        IF((boardCMove[i, j] = defaultCHAR) AND hasntFoundSpot) AND (((i + j) MOD 2) = 0) THEN
+          BEGIN
+            hasntFoundSpot := FALSE;
+            IF (DEBUG) THEN writeln('Found: CORNER');//||||||||||||||||||||||||||||||||||||||||
+            boardCMove[i, j] := compCHAR;
+          END;
+//      ENDIF
+      END;
+    END;
+  END;
 
   // 6: A Side
-
+  IF(hasntFoundSpot) THEN BEGIN
+    FOR i := 1 TO 3 DO BEGIN
+      FOR j := 1 TO 3 DO BEGIN
+        IF((boardCMove[i, j] = defaultCHAR) AND hasntFoundSpot) AND (((i + j) MOD 2) = 1) THEN
+          BEGIN
+            hasntFoundSpot := FALSE; 
+            IF (DEBUG) THEN writeln('Found: SIDE');//||||||||||||||||||||||||||||||||||||||||
+            boardCMove[i, j] := compCHAR;
+          END;
+//      ENDIF
+      END;
+    END;
+  END;
 
 
   // Fallback
