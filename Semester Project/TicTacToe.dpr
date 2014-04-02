@@ -126,6 +126,17 @@ BEGIN
   END;
 END;
 
+PROCEDURE checkSimilar(char1CS, char2CS, char3CS : char; VAR outChar : char);
+BEGIN
+  IF((char1CS = char2CS) AND  // Check if same throught
+  (char2CS = char3CS) AND
+
+  (char1CS <> defaultCHAR)) THEN // And if they arent just blank
+
+    outChar := char1CS;
+  // ENDIF
+END;
+
 PROCEDURE checkWin(boardCheck : tttBoard; VAR winningChar : char);
 VAR
   char1, char2, char3 : char;
@@ -142,19 +153,7 @@ BEGIN
       char1 := boardCheck[i, 1];
       char2 := boardCheck[i, 2];
       char3 := boardCheck[i, 3];
-      // Check if same throught
-      // FACTOR MEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-      //EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-      IF((char1 = char2) AND
-         (char2 = char3) AND
-         // And if the row isnt just blank
-         (char1 <> defaultCHAR)) THEN
-
-            winningChar := char1;
-      // END FACTOR MEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-      //EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-      // ENDIF
-
+      checkSimilar(char1, char2, char3, winningChar);
     END; // ENDIF (SKIP CHECK)
 
   END;  // ENDFOR Row Checking)
@@ -165,9 +164,7 @@ BEGIN
       char1 := boardCheck[1, i];
       char2 := boardCheck[2, i];
       char3 := boardCheck[3, i];
-      IF((char1 = char2) AND (char2 = char3) AND (char1 <> defaultCHAR)) THEN
-        winningChar := char1;
-//    ENDIF
+      checkSimilar(char1, char2, char3, winningChar);
 
     END; // ENDIF (SKIP CHECK)
 
@@ -180,10 +177,8 @@ BEGIN
       char1 := boardCheck[1, 1];
       char2 := boardCheck[2, 2];
       char3 := boardCheck[3, 3];
-      // Check if same throught
-      IF((char1 = char2) AND (char2 = char3) AND (char1 <> defaultCHAR)) THEN
-        winningChar := char1;
-//    ENDIF
+      checkSimilar(char1, char2, char3, winningChar);
+//  ENDIF
 
     END;  // ENDIF (TOP LEFT - BOTTOM RIGHT)
 
@@ -192,10 +187,9 @@ BEGIN
       char1 := boardCheck[1, 3];
       char2 := boardCheck[2, 2];
       char3 := boardCheck[3, 1];
-      IF((char1 = char2) AND (char2 = char3) AND (char1 <> defaultCHAR)) THEN
-        winningChar := char1;
-//    ENDIF
-    END;  // ENDIF (TOP RIGHT - BOTTOM LEFT)
+      checkSimilar(char1, char2, char3, winningChar);
+//  ENDIF (TOP RIGHT - BOTTOM LEFT)
+    END;
 END; // ENDPROCEDURE (checkWin)
 
 
@@ -215,11 +209,13 @@ begin
     checkWin(board, winTest);
   END;
 
-  writeln(winTest, winTest, winTest, winTest, winTest, winTest);
-  writeln(winTest, winTest, winTest, winTest, winTest, winTest);
-  writeln(winTest, winTest, winTest, winTest, winTest, winTest);
-  writeln(winTest, winTest, winTest, winTest, winTest, winTest);
-  writeln(winTest, winTest, winTest, winTest, winTest, winTest);
+  writeln(winTest, winTest, winTest, winTest, winTest,
+      winTest, winTest, winTest, winTest, winTest);
+  writeln(winTest, '        ', winTest);
+  writeln(winTest, ' WINNER ', winTest);
+  writeln(winTest, '        ', winTest);
+  writeln(winTest, winTest, winTest, winTest, winTest,
+      winTest, winTest, winTest, winTest, winTest);
 
   readln;
 end.
