@@ -8,7 +8,7 @@ program TicTacToe;
 // Make a tic tac toe game
 
 const
-  DEBUG : boolean = FALSE;
+  DEBUG : boolean = TRUE;
 
   defaultCHAR : char = ' ';
   playerCHAR : char = 'X';
@@ -134,6 +134,11 @@ VAR
   k, l, m, n : integer;
   // More counters
 
+  i1, i0, j0, i2 : integer;
+  //Even more!
+
+  testForCHAR : char;
+
   hasntFoundSpot : boolean;
 
 BEGIN
@@ -192,6 +197,98 @@ BEGIN
 
   END;
 
+  //Diagonal
+
+
+  //TL-BR
+  i := 1;
+  j := 1;
+  k := 0;
+  l := 0;
+  IF(boardCMove[i, j] = compCHAR) THEN BEGIN
+    k :=  k + 1; // Increment the filled spot counter
+    END
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  i := 2;
+  j := 2;
+  IF(boardCMove[i, j] = compCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+  
+  i := 3;
+  j := 3;
+  IF(boardCMove[i, j] = compCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  IF((k = 2) AND (l = 1)) THEN BEGIN
+    hasntFoundSpot := FALSE;
+    IF (DEBUG) THEN writeln('Found: WIN TL-BR');//||||||||||||||||||||||||||||||||||||||||
+    boardCMove[m, n] := compCHAR;
+  END;//ENDIF
+
+  //TR-BL
+  i := 1;
+  j := 3;
+  k := 0;
+  l := 0;
+  IF(boardCMove[i, j] = compCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  i := 2;
+  j := 2;
+  IF(boardCMove[i, j] = compCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+  
+  i := 3;
+  j := 1;
+  IF(boardCMove[i, j] = compCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE 
+
+  IF((k = 2) AND (l = 1)) THEN BEGIN
+    hasntFoundSpot := FALSE;
+    IF (DEBUG) THEN writeln('Found: WIN TR-BL');//||||||||||||||||||||||||||||||||||||||||
+    boardCMove[m, n] := compCHAR;
+  END;//ENDIF
+
+
+
+
+
 
   // 2: Block opponet Win if possible
   FOR i := 1 TO 3 DO BEGIN
@@ -244,6 +341,244 @@ BEGIN
     END;
 
   END;
+  //Diagonal
+
+  IF(hasntFoundSpot) THEN BEGIN
+  //TL-BR
+  k := 0;
+  l := 0;
+  i := 1;
+  j := 1;
+  IF(boardCMove[i, j] = playerCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  i := 2;
+  j := 2;
+  IF(boardCMove[i, j] = playerCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  i := 3;
+  j := 3;
+  IF(boardCMove[i, j] = playerCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+  IF((k = 2) AND (l = 1)) THEN BEGIN
+    hasntFoundSpot := FALSE;
+    IF (DEBUG) THEN writeln('Found: BLOCK TL-BR');//||||||||||||||||||||||||||||||||||||||||
+    boardCMove[m, n] := compCHAR;
+  END;//ENDIF
+  END;
+  IF(hasntFoundSpot) THEN BEGIN
+  //TR-BL    
+  k := 0;
+  l := 0;
+
+  i := 1;
+  j := 3;
+  IF(boardCMove[i, j] = playerCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  i := 2;
+  j := 2;
+  IF(boardCMove[i, j] = playerCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  i := 3;
+  j := 1;
+  IF(boardCMove[i, j] = playerCHAR) THEN
+    k :=  k + 1 // Increment the filled spot counter
+  ELSE
+    IF (boardCMove[i, j] = defaultCHAR) THEN BEGIN
+    l := l + 1; // Increment the empty spot counter
+    m := i; // Track the empty spot
+    n := j;
+  END;//ENDELSE
+
+  IF((k = 2) AND (l = 1)) THEN BEGIN
+    hasntFoundSpot := FALSE;
+    IF (DEBUG) THEN writeln('Found: BLOCK TR-BL');//||||||||||||||||||||||||||||||||||||||||
+    boardCMove[m, n] := compCHAR;
+  END;//ENDIF
+  END;
+
+
+
+
+
+  // Make forks!  
+  // Block Forks!
+  IF(hasntFoundSpot) THEN BEGIN
+  FOR i2 := 1 TO 2 DO BEGIN
+  CASE i2 OF
+    1: testForCHAR := compCHAR; // Test if we can make a fork
+    2: testForCHAR := playerCHAR; // Then Test if we can block a fork
+  END;
+
+
+  // Corner Forks
+  IF(hasntFoundSpot) THEN
+  FOR i1 := 1 TO 4 DO BEGIN
+    CASE i1 OF
+      1: BEGIN
+        i := 1;
+        j := 1;
+      END;
+      2: BEGIN
+        i := 1;
+        j := 3;
+      END;
+      3: BEGIN
+        i := 3;
+        j := 1;
+      END;
+      4: BEGIN
+        i := 3;
+        j := 3;
+      END;
+    END;//ENDCASE
+    j0 := 4 - j;
+    i0 := 4 - i;
+
+    IF(hasntFoundSpot) THEN
+    IF(
+       (boardCMove[i, j] = defaultCHAR) AND // SELF
+       (boardCMove[i0, j] = defaultCHAR) AND  // OPPO ROW
+       (boardCMove[i, j0] = defaultCHAR) AND  // OPPO COL
+       (boardCMove[i, 2] = testForCHAR) AND  // ADJ ROW
+       (boardCMove[2, j] = testForCHAR)
+    )
+
+
+
+        THEN  // ADJ COL
+       BEGIN
+
+       hasntFoundSpot := FALSE;
+       IF (DEBUG) THEN writeln('Found: CORNER FORK: ', testForCHAR);//||||||||||||||||||||||||||||||||||||||||
+       boardCMove[i, j] := compCHAR;
+
+    END;//ENDIF
+
+
+    IF(hasntFoundSpot) THEN
+    IF((boardCMove[i, j] = defaultCHAR) AND // SELF
+       (boardCMove[i0, j] = testForCHAR) AND  // OPPO ROW
+       (boardCMove[i, j0] = testForCHAR) AND  // OPPO COL
+       (boardCMove[i, 2] = defaultCHAR) AND  // ADJ ROW
+       (boardCMove[2, j] = defaultCHAR))
+       
+       THEN BEGIN
+       IF (DEBUG) THEN writeln('Found: CORNER FORK: ', testForCHAR);//||||||||||||||||||||||||||||||||||||||||
+       hasntFoundSpot := FALSE;
+       boardCMove[2, j] := compCHAR;
+
+    END;//ENDIF
+  END;//ENDFOR
+  END;
+  IF(hasntFoundSpot) THEN BEGIN
+  // Side Forks
+  IF(hasntFoundSpot) THEN
+  FOR i1 := 1 TO 4 DO BEGIN
+    CASE i1 OF
+      1: BEGIN
+        i := 1;
+        j := 2;
+      END;
+      2: BEGIN
+        i := 2;
+        j := 1;
+      END;
+      3: BEGIN
+        i := 3;
+        j := 2;
+      END;
+      4: BEGIN
+        i := 2;
+        j := 3;
+      END;
+    END;//ENDCASE
+    j0 := 4 - j;
+    i0 := 4 - i;
+    IF(hasntFoundSpot) THEN
+    IF((boardCMove[2, 2] = testForCHAR) AND // CENTER
+       (boardCMove[i0, j] = defaultCHAR) AND  // SELF OR OPPO
+       (boardCMove[i, j0] = defaultCHAR))   // SELF OR OPPO
+       THEN BEGIN
+       IF ((i = 2) AND (boardCMove[1, j] = testForCHAR) AND (boardCMove[3, j] = defaultCHAR)) OR
+         ((i = 2) AND (boardCMove[1, j] = defaultCHAR) AND (boardCMove[3, j] = testForCHAR)) THEN BEGIN
+         IF(boardCMove[1, j] = testForCHAR) THEN BEGIN
+            boardCMove[3, j] := compCHAR;
+            hasntFoundSpot := FALSE;
+            IF (DEBUG) THEN writeln('Found: SIDE FORK: ', testForCHAR);//|||||||||||||||||||||||||||||||
+          END ELSE BEGIN
+            boardCMove[1, j] := compCHAR;
+            hasntFoundSpot := FALSE;
+            IF (DEBUG) THEN writeln('Found: SIDE FORK: ', testForCHAR);//||||||||||||||||||||
+          END;
+
+       END;
+
+       IF ((j = 2) AND (boardCMove[i, 1] = testForCHAR) AND (boardCMove[i, 3] = defaultCHAR)) OR
+         ((j = 2) AND (boardCMove[i, 1] = defaultCHAR) AND (boardCMove[i, 3] = testForCHAR)) THEN BEGIN
+          IF(boardCMove[i, 1] = testForCHAR) THEN BEGIN
+            boardCMove[i, 3] := compCHAR;
+            hasntFoundSpot := FALSE;
+            IF (DEBUG) THEN writeln('Found: SIDE FORK: ', testForCHAR);//|||||||||||||||||||||||||||||||
+          END ELSE BEGIN
+            boardCMove[i, 1] := compCHAR;
+            hasntFoundSpot := FALSE;
+            IF (DEBUG) THEN writeln('Found: SIDE FORK: ', testForCHAR);//||||||||||||||||||||
+          END;
+       END;
+
+
+//       THEN BEGIN
+
+//       hasntFoundSpot := FALSE;
+//       IF (DEBUG) THEN writeln('Found: SIDE FORK: ', testForCHAR);//||||||||||||||||||||||||||||||||||||||||
+//       boardCMove[i, j] := compCHAR;
+
+
+
+    END;//ENDIF
+  END;//ENDFOR
+
+
+
+  END;//ENDIF
+  END;
+
+
+
 
 
   // 3: Center
