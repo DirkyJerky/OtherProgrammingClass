@@ -8,7 +8,7 @@ program TicTacToe;
 // Make a tic tac toe game
 
 const
-  DEBUG : boolean = TRUE;
+  DEBUG : boolean = FALSE;
 
   defaultCHAR : char = ' ';
   playerCHAR : char = 'X';
