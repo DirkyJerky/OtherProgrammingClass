@@ -5,7 +5,7 @@
 * @param dollars The number of dollars
 * @return The dollars converted to pounds
 */
-float pounds(float dollars) {
+double pounds(double dollars) {
 	return dollars * 2;
 }
 /**
@@ -13,8 +13,8 @@ float pounds(float dollars) {
 * @param dollars The number of dollars
 * @return the dollars converted to  cents
 */
-int cents(float dollars) {
-	return (int) (dollars * 100);
+double cents(double dollars) {
+	return dollars * 100;
 }
 int main() {
 	float dollars;
@@ -23,7 +23,7 @@ int main() {
 	scanf("%f", &dollars);
 	printf("\n");
 	printf("$%.2f equals %.2f pounds.\n", dollars, pounds(dollars));
-	printf("$%.2f equals %d cents.\n", dollars, cents(dollars));
+	printf("$%.2f equals %.0f cents.\n", dollars, cents(dollars));
 
 
 	return 0;
