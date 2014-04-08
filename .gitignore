@@ -3,6 +3,9 @@
 *.local
 *.identcache
 __history
+*.bak
+*.obj
+*.csm
 *.drc
 *.map
 *.exe
@@ -11,3 +14,6 @@ bin/*
 *.~dpr
 *.cfg
 *.dof
+/Debug
+
+/Release
