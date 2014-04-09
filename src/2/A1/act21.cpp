@@ -25,6 +25,5 @@ int main() {
 	printf("$%.2f equals %.2f pounds.\n", dollars, pounds(dollars));
 	printf("$%.2f equals %.0f cents.\n", dollars, cents(dollars));
 
-
 	return 0;
 }

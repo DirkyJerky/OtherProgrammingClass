@@ -1,7 +1,7 @@
-Please enter a dollar amount: 3033
+Please enter a dollar amount: 2.222
 
-$3033.00 equals 6066.00 pounds.
-$3033.00 equals 303300 cents.
+$2.22 equals 4.44 pounds.
+$2.22 equals 222 cents.
 
 |||||||||||||||||||||||||||||||||||||||||||||||||||
 Please enter a dollar amount: 10
@@ -20,7 +20,7 @@ $3033.00 equals 6066.00 pounds.
 $3033.00 equals 303300 cents.
 
 |||||||||||||||||||||||||||||||||||||||||||||||||||
-Please enter a dollar amount: 3033
+Please enter a dollar amount: -3421
 
-$3033.00 equals 6066.00 pounds.
-$3033.00 equals 303300 cents.
+$-3421.00 equals -6842.00 pounds.
+$-3421.00 equals -342100 cents.
