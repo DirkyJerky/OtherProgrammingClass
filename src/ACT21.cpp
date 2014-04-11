@@ -16,7 +16,7 @@ double pounds(double dollars) {
 double cents(double dollars) {
 	return dollars * 100;
 }
-int main() {
+int mainA21() {
 	float dollars;
 
 	printf("Please enter a dollar amount: ");
@@ -25,5 +25,6 @@ int main() {
 	printf("$%.2f equals %.2f pounds.\n", dollars, pounds(dollars));
 	printf("$%.2f equals %.0f cents.\n", dollars, cents(dollars));
 
+	scanf("\n");
 	return 0;
 }
