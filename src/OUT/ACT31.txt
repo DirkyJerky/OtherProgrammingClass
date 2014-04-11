@@ -1,0 +1,19 @@
+Please enter a number of feet: 1.4232
+
+There are 12 inches and 30.5 centimeters in 1 feet.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of feet: 765434
+
+There are 9185208 inches and 23345737.0 centimeters in 765434 feet.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of feet: 0
+
+There are 0 inches and 0.0 centimeters in 0 feet.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of feet: -12321
+
+There are -147852 inches and -375790.5 centimeters in -12321 feet.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of feet: -022
+
+There are -264 inches and -671.0 centimeters in -22 feet.

@@ -1,9 +1,7 @@
 // Geoff Yoerger
-// Activity 3.1
-// AHEAD
-// Convert feet to inches and centimeters
 #include "stdio.h"
-#include "iostream.h"
+#include <iostream>
+using namespace std;
 
 /**
 * Convert feet to inches
@@ -11,7 +9,7 @@
 * @return feet * 12
 *
 */
-int inches(int feet) {
+int feetToInches(int feet) {
 	return (feet * 12);
 }
 
@@ -21,7 +19,7 @@ int inches(int feet) {
 * @return feet * 30.5
 *
 */
-double centimeters(int feet) {
+double feetToCM(int feet) {
 	return (feet * 30.5);
 }
 
@@ -31,12 +29,12 @@ int main() {
 	cin >> feet;
 
 	int inches;
-	inches = inches(feet);
+	inches = feetToInches(feet);
 
 	double centimeters;
-	centimeters = centimeters(feet);
+	centimeters = feetToCM(feet);
 
-	printf("\n\n There are %d inches and %.1f centimeters in %d feet.",
+	printf("\nThere are %d inches and %.1f centimeters in %d feet.",
 			inches, centimeters, feet);
 
 	return 0;
