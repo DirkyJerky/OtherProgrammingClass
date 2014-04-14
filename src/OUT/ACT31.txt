@@ -1,6 +1,6 @@
-Please enter a number of feet: 1.4232
+Please enter a number of feet: 303.122
 
-There are 12 inches and 30.5 centimeters in 1 feet.
+There are 3637.464 inches and 9245.221 centimeters in 303.122 feet.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 Please enter a number of feet: 765434
 

@@ -1,8 +1,38 @@
+Please enter the following values about your carton:
+The length (in inches): 1.4
+The width: 5.3
+The height: 0.33
+And the weight of the substance (per cubic inch)9.222
+The total weight of the carton is 22.581
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter the following values about your carton:
+The length (in inches): 7
+The width: 7
+The height:7
+And the weight of the substance (per cubic inch)7
+The total weight of the carton is 2401
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter the following values about your carton:
+The length (in inches): 2
+The width: 4
+The height:654634
+And the weight of the substance (per cubic inch)0
+The total weight of the carton is 0
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter the following values about your carton:
+The length (in inches): 
+-33
+The width: -222
+The height:-6444
+And the weight of the substance (per cubic inch)2
+The total weight of the carton is -9.44175e+07
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter the following values about your carton:
+The length (in inches): 0
+The width: 0
+The height:0
+And the weight of the substance (per cubic inch)-44
+The total weight of the carton is -0
