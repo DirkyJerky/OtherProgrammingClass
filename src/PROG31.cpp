@@ -24,7 +24,7 @@ double getWeight(double length, double width, double height, double weight) {
  * @param weight the total weight of the carton
  */
 void printWeight(double weight) {
-	cout << "The total weight of the carton is " << weight << "\n";
+	cout << "The total weight of the carton is " << weight << ".\n";
 }
 
 /**
