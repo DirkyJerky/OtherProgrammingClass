@@ -1,8 +1,14 @@
-
+Please enter a number: 0020
+The sum of all the numbers from 20 to 40 is 630
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a number: -343
+The sum of all the numbers from -686 to -343 is -176988
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a number: 2
+The sum of all the numbers from 2 to 4 is 9
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a number: 0
+The sum of all the numbers from 0 to 0 is 0
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number: 444
+The sum of all the numbers from 444 to 888 is 296370
