@@ -1,6 +1,6 @@
 #include "stdio.h"
 
-int mainA22() {
+int main() {
 	double minutes, years;
 
 	double minutesInYear;

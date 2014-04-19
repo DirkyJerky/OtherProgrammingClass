@@ -1,8 +1,64 @@
+How many burgers?
+1
+How many fries?
+2
+How many cokes?
+3
+    Thank you!
+You ordered:
+1 burgers
+2 fries
+3 cokes
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+How many burgers?
+544
+How many fries?
+0
+How many cokes?
+33
+    Thank you!
+You ordered:
+544 burgers
+0 fries
+33 cokes
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+How many burgers?
+3
+How many fries?
+04343
+How many cokes?
+-23
+    Thank you!
+You ordered:
+3 burgers
+4343 fries
+-23 cokes
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+How many burgers?
+0
+How many fries?
+0
+How many cokes?
+0
+    Thank you!
+You ordered:
+0 burgers
+0 fries
+0 cokes
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+How many burgers?
+99999
+How many fries?
+88888
+How many cokes?
+77777
+    Thank you!
+You ordered:
+99999 burgers
+88888 fries
+77777 cokes
+

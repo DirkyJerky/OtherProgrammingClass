@@ -1,8 +1,44 @@
-
+Please enter the following values about your carton:
+The length (in meters): 1
+The width: 1
+The height: 1
+And the weight of the substance (lb/cm^3): 0
+It would cost $0 to ship this carton via FedEx;
+And it would cost $1.2 via OverNite.
+(FedEx is cheaper)
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter the following values about your carton:
+The length (in meters): 4
+The width: 0.01
+The height: 0.01
+And the weight of the substance (lb/cm^3): 0.2
+It would cost $0.26 to ship this carton via FedEx;
+And it would cost $0.00048 via OverNite.
+(OverNite is cheaper)
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter the following values about your carton:
+The length (in meters): 9
+The width: 9
+The height: 9
+And the weight of the substance (lb/cm^3): 0.0005
+It would cost $1184.62 to ship this carton via FedEx;
+And it would cost $874.8 via OverNite.
+(OverNite is cheaper)
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter the following values about your carton:
+The length (in meters): -3
+The width: -2
+The height: -1
+And the weight of the substance (lb/cm^3): -55
+It would cost $1.0725e+06 to ship this carton via FedEx;
+And it would cost $-7.2 via OverNite.
+(OverNite is cheaper)
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter the following values about your carton:
+The length (in meters):  222
+The width: 333
+The height: 444
+And the weight of the substance (lb/cm^3): -0.0008
+It would cost $-8.53402e+07 to ship this carton via FedEx;
+And it would cost $3.93878e+07 via OverNite.
+(FedEx is cheaper)

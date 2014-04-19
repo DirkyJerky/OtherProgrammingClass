@@ -1,8 +1,91 @@
-
+Please enter your number of rooms in your house: 3
+You enter room 1
+How long is the room (ft)? 3.9
+How wide is the room (ft)? 4.9
+You enter room 2
+How long is the room (ft)? 14
+How wide is the room (ft)? 18
+You enter room 3
+How long is the room (ft)? 5
+How wide is the room (ft)? .5
+Your house's square footage is 273.61 feet squared.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter your number of rooms in your house: 0
+Your house's square footage is 0 feet squared.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter your number of rooms in your house: 92
+You enter room 1
+How long is the room (ft)? 1
+1How wide is the room (ft)? 
+1You enter room 2
+How long is the room (ft)? 
+1How wide is the room (ft)? 
+1You enter room 3
+CLIPCLIPCLIPCLIPCLIPCLIPCLIPCLIP
+You enter room 92
+How long is the room (ft)? 1
+How wide is the room (ft)? 1
+Your house's square footage is 92 feet squared.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter your number of rooms in your house: 9
+You enter room 1
+How long is the room (ft)? 1
+How wide is the room (ft)? 1
+You enter room 2
+How long is the room (ft)? 2
+How wide is the room (ft)? 2
+You enter room 3
+How long is the room (ft)? 3
+How wide is the room (ft)? 3
+You enter room 4
+How long is the room (ft)? 4
+How wide is the room (ft)? 4
+You enter room 5
+How long is the room (ft)? 5
+How wide is the room (ft)? 5
+You enter room 6
+How long is the room (ft)? 6
+How wide is the room (ft)? 6
+You enter room 7
+How long is the room (ft)? 7
+How wide is the room (ft)? 7
+You enter room 8
+How long is the room (ft)? 8
+How wide is the room (ft)? 8
+You enter room 9
+How long is the room (ft)? 9
+How wide is the room (ft)? 9
+Your house's square footage is 285 feet squared.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter your number of rooms in your house: 10
+You enter room 1
+How long is the room (ft)? 1
+How wide is the room (ft)? 1
+You enter room 2
+How long is the room (ft)? 1
+How wide is the room (ft)? 2
+You enter room 3
+How long is the room (ft)? 1
+How wide is the room (ft)? 3
+You enter room 4
+How long is the room (ft)? 1
+How wide is the room (ft)? 4
+You enter room 5
+How long is the room (ft)? 1
+How wide is the room (ft)? 5
+You enter room 6
+How long is the room (ft)? 1
+How wide is the room (ft)? 6
+You enter room 7
+How long is the room (ft)? 1
+How wide is the room (ft)? 7
+You enter room 8
+How long is the room (ft)? 1
+How wide is the room (ft)? 8
+You enter room 9
+How long is the room (ft)? 1
+How wide is the room (ft)? 9
+You enter room 10
+How long is the room (ft)? 1
+How wide is the room (ft)? 10
+Your house's square footage is 55 feet squared.

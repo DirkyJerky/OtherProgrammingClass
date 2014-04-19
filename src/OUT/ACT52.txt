@@ -1,8 +1,61 @@
-
+Please enter a number: 909
+The perfect squares between 1 and 909 are:
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+121
+144
+169
+196
+225
+256
+289
+324
+361
+400
+441
+484
+529
+576
+625
+676
+729
+784
+841
+900
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a number: 0
+The perfect squares between 1 and 0 are:
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a number: -6764
+The perfect squares between 1 and -6764 are:
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a number: 8
+The perfect squares between 1 and 8 are:
+1
+4
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number: 000000255
+The perfect squares between 1 and 255 are:
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+121
+144
+169
+196
+225

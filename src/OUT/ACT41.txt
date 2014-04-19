@@ -1,8 +1,37 @@
+Do you want to add or subract 2 integers? (+ or -)
++
+Please enter 2 integers:
+20
+40
+20 + 40 = 60
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Do you want to add or subract 2 integers? (+ or -)
+-
+Please enter 2 integers:
+-20
+-70
+-20 - -70 = 50
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Do you want to add or subract 2 integers? (+ or -)
+p
+Please enter 2 integers:
+0
+292922
+0 + 292922 = 292922
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Do you want to add or subract 2 integers? (+ or -)
+m
+Please enter 2 integers:
+0
+0
+0 - 0 = 0
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Do you want to add or subract 2 integers? (+ or -)
+-
+Please enter 2 integers:
+12341233
+3432432
+12341233 - 3432432 = 8908801
