@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 16, 2014
 // Assignment: Activity/Program ACT51.cpp
-// Purpose: 
+// Purpose: TODO
 
 #include "stdio.h"
 #include <iostream>

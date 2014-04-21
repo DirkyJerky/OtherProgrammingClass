@@ -1,4 +1,7 @@
-// Geoff Yoerger
+// Author: Geoff Yoerger
+// Date: Apr 14, 2014
+// Assignment: Activity/Program ACT31.cpp
+// Purpose: TODO
 #include "stdio.h"
 #include <iostream>
 using namespace std;
@@ -9,11 +12,7 @@ using namespace std;
 * @return feet * 12
 */
 double feetToInches(double feet) {
-<<<<<<< HEAD
-	return (feet * 12);
-=======
 	return (feet * 12.0);
->>>>>>> ec62347aca28adff52ef9124403bb7133c9fe1fa
 }
 
 /**
@@ -21,12 +20,7 @@ double feetToInches(double feet) {
 * @param feet the number of feet
 * @return feet * 30.5
 */
-<<<<<<< HEAD
-double feetToCM(double
-		feet) {
-=======
 double feetToCM(double feet) {
->>>>>>> ec62347aca28adff52ef9124403bb7133c9fe1fa
 	return (feet * 30.5);
 }
 

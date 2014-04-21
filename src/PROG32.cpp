@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 15, 2014
 // Assignment: Activity/Program PROG32.cpp
-// Purpose: 
+// Purpose: TODO
 
 #include "stdio.h"
 #include <iostream>

@@ -1,3 +1,7 @@
+// Author: Geoff Yoerger
+// Date: Apr 14, 2014
+// Assignment: Activity/Program ACT22.cpp
+// Purpose: TODO
 #include "stdio.h"
 
 int main() {
