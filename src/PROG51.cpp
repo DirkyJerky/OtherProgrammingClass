@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 16, 2014
 // Assignment: Activity/Program PROG51.cpp
-// Purpose: TODO
+// Purpose: Calculate the total square footage of a house
 
 #include "stdio.h"
 #include <iostream>

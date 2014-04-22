@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 16, 2014
 // Assignment: Activity/Program ACT52.cpp
-// Purpose: TODO
+// Purpose: Print all the perfect squares between 1 and the inputted number
 
 #include "stdio.h"
 #include <iostream>

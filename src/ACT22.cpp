@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 14, 2014
 // Assignment: Activity/Program ACT22.cpp
-// Purpose: TODO
+// Purpose: Calculat ethe number of minutes in a year
 #include "stdio.h"
 
 int main() {

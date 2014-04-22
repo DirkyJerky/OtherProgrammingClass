@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 14, 2014
 // Assignment: Activity/Program ACT21.cpp
-// Purpose: TODO
+// Purpose: Convert a dollar amount to pounds and cents
 #include "stdio.h"
 
 /**

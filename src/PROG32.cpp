@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 15, 2014
 // Assignment: Activity/Program PROG32.cpp
-// Purpose: TODO
+// Purpose: Calculate the price of a carton shipping via "FedEx" and "Overnite"
 
 #include "stdio.h"
 #include <iostream>

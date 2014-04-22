@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 14, 2014
 // Assignment: Activity/Program ACT31.cpp
-// Purpose: TODO
+// Purpose: Convert a number of feet to inches and centimeters
 #include "stdio.h"
 #include <iostream>
 using namespace std;

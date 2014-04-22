@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 16, 2014
 // Assignment: Activity/Program ACT42.cpp
-// Purpose: TODO
+// Purpose: Get the sign of an inputted number
 
 #include "stdio.h"
 #include <iostream>

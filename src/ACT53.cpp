@@ -1,7 +1,7 @@
 // Author: Geoff Yoerger
 // Date: Apr 16, 2014
 // Assignment: Activity/Program ACT53.cpp
-// Purpose: TODO
+// Purpose: Sum up all the numbers from input-num to 2*input-num
 
 #include "stdio.h"
 #include <iostream>
