@@ -1,8 +1,40 @@
+Player 1
+Please enter R for rock, P for paper, or S for scissors.
+P
+Player 2
+Please enter R for rock, P for paper, or S for scissors.
+R
+Player 1; Paper covers rock
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Player 1
+Please enter R for rock, P for paper, or S for scissors.
+R
+Player 2
+Please enter R for rock, P for paper, or S for scissors.
+P
+Player 2; Rock is covered by paper.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Player 1
+Please enter R for rock, P for paper, or S for scissors.
+S
+Player 2
+Please enter R for rock, P for paper, or S for scissors.
+S
+Tie; Scissors ties scissors.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Player 1
+Please enter R for rock, P for paper, or S for scissors.
+P
+Player 2
+Please enter R for rock, P for paper, or S for scissors.
+S
+Player 2; Paper gets cut by scissors.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Player 1
+Please enter R for rock, P for paper, or S for scissors.
+P
+Player 2
+Please enter R for rock, P for paper, or S for scissors.
+R
+Player 1; Paper covers rock

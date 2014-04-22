@@ -1,17 +1,17 @@
 // Author: Geoff Yoerger
-// Date: Apr 17, 2014
+// Date: Apr 22, 2014
 // Assignment: Activity/Program ACT101.cpp
-// Purpose: TODO
+// Purpose: Analyze a persons inputted full name
 
 #include "stdio.h"
 #include <iostream>
 using namespace std;
 
 /**
- * TODO
+ * 
  * @return If the program ended succesfully
  */
 int main() {
-	
+	//TODO
 	return 0;
 }

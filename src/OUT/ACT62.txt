@@ -1,8 +1,67 @@
+Please enter your time in hours: 1
+Please enter your distance in miles: 1
+You need to go 1 miles/hour
+Do you want to continue? (Y/N) No please
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter your time in hours: 0
+Please enter your distance in miles: 0
+You need to go nan miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 0
+Please enter your distance in miles: 1
+You need to go inf miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 1
+Please enter your distance in miles: 0
+You need to go 0 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 1
+Please enter your distance in miles: 1
+You need to go 1 miles/hour
+Do you want to continue? (Y/N) N
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter your time in hours: -33
+Please enter your distance in miles: -22
+You need to go 0.666667 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 5
+Please enter your distance in miles: 200
+You need to go 40 miles/hour
+Do you want to continue? (Y/N) N
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter your time in hours: 001
+Please enter your distance in miles: 002
+You need to go 2 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 0.3
+Please enter your distance in miles: 5
+You need to go 16.6667 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 0.1234
+Please enter your distance in miles: 0.9876
+You need to go 8.00324 miles/hour
+Do you want to continue? (Y/N) N
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter your time in hours: 10000
+Please enter your distance in miles: 00002
+You need to go 0.0002 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 00001
+Please enter your distance in miles: 10000
+You need to go 10000 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 5
+Please enter your distance in miles: 625
+You need to go 125 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 2
+Please enter your distance in miles: 450
+You need to go 225 miles/hour
+Do you want to continue? (Y/N) Y
+Please enter your time in hours: 3
+Please enter your distance in miles: 1256
+You need to go 418.667 miles/hour
+Do you want to continue? (Y/N) N

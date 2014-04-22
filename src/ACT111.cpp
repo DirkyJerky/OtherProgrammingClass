@@ -1,17 +1,17 @@
 // Author: Geoff Yoerger
-// Date: Apr 17, 2014
-// Assignment: Activity/Program ACT111.cpp
-// Purpose: TODO
+// Date: Apr 22, 2014
+// Assignment: Activity/Program ACT111
+// Purpose: Turn a given integer into its english word equivalent
 
 #include "stdio.h"
 #include <iostream>
 using namespace std;
 
 /**
- * TODO
+ * 
  * @return If the program ended succesfully
  */
 int main() {
-	
+	//TODO
 	return 0;
 }

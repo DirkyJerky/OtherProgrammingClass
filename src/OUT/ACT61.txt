@@ -1,8 +1,14 @@
-
+Please enter a String: Geoff
+Your encoded string is "7yoxx".
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a String: GeoffYoerger
+Your encoded string is "7yoxx%oylwyl".
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a String: 6=six
+Your encoded string is "0)s}n".
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a String: !@#$%^*()
+Your encoded string is ")*'&%, "!".
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a String: Stringitty
+Your encoded string is "{Z\e`geZZU".
