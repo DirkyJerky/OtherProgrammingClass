@@ -8,10 +8,11 @@
 using namespace std;
 
 /**
- * TODO
  * @return If the program ended succesfully
  */
 int main() {
-	
+	for(double num = 1; ((int) num) <= (5 - 1); num += 0.1 ) {
+		cout << num << "\n";
+	}
 	return 0;
 }

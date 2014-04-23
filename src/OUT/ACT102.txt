@@ -1,8 +1,28 @@
+Please input a string.
+Geoff
+Your padded string is:
+Geoff........................................................ 
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please input a string.
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234567
+Your padded string is:
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234567.. 
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please input a string.
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234567
+Your padded string is:
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234567.. 
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please input a string.
+1
+Your padded string is:
+1............................................................ 
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please input a string.
+How_much_wood_could_a_wood_chuck_chuck_if_a_wood_chuck_could_chuck_wood
+Your padded string is:
+How_much_wood_could_a_wood_chuck_chuck_if_a_wood_chuck_could_ 

@@ -8,10 +8,12 @@
 using namespace std;
 
 /**
- * TODO
  * @return If the program ended succesfully
  */
 int main() {
-	
+	int count;
+	for(count = 100; count >= 1; count--) {
+		cout << count << "\n";
+	}
 	return 0;
 }

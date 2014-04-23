@@ -1,8 +1,73 @@
+Enter a list of positive numbers. Enter a negative to quit.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1.1
+2.2
+3.3
+4.4
+5.5
+6.6
+7.7
+8.8
+9.9
+10.10
+-1
+The total of your numbers is 114.6
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Enter a list of positive numbers. Enter a negative to quit.
+1
+01
+10
+00
+11
+000
+100
+010
+001
+110
+101
+011
+111
+-111111111111111111111111
+The total of your numbers is 467
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Enter a list of positive numbers. Enter a negative to quit.
+12312
+354235
+32523
+52452
+141354
+425245
 
+-32523
+The total of your numbers is 1.01812e+06
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Enter a list of positive numbers. Enter a negative to quit.
+-0
+-2
+The total of your numbers is 0
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Enter a list of positive numbers. Enter a negative to quit.
+0
+0
+0
+0
+0
+0
+0
+0
+00
+0
+0
+22
+-022
+The total of your numbers is 22

@@ -5,13 +5,21 @@
 
 #include "stdio.h"
 #include <iostream>
+#include "string.h"
 using namespace std;
 
 /**
- * 
  * @return If the program ended succesfully
  */
 int main() {
-	//TODO
+	char string[61];
+	cout << "Please input a string." << "\n";
+	cin >> string;
+	for(int i = strlen(string); i <= 60; i++) {
+		string[i] = '.';
+	}
+	string[61] = ' '; //The null char acts very weird
+	cout << "Your padded string is:" << "\n";
+	cout << string << "\n";
 	return 0;
 }

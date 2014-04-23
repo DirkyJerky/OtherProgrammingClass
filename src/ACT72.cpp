@@ -8,10 +8,19 @@
 using namespace std;
 
 /**
- * TODO
  * @return If the program ended succesfully
  */
 int main() {
-	
+	int total = 0;
+	cout << "All possible combinations of 3 letters are:" << "\n";
+	for(char c1 = 'A'; c1 <= 'Z'; c1++) {
+		for(char c2 = 'A'; c2 <= 'Z'; c2++) {
+			for(char c3 = 'A'; c3 <= 'Z'; c3++) {
+				cout << c1 << c2 << c3 << "\n";
+				total++;
+			}
+		}
+	}
+	cout << "The total number of combinations is: " << total << "\n";
 	return 0;
 }

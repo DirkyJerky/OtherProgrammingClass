@@ -1,8 +1,29 @@
-
+Please enter 3 sides of a triangle
+1.5
+2
+3
+Yes; Those 3 numbers can be the sides of a triangle.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter 3 sides of a triangle
+0
+0
+0
+No; Those 3 numbers cannot be the sides of a triangle.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter 3 sides of a triangle
+00
+00
+01
+No; Those 3 numbers cannot be the sides of a triangle.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter 3 sides of a triangle
+-888
+-444
+-21111
+No; Those 3 numbers cannot be the sides of a triangle.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter 3 sides of a triangle
+1241234
+4124212
+5112347
+Yes; Those 3 numbers can be the sides of a triangle.

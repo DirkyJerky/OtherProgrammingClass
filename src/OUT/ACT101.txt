@@ -1,8 +1,63 @@
+First name?
+Geoff
+Last name?
+Yoerger
+
+Analysis:
+Your first name is Geoff.
+Your last name is Yoerger.
+Your first name is 5 characters long.
+Your last name is 7 characters long.
+Your last name comes before your first name alphabetically.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+First name?
+Fred
+Last name?
+Fred
+
+Analysis:
+Your first name is Fred.
+Your last name is Fred.
+Your first name is 4 characters long.
+Your last name is 4 characters long.
+Your first and last names are identical alphabetically.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+First name?
+Ted
+Last name?
+Supercalifragilisticexpealidotious
+
+Analysis:
+Your first name is Ted.
+Your last name is Supercalifragilisticexpealidotious.
+Your first name is 3 characters long.
+Your last name is 34 characters long.
+Your first name comes before your last name alphabetically.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+First name?
+Dr.
+Last name?
+Doctor
+
+Analysis:
+Your first name is Dr..
+Your last name is Doctor.
+Your first name is 3 characters long.
+Your last name is 6 characters long.
+Your first name comes before your last name alphabetically.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+First name?
+ThisIsTwentycharacters
+Last name?
+ThisisntEleven
+
+Analysis:
+Your first name is ThisIsTwentycharacters.
+Your last name is ThisisntEleven.
+Your first name is 22 characters long.
+Your last name is 14 characters long.
+Your last name comes before your first name alphabetically.
