@@ -1,3 +1,49 @@
+Please enter a float
+1.1111
+Your padded float: "     1.111" 
+Please enter a float
+2.2222
+Your padded float: "     2.222" 
+Please enter a float
+3.3333
+Your padded float: "     3.333" 
+Please enter a float
+4.4444
+Your padded float: "     4.444" 
+Please enter a float
+5.5555
+Your padded float: "     5.556" 
+Please enter a int
+1
+Your padded int: "0000000001" 
+Please enter a int
+22
+Your padded int: "0000000022" 
+Please enter a int
+333
+Your padded int: "0000000333" 
+Please enter a int
+4444
+Your padded int: "0000004444" 
+Please enter a int
+55555
+Your padded int: "0000055555" 
+Please enter a string
+LongIsALongString
+Your padded string: "LongIsALon" 
+Please enter a string
+Short!
+Your padded string: "Short!" 
+Please enter a string
+NotLongMaybe?
+Your padded string: "NotLongMay" 
+Please enter a string
+September
+Your padded string: "September" 
+Please enter a string
+PleaseEnterAString
+Your padded string: "PleaseEnte" 
+
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 

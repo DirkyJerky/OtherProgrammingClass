@@ -1,8 +1,35 @@
+Please enter a string.
+Geoff..............
+In your string there are:
+0 commas
+14 periods
+0 spaces
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a string.
+Geoff Yoerger,is,amazing!.!.!.!.!.!
+In your string there are:
+0 commas
+5 periods
+3 spaces
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a string.
 
+In your string there are:
+0 commas
+0 periods
+0 spaces
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
+Please enter a string.
+, . 
+In your string there are:
+1 comma
+1 period
+2 spaces
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+This is a really long string, with mostly spaces, but occastionally a mysterious period....
+Please enter a string.
+In your string there are:
+2 commas
+0 periods
+13 spaces
