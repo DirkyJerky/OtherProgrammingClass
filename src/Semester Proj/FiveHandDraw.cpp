@@ -4,8 +4,81 @@
 // Purpose: Play Five card draw!
 
 #include "stdio.h"
+#include "string.h"
 #include <iostream>
+#include "ctype.h"
 using namespace std;
+
+// Global deck of cards
+// cardDeck[*][0] == Value
+// cardDeck[*][1] == Suit
+char cardDeck[52][2];
+
+// Number of cards in the deck currently
+int cardsInDeck;
+
+// Character representation of the 13 card values
+char readableCardVals[] = {'A', 'K', 'Q', 'J', '0', '9', '8',
+		'7', '6', '5', '4', '3', '2',};
+
+// Representation of the 13 card values in a lexographic ordered format
+char orderedCardVals[] = {'A', 'C', 'E', 'J', 'L', 'N', 'O',
+		'S', 'T', 'V', 'X', 'Y', 'Z',};
+// Number of card values constant
+int numCardValues = 13;
+
+// All the suits
+char readableSuits[] = {'C', 'D', 'H', 'S'};
+// The number of suits
+int numSuits = 4;
+
+
+// Used for error handling
+int error;
+
+int fillDeck() {
+	cardsInDeck = 0;
+	// Iter over orderedCardVales[]
+	for(int i = 0; i < numCardValues; i++) {
+		// Iter over readableSuits[]
+		for(int j = 0; j < numSuits; j++) {
+			cardDeck[cardsInDeck][0] = orderedCardVals[i];
+			cardDeck[cardsInDeck][1] = readableSuits[j];
+			cardsInDeck++;
+		}
+	}
+	if(cardsInDeck != 52) {
+		return -1;
+	}
+	return 0;
+
+}
+
+char getCardChar(char readableChar) {
+	char val = toupper(readableChar);
+	for(int i = 0; i < numCardValues; i++) {
+		if(val != readableCardVals[i]) {
+			continue;
+		} else {
+			return orderedCardVals[i];
+		}
+	}
+	// If its not in readableCharVals[]; return null
+	return '\0';
+}
+char getReadableCardChar(char orderedChar) {
+	char val = toupper(orderedChar);
+	for(int i = 0; i < numCardValues; i++) {
+		if(val != orderedCardVals[i]) {
+			continue;
+		} else {
+			return readableCardVals[i];
+		}
+	}
+	// If its not in orderedCardVals[]; return null
+	return '\0';
+}
+
 
 /**
  * @return If the program ended succesfully
@@ -13,6 +86,11 @@ using namespace std;
 int main() {
 	//TODO: Define and initialize an array to hold the deck of cards.
 	// -- Print it out
+	fillDeck();
+	for(int i = 0; i < cardsInDeck; i++) {
+		cout << "Card " << i << ": " << getReadableCardChar(cardDeck[i][0]) << cardDeck[i][0] << "\n";
+	}
+
 
 	//TODO: Define arrays to hold the palyers and dealers hand
 
