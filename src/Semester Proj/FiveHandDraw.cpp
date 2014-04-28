@@ -88,11 +88,11 @@ int main() {
 	// -- Print it out
 	fillDeck();
 	for(int i = 0; i < cardsInDeck; i++) {
-		cout << "Card " << i << ": " << getReadableCardChar(cardDeck[i][0]) << cardDeck[i][0] << "\n";
+		cout << "Card " << i + 1 << ": " << getReadableCardChar(cardDeck[i][0]) << cardDeck[i][1] << "\n";
 	}
 
 
-	//TODO: Define arrays to hold the palyers and dealers hand
+	//TODO: Define arrays to hold the players and dealers hand
 
 	//TODO: Generate random numbers between 0 and 51 to select cards from the deck.
 	// Put them in the players and dealers hands, Dont reuse cards;
