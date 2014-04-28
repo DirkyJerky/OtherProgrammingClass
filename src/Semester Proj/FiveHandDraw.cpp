@@ -7,6 +7,8 @@
 #include "string.h"
 #include <iostream>
 #include "ctype.h"
+#include "stdlib.h"
+#include "time.h"
 using namespace std;
 
 
@@ -39,8 +41,11 @@ char readableSuits[] = {'C', 'D', 'H', 'S'};
 int numSuits = 4;
 
 // Dealer and players hand
-char hand_Dealer[5][2];
+char hand_dealer[5][2];
 char hand_player[5][2];
+
+//Values of the card on "hold" after #cardFromDeck(void)
+char hold_card[2];
 
 
 int fillDeck() {
@@ -92,23 +97,54 @@ void printCard(char card[2]) {
 	cout << card[1];
 }
 
+void cardFromDeck() {
+	int randomCardNum = rand() % cardsInDeck; // Selects one card location from the deck
+	// Duplicate that card to the 'hold' slot
+	hold_card[0] = cardDeck[randomCardNum][0];
+	hold_card[1] = cardDeck[randomCardNum][1];
+	// Shift the last 'card' in the deck to the old place of the 'held' card
+	cardDeck[randomCardNum][0] = cardDeck[cardsInDeck - 1][0];
+	cardDeck[randomCardNum][1] = cardDeck[cardsInDeck - 1][1];
+	// Decrease the supposed 'amount of cards' in the deck
+	cardsInDeck--;
+	// Set old to null characters
+	cardDeck[cardsInDeck][0] = '\0';
+	cardDeck[cardsInDeck][1] = '\0';
+}
+
+void fillHandsInit() {
+	for(int i = 0; i < 5; i++) {
+		cardFromDeck();
+		hand_player[i][0] = hold_card[0];
+		hand_player[i][1] = hold_card[1];
+	}
+	for(int i = 0; i < 5; i++) {
+		cardFromDeck();
+		hand_dealer[i][0] = hold_card[0];
+		hand_dealer[i][1] = hold_card[1];
+	}
+}
+
+
+
 /**
  * @return If the program ended succesfully
  */
 int main() {
+	srand(time('\0')); // Seed the rand()
 	fillDeck();
+	// Step 1
 //	for(int i = 0; i < cardsInDeck; i++) {
 //		cout << "\nCard " << i + 1 << ": ";
 //        printCard(cardDeck[i]);
 //	}
-
-
-
-	//TODO: Define arrays to hold the players and dealers hand
-
-	//TODO: Generate random numbers between 0 and 51 to select cards from the deck.
-	// Put them in the players and dealers hands, Dont reuse cards;
-	// -- Print players hand
+	fillHandsInit();
+	// Step 3
+	for(int i = 0; i < 5; i++) {
+		cout << "Card " << i + 1 << ": ";
+		printCard(hand_player[i]);
+		cout << "" << "\n";
+	}
 
 	//TODO:Ack the user what card(s) he wants to discard
 	// Replace with new cards
