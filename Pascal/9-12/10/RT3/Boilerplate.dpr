@@ -12,15 +12,12 @@ Purpose: Get 20 scores and calc the average
 uses
   SysUtils;
 
-const
-  numScores : Integer = 20;
-
 type
-  scoreArrayType = array[1..100] of Integer;
+  scoreArrayType = array[1..20] of Integer;
 
 var
-  scoreArray : scoreArrayType;
-  average : real;
+  scoreArray : scoreArrayType; // Score tracking array
+  average : real; // Average score
   aScore : integer; // Temp score variable
   i : integer; // Counter
 
@@ -64,9 +61,8 @@ BEGIN
   writeln;
   writeln('The average is ', averageOut:0:2);
   writeln;
-  FOR i := 1 TO 100 DO BEGIN
-    IF (scoresArrayOut[i] <> 0) THEN
-      writeln('Students who Scored ', i, ': ', scoresArrayOut[i]);
+  FOR i := 1 TO 20 DO BEGIN
+    writeln('Student ', i, ': ', scoresArrayOut[i]);
   END;
 END;
 
@@ -80,9 +76,9 @@ END;
 PROCEDURE getScores (VAR scoresArrayGet : scoreArrayType);
 BEGIN
   writeln('Please enter 20 scores: ');
-  FOR i := 1 TO numScores DO BEGIN
+  FOR i := 1 TO 20 DO BEGIN
     readln(aScore);
-    Inc(scoresArrayGet[aScore]);
+    scoresArrayGet[i] := aScore;
   END;
 END;
 
@@ -96,23 +92,12 @@ END;
 PROCEDURE calcAverage (theArray : scoreArrayType; VAR averageCalc : real);
 BEGIN
   averageCalc := 0;
-  FOR i := 1 TO 100 DO BEGIN
+  FOR i := 1 TO 20 DO BEGIN
     averageCalc := averageCalc + theArray[i];
   END;
-  averageCalc := averageCalc / 100;
+  averageCalc := averageCalc / 20;
 END;
 
-
-//************
-//*  Inc
-//************
-//*  Increment a counter
-//************
-
-PROCEDURE Inc (VAR incrementee : integer);
-BEGIN
-  incrementee := incrementee + 1;
-END;
 
 
 
