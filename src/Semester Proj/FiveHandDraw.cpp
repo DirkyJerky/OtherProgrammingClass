@@ -97,6 +97,7 @@ void printCard(char card[2]) {
 	cout << card[1];
 }
 
+// Get a card from the deck
 void cardFromDeck() {
 	int randomCardNum = rand() % cardsInDeck; // Selects one card location from the deck
 	// Duplicate that card to the 'hold' slot
@@ -112,6 +113,19 @@ void cardFromDeck() {
 	cardDeck[cardsInDeck][1] = '\0';
 }
 
+// Put a card back into the deck
+void deckFromCard() {
+	if(hold_card[0] == '\0' || hold_card[1] == '\0') {
+		return;
+	}
+	cardDeck[cardsInDeck][0] = hold_card[0];
+	cardDeck[cardsInDeck][1] = hold_card[1];
+	cardsInDeck++;
+	hold_card[0] = '\0';
+	hold_card[1] = '\0';
+
+}
+
 void fillHandsInit() {
 	for(int i = 0; i < 5; i++) {
 		cardFromDeck();
@@ -125,7 +139,7 @@ void fillHandsInit() {
 	}
 }
 
-void printFullCard(char card[]) {
+void printFullCard(char card[2], bool full) {
 	char name[], suit[];
 	//Val
 	switch(getReadableCardChar(card[0])) {
@@ -154,11 +168,48 @@ void printFullCard(char card[]) {
 		case '\0': name = "\0"; break;
 		default: name = "\0"; break;
 	}
-	cout << name << " of " << suit;
+	if(full) {
+		cout << name << " of " << suit;
+	} else {
+		cout << name << "\n";
+	}
+}
+void printFullCard(char card[2]) {
+	printFullCard(card, true);
+}
+
+bool yesNo() {
+	char resp = '\0';
+	cout << "(y/n): ";
+	do {
+		cin >> resp;
+	} while(resp != 'Y' && resp != 'y' && resp != 'N' && resp != 'n');
+	if(resp == 'Y' || resp == 'y') {
+		return true;
+	}
+	return false;
 }
 
 void discardStep() {
-	//TODO
+	bool shouldDiscard[5];
+	cout << "You have the following cards:" << "\n";
+	for(int i = 0; i < 5; i++) {
+		cout << i << ": ";
+		printFullCard(hand_player[i]);
+		cout << "\n";
+	}
+	for(int i = 0; i < 5; i++) {
+		cout << "Do you want to discard card #" << i + 1 << ", the ";
+				printFullCard(hand_player[i], false);
+		cout << "? ";
+		shouldDiscard[i] = yesNo();
+	}
+	for(int i = 0; i < 5; i++) {
+		if(!shouldDiscard[i]) {
+			continue;
+		}
+
+	}
 }
 
 /**
