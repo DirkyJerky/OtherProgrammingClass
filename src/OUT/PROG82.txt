@@ -1,8 +1,29 @@
+Please enter a number of cents.
+100
+In 100 cents there are:
+4 quarters
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of cents.
+0.01
+In 1 cents there are:
+1 pennies
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of cents.
+0.89
+In 89 cents there are:
+3 quarters
+1 dimes
+4 pennies
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of cents.
+41
+In 41 cents there are:
+1 quarters
+1 dimes
+1 nickels
+1 pennies
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter a number of cents.
+0
+In 0 cents there are:

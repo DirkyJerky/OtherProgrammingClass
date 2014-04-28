@@ -1,8 +1,133 @@
+Please enter < 20 strings, enter quit to quit.
+String?
+String
+String?
+LongestAndLastString
+String?
+quit
+You entered 2 Strings.
+The longest string was LongestAndLastString.
+It was 20 chars long.
+The first string was String.
+The last string was LongestAndLastString.
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter < 20 strings, enter quit to quit.
+String?
+Stringgggggggggggggggggggg
+String?
+aaaa
+String?
+bbbb
+String?
+cccc
+String?
+dddde
+String?
+eeee
+String?
+fffff
+String?
+gggg
+String?
+gggggggggggggggggggggggggggggggg
+String?
+NotHs
+String?
+LotsOfEyes
+String?
+MuchJHooks
+String?
+NoMsAllowed
+String?
+NsAreSidewaysZs
+String?
+OsareRound
+String?
+IsThistwentyStringsYet?
+String?
+HopefullySoon
+String?
+IThinkItsThisOne!
+String?
+nope....
+String?
+aw
+You entered 19 Strings.
+The longest string was gggggggggggggggggggggggggggggggg.
+It was 32 chars long.
+The first string was Stringgggggggggggggggggggg.
+The last string was nope.....
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter < 20 strings, enter quit to quit.
+String?
+.
+String?
+.
+.String?
+
+.String?
+
+.String?
+
+.String?
+
+.String?
+..
+String?
+....
+String?
+.....
+.String?
+.....
+String?
+......
+String?
+.......
+.String?
+.......
+String?
+.....
+String?
+QUIT
+You entered 14 Strings.
+The longest string was .........
+It was 8 chars long.
+The first string was ..
+The last string was ......
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter < 20 strings, enter quit to quit.
+String?
+Short
+String?
+And
+String?
+Stout
+String?
+Makes
+String?
+The
+String?
+Teacup
+String?
+Shatter?
+String?
+quit
+You entered 7 Strings.
+The longest string was Shatter?.
+It was 8 chars long.
+The first string was Short.
+The last string was Shatter?.
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Please enter < 20 strings, enter quit to quit.
+String?
+Sing
+String?
+Song
+String?
+QUIT
+You entered 2 Strings.
+The longest string was Sing.
+It was 4 chars long.
+The first string was Sing.
+The last string was Song.
