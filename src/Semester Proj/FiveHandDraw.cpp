@@ -125,7 +125,41 @@ void fillHandsInit() {
 	}
 }
 
+void printFullCard(char card[]) {
+	char name[], suit[];
+	//Val
+	switch(getReadableCardChar(card[0])) {
+		case 'A': name = "Ace"; break;
+		case 'K': name = "King"; break;
+		case 'Q': name = "Queen"; break;
+		case 'J': name = "Jack"; break;
+		case '0': name = "Ten"; break;
+		case '9': name = "Nine"; break;
+		case '8': name = "Eight"; break;
+		case '7': name = "Seven"; break;
+		case '6': name = "Six"; break;
+		case '5': name = "Five"; break;
+		case '4': name = "Four"; break;
+		case '3': name = "Three"; break;
+		case '2': name = "Two"; break;
+		case '\0': name = "\0"; break;
+		default: name = "\0"; break;
+	}
+	//Suit
+	switch(card[1]) {
+		case 'C': suit = "Clubs"; break;
+		case 'D': suit = "Diamonds"; break;
+		case 'H': suit = "Hearts"; break;
+		case 'S': suit = "Spades"; break;
+		case '\0': name = "\0"; break;
+		default: name = "\0"; break;
+	}
+	cout << name << " of " << suit;
+}
 
+void discardStep() {
+	//TODO
+}
 
 /**
  * @return If the program ended succesfully
@@ -140,15 +174,16 @@ int main() {
 //	}
 	fillHandsInit();
 	// Step 3
-	for(int i = 0; i < 5; i++) {
-		cout << "Card " << i + 1 << ": ";
-		printCard(hand_player[i]);
-		cout << "" << "\n";
-	}
+//	for(int i = 0; i < 5; i++) {
+//		cout << "Card " << i + 1 << ": ";
+//		printCard(hand_player[i]);
+//		cout << "" << "\n";
+//	}
 
-	//TODO:Ack the user what card(s) he wants to discard
+	//TODO:Ask the user what card(s) he wants to discard
 	// Replace with new cards
 	// -- Print: player and dealers hands
+	discardStep();
 
 	//TODO: Determine the winner, And how they won.
 
