@@ -9,6 +9,10 @@
 #include "ctype.h"
 using namespace std;
 
+
+// Used for error handling
+int error;
+
 // Global deck of cards
 // cardDeck[*][0] == Value
 // cardDeck[*][1] == Suit
@@ -24,17 +28,20 @@ char readableCardVals[] = {'A', 'K', 'Q', 'J', '0', '9', '8',
 // Representation of the 13 card values in a lexographic ordered format
 char orderedCardVals[] = {'A', 'C', 'E', 'J', 'L', 'N', 'O',
 		'S', 'T', 'V', 'X', 'Y', 'Z',};
+
 // Number of card values constant
 int numCardValues = 13;
 
 // All the suits
 char readableSuits[] = {'C', 'D', 'H', 'S'};
+
 // The number of suits
 int numSuits = 4;
 
+// Dealer and players hand
+char hand_Dealer[5][2];
+char hand_player[5][2];
 
-// Used for error handling
-int error;
 
 int fillDeck() {
 	cardsInDeck = 0;
@@ -53,6 +60,7 @@ int fillDeck() {
 	return 0;
 
 }
+
 
 char getCardChar(char readableChar) {
 	char val = toupper(readableChar);
@@ -79,17 +87,21 @@ char getReadableCardChar(char orderedChar) {
 	return '\0';
 }
 
+void printCard(char card[2]) {
+	cout << getReadableCardChar(card[0]);
+	cout << card[1];
+}
 
 /**
  * @return If the program ended succesfully
  */
 int main() {
-	//TODO: Define and initialize an array to hold the deck of cards.
-	// -- Print it out
 	fillDeck();
-	for(int i = 0; i < cardsInDeck; i++) {
-		cout << "Card " << i + 1 << ": " << getReadableCardChar(cardDeck[i][0]) << cardDeck[i][1] << "\n";
-	}
+//	for(int i = 0; i < cardsInDeck; i++) {
+//		cout << "\nCard " << i + 1 << ": ";
+//        printCard(cardDeck[i]);
+//	}
+
 
 
 	//TODO: Define arrays to hold the players and dealers hand
