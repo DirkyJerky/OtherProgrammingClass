@@ -9,6 +9,7 @@
 #include "ctype.h"
 #include "stdlib.h"
 #include "time.h"
+
 using namespace std;
 
 
@@ -95,6 +96,14 @@ char getReadableCardChar(char orderedChar) {
 void printCard(char card[2]) {
 	cout << getReadableCardChar(card[0]);
 	cout << card[1];
+	// Not supported in windows :(
+//	switch(card[1]) {
+//	case 'C': cout << "\u2663"; break;
+//	case 'D': cout << "\u2662"; break;
+//	case 'H': cout << "\u2661"; break;
+//	case 'S': cout << "\u2660"; break;
+//	default: cout << "\0"; break;
+//	}
 }
 
 // Get a card from the deck
@@ -140,38 +149,38 @@ void fillHandsInit() {
 }
 
 void printFullCard(char card[2], bool full) {
-	char name[], suit[];
+	char name[10], suit[10];
 	//Val
 	switch(getReadableCardChar(card[0])) {
-		case 'A': name = "Ace"; break;
-		case 'K': name = "King"; break;
-		case 'Q': name = "Queen"; break;
-		case 'J': name = "Jack"; break;
-		case '0': name = "Ten"; break;
-		case '9': name = "Nine"; break;
-		case '8': name = "Eight"; break;
-		case '7': name = "Seven"; break;
-		case '6': name = "Six"; break;
-		case '5': name = "Five"; break;
-		case '4': name = "Four"; break;
-		case '3': name = "Three"; break;
-		case '2': name = "Two"; break;
-		case '\0': name = "\0"; break;
-		default: name = "\0"; break;
+		case 'A': strcpy(name, "Ace"); break;
+		case 'K': strcpy(name, "King"); break;
+		case 'Q': strcpy(name, "Queen"); break;
+		case 'J': strcpy(name, "Jack"); break;
+		case '0': strcpy(name, "Ten"); break;
+		case '9': strcpy(name, "Nine"); break;
+		case '8': strcpy(name, "Eight"); break;
+		case '7': strcpy(name, "Seven"); break;
+		case '6': strcpy(name, "Six"); break;
+		case '5': strcpy(name, "Five"); break;
+		case '4': strcpy(name, "Four"); break;
+		case '3': strcpy(name, "Three"); break;
+		case '2': strcpy(name, "Two"); break;
+		case '\0': strcpy(name, "\0"); break;
+		default: strcpy(name, "\0"); break;
 	}
 	//Suit
 	switch(card[1]) {
-		case 'C': suit = "Clubs"; break;
-		case 'D': suit = "Diamonds"; break;
-		case 'H': suit = "Hearts"; break;
-		case 'S': suit = "Spades"; break;
-		case '\0': name = "\0"; break;
-		default: name = "\0"; break;
+		case 'C': strcpy(suit, "Clubs"); break;
+		case 'D': strcpy(suit, "Diamonds"); break;
+		case 'H': strcpy(suit, "Hearts"); break;
+		case 'S': strcpy(suit, "Spades"); break;
+		case '\0': strcpy(suit, "\0"); break;
+		default: strcpy(suit, "\0"); break;
 	}
 	if(full) {
 		cout << name << " of " << suit;
 	} else {
-		cout << name << "\n";
+		cout << name;
 	}
 }
 void printFullCard(char card[2]) {
@@ -194,21 +203,29 @@ void discardStep() {
 	bool shouldDiscard[5];
 	cout << "You have the following cards:" << "\n";
 	for(int i = 0; i < 5; i++) {
-		cout << i << ": ";
+		cout << i + 1 << ": ";
 		printFullCard(hand_player[i]);
 		cout << "\n";
 	}
+	cout << "Do you want to discard: " << "\n";
 	for(int i = 0; i < 5; i++) {
-		cout << "Do you want to discard card #" << i + 1 << ", the ";
-				printFullCard(hand_player[i], false);
-		cout << "? ";
+		cout << "\tCard #" << i + 1 << ", the ";
+		printFullCard(hand_player[i], false);
+		cout << " (";
+		printCard(hand_player[i]);
+		cout << ")? ";
 		shouldDiscard[i] = yesNo();
 	}
 	for(int i = 0; i < 5; i++) {
 		if(!shouldDiscard[i]) {
 			continue;
 		}
-
+		hold_card[0] = hand_player[i][0];
+		hold_card[1] = hand_player[i][1];
+		deckFromCard(); // Transfer the card back into the "deck"
+		cardFromDeck(); // Get a new card
+		hand_player[i][0] = hold_card[0];
+		hand_player[i][1] = hold_card[1];
 	}
 }
 
@@ -216,6 +233,7 @@ void discardStep() {
  * @return If the program ended succesfully
  */
 int main() {
+
 	srand(time('\0')); // Seed the rand()
 	fillDeck();
 	// Step 1
@@ -227,16 +245,20 @@ int main() {
 	// Step 3
 //	for(int i = 0; i < 5; i++) {
 //		cout << "Card " << i + 1 << ": ";
-//		printCard(hand_player[i]);
+//		printFullCard(hand_player[i]);
 //		cout << "" << "\n";
 //	}
 
-	//TODO:Ask the user what card(s) he wants to discard
-	// Replace with new cards
-	// -- Print: player and dealers hands
 	discardStep();
+	// Step 4
+	for(int i = 0; i < 5; i++) {
+		cout << "Card " << i + 1 << ": ";
+		printFullCard(hand_player[i]);
+		cout << "" << "\n";
+	}
 
 	//TODO: Determine the winner, And how they won.
+
 
 	//TODO: Implement Betting (See sheet)
 
