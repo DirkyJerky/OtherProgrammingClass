@@ -48,6 +48,13 @@ char hand_player[5][2];
 //Values of the card on "hold" after #cardFromDeck(void)
 char hold_card[2];
 
+//[0,1] = ID for win method
+//[2] = '-'
+//[3] ID of high/main card used in the win method
+//[4-7] The rest of the 4 cards
+char outcome_player[9];
+char outcome_dealer[9];
+
 
 int fillDeck() {
 	cardsInDeck = 0;
@@ -228,6 +235,131 @@ void discardStep() {
 		hand_player[i][1] = hold_card[1];
 	}
 }
+char tempChars[9]; // Used for transfering stuff
+void evalWinMethod(char hand[5][2]) {
+	//FunFunFun!
+	bool hasNotFoundWin = true;
+	// Counters!
+	int i1, i2, i3, i4;
+
+	// Properties!
+	bool sameSuit = false;
+
+	char winMethod[2];
+	char orderedCards[5];
+
+	// Four of a kind: "FA"
+	// We only need to check 2 cards in the hand;
+	// For if its 4 of a kind there will only be 2 distinct values
+	// in the hand, We just need to make sure we compare atleast
+	// once with each card value then.
+	// If its not a FOAK hand, this will just silently stop after 2 tries.
+	for(int i = 0; i < 2; i++) {
+		i1 = 0; // Similarity counter
+		i2 = 0; // Value tracker
+		i3 = -1; // Location of the odd card
+		for(int j = 0; j < 5; j++) { // For each card in the hand ...
+			// Count the number of card values in hand
+			// equal to card #i's value
+			if(hand[i][0] == hand[j][0]) {
+				i1++;
+				if(i1 == 4) {
+					// Hold the value, its a winner!
+					i2 = hand[i][0];
+				}
+			} else if (i1 != 4) {
+				// If there is a FOAK, And we found an odd card
+				// The only possibility is that this is the last card
+				// and its not part of the FOAK, So we do
+				// NOT Want to track the OTHER cards as the odd card,
+				// For they are a FOAK
+				i3 = j;
+			}
+		}
+		// If we have 4 of a card value, then we have a FOAK!
+		if(i1 == 4) {
+			hasNotFoundWin = false;
+			winMethod[0] = 'F'; // Four of
+			winMethod[1] = 'A'; // A kind
+			if(i3 == 0) {
+				// Use other than the 'odd' card for value tracking
+				orderedCards[0] = hand[1][0];
+			} else {
+				orderedCards[0] = hand[0][0];
+			}
+			for(int i = 1; i < 4; i++) {
+				orderedCards[i] = orderedCards[0];
+				// Fill the rest of the other 3 slots
+			}
+			orderedCards[4] = hand[i3][0];
+			// Put the odd card into the LAST ordered slot
+		}
+	}
+
+	// Straight Flush: "FC"
+	if(hasNotFoundWin) {
+		i1 = 0; // Used here as a boolean
+		// to track if all the cards are the same suit
+
+		// For each card in hand...
+		for(int i = 0; i < 5; i++) {
+			// For each card AFTER i...
+			for(int j = i + 1; j < 5; j++) {
+				// If they arent the same suit, then this can't work.
+				if(hand[i][1] != hand[j][1]) {
+					i1 = 1;
+				}
+			}
+		}
+		if(i1 == 0) {
+			sameSuit = true; // Set a property; see Flush checker below
+		}
+	}
+
+	// Full House: "FH"
+	if(hasNotFoundWin)
+
+	// Flush: "FL"
+	if(hasNotFoundWin) {
+		// Same suit tracking happened in Straight Flush checking
+		if(sameSuit) {
+			hasNotFoundWin = false;
+			winMethod[0] = 'F';
+			winMethod[1] = 'L';
+			// TODO: Sort hand -> orderedCards[]
+		}
+	}
+
+	// Straight: "ST"
+	if(hasNotFoundWin)
+
+	// Three of a kind: "TA"
+	if(hasNotFoundWin)
+
+	// Two Pair: "TP"
+	if(hasNotFoundWin)
+
+	// Pair: "WW"
+	if(hasNotFoundWin)
+
+	// High Card: "XC"
+	if(hasNotFoundWin)
+
+	tempChars[0] = winMethod[0];
+	tempChars[1] = winMethod[1];
+	tempChars[2] = '-';
+	for (int i = 0; i < 5; i++) {
+		tempChars[i + 3] = orderedCards[i];
+	}
+}
+void evalWinMethod_Player() {
+	evalWinMethod(hand_player);
+	strcpy(outcome_player, tempChars);
+}
+void evalWinMethod_Dealer() {
+	evalWinMethod(hand_dealer);
+	strcpy(outcome_dealer, tempChars);
+}
 
 /**
  * @return If the program ended succesfully
@@ -251,13 +383,15 @@ int main() {
 
 	discardStep();
 	// Step 4
-	for(int i = 0; i < 5; i++) {
-		cout << "Card " << i + 1 << ": ";
-		printFullCard(hand_player[i]);
-		cout << "" << "\n";
-	}
+//	for(int i = 0; i < 5; i++) {
+//		cout << "Card " << i + 1 << ": ";
+//		printFullCard(hand_player[i]);
+//		cout << "" << "\n";
+//	}
 
 	//TODO: Determine the winner, And how they won.
+	evalWinMethod_Player();
+	evalWinMethod_Dealer();
 
 
 	//TODO: Implement Betting (See sheet)
