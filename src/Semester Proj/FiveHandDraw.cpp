@@ -13,8 +13,6 @@
 using namespace std;
 
 
-// Used for error handling
-int error;
 
 // Global deck of cards
 // cardDeck[*][0] == Value
@@ -54,6 +52,11 @@ char hold_card[2];
 //[4-7] The rest of the 4 cards
 char outcome_player[9];
 char outcome_dealer[9];
+
+// NOTE:
+// The lesser the value of the 2 outcomes lexographicaly
+// ====
+// THE BETTER HAND
 
 
 int fillDeck() {
@@ -240,13 +243,36 @@ void evalWinMethod(char hand[5][2]) {
 	//FunFunFun!
 	bool hasNotFoundWin = true;
 	// Counters!
-	int i1, i2, i3, i4;
+	int i1, i2, i3;
 
 	// Properties!
-	bool sameSuit = false;
+	bool prop_sameSuit = false;
+	bool prop_consecutive = false;
 
 	char winMethod[2];
-	char orderedCards[5];
+	char finalOrderedCards[5];
+
+	// Used for evaluating based on order
+	char tempOrderedCards[5];
+	// Init
+	for(int i = 0; i < 5; i++) {
+		tempOrderedCards[i] = hand[i][0];
+	}
+
+	// 5 times...
+	for(int i = 0; i < 5; i++) {
+		//For every card BUT the last one..
+		for(int j = 0; j < 4; j++) {
+			//IF the next card is of GREATER VALUE
+			// (lesser weight computationally);
+			if(tempOrderedCards[j] > tempOrderedCards[j + 1]) {
+				//SWAP
+				i1 = tempOrderedCards[j];
+				tempOrderedCards[j] = tempOrderedCards[j + 1];
+				tempOrderedCards[j + 1] = i1;
+			}
+		}
+	}
 
 	// Four of a kind: "FA"
 	// We only need to check 2 cards in the hand;
@@ -254,6 +280,9 @@ void evalWinMethod(char hand[5][2]) {
 	// in the hand, We just need to make sure we compare atleast
 	// once with each card value then.
 	// If its not a FOAK hand, this will just silently stop after 2 tries.
+
+	// TODO: Redo using tempOrderedCards[] TO eliminate complex logic
+	// Like the "else if (i1 != 4)" block
 	for(int i = 0; i < 2; i++) {
 		i1 = 0; // Similarity counter
 		i2 = 0; // Value tracker
@@ -272,7 +301,7 @@ void evalWinMethod(char hand[5][2]) {
 				// The only possibility is that this is the last card
 				// and its not part of the FOAK, So we do
 				// NOT Want to track the OTHER cards as the odd card,
-				// For they are a FOAK
+				// For they are part of the FOAK
 				i3 = j;
 			}
 		}
@@ -283,22 +312,22 @@ void evalWinMethod(char hand[5][2]) {
 			winMethod[1] = 'A'; // A kind
 			if(i3 == 0) {
 				// Use other than the 'odd' card for value tracking
-				orderedCards[0] = hand[1][0];
+				finalOrderedCards[0] = hand[1][0];
 			} else {
-				orderedCards[0] = hand[0][0];
+				finalOrderedCards[0] = hand[0][0];
 			}
 			for(int i = 1; i < 4; i++) {
-				orderedCards[i] = orderedCards[0];
+				finalOrderedCards[i] = finalOrderedCards[0];
 				// Fill the rest of the other 3 slots
 			}
-			orderedCards[4] = hand[i3][0];
+			finalOrderedCards[4] = hand[i3][0];
 			// Put the odd card into the LAST ordered slot
 		}
 	}
 
 	// Straight Flush: "FC"
 	if(hasNotFoundWin) {
-		i1 = 0; // Used here as a boolean
+		i1 = true; // Used here as a boolean, a 'complete truth tracker'
 		// to track if all the cards are the same suit
 
 		// For each card in hand...
@@ -307,50 +336,168 @@ void evalWinMethod(char hand[5][2]) {
 			for(int j = i + 1; j < 5; j++) {
 				// If they arent the same suit, then this can't work.
 				if(hand[i][1] != hand[j][1]) {
-					i1 = 1;
+					i1 = false;
 				}
 			}
 		}
-		if(i1 == 0) {
-			sameSuit = true; // Set a property; see Flush checker below
+		if(i1) {
+			prop_sameSuit = true; // Set a property; see Flush checker below
 		}
+		// Reuse i1 as a 'complete truth tracker' again
+		i1 = true;
+		// For each card but the last
+		for(int i = 0; i < 4; i++) {
+			// If the next card is not consecutivly after this card..
+			if((tempOrderedCards[i] + 1) != tempOrderedCards[i + 1]) {
+				// Then its not consecutive
+				i1 = false;
+			}
+		}
+		// If we are consecutive
+		if(i1) {
+			// Set the property
+			prop_consecutive = true;
+		}
+
+
+		// Actual checking....
+		if(prop_consecutive && prop_sameSuit) {
+			// Then we have a SF!
+			hasNotFoundWin = false;
+			winMethod[0] = 'F';
+			winMethod[1] = 'C';
+			finalOrderedCards[0] = '?';
+		}
+
+
 	}
 
 	// Full House: "FH"
-	if(hasNotFoundWin)
+	// Cant be consecutive
+	if(!prop_consecutive && hasNotFoundWin) {
+		// If the TOK comes BEFORE the pair in the FH (sorted hand)
+		// -1 = TOK - WW
+		// 1 = WW - TOK
+		i1 = 0;
+
+		i2 = 0; // Value of the triplet
+		i3 = 0; // Value of the pair
+
+		// Ordered, the first 2 cards and the last 2 cards need to match
+		if((tempOrderedCards[0] == tempOrderedCards[1]) &&
+				(tempOrderedCards[3] == tempOrderedCards[4])) {
+			if(tempOrderedCards[2] == tempOrderedCards[0]) {
+				i1 = -1; // Triplet comes first
+			} else if(tempOrderedCards[2] == tempOrderedCards[4]) {
+				i1 = 1; // Triplet comes second
+			}
+			// If there is a TOK and a Pair, we have a FH
+			if(i1) {
+				hasNotFoundWin = false;
+				winMethod[0] = 'F';
+				winMethod[1] = 'H';
+				// If triplet comes second
+				if(i1 == 1) {
+					// Triplet comes second;
+					i2 = tempOrderedCards[4];
+					// Pair comes first
+					i3 = tempOrderedCards[0];
+				} else {
+					// Triplet comes first
+					i2 = tempOrderedCards[0];
+					// Pair comes second;
+					i3 = tempOrderedCards[4];
+				}
+
+				// Set the triplet as the first 3
+				for(int i = 0; i < 3; i++) {
+					finalOrderedCards[i] = i2;
+				}
+
+				// Set the pair as the last 2
+				for(int i = 3; i < 5; i++) {
+					finalOrderedCards[i] = i3;
+				}
+
+			}
+		}
+	}
 
 	// Flush: "FL"
 	if(hasNotFoundWin) {
 		// Same suit tracking happened in Straight Flush checking
-		if(sameSuit) {
+		if(prop_sameSuit) {
 			hasNotFoundWin = false;
 			winMethod[0] = 'F';
 			winMethod[1] = 'L';
-			// TODO: Sort hand -> orderedCards[]
+			// Tag the hand as needing to be ordered
+			finalOrderedCards[0] = '?';
 		}
 	}
 
 	// Straight: "ST"
-	if(hasNotFoundWin)
+	// If its consecutive,.... (eZ! hehe)
+	if(prop_consecutive && hasNotFoundWin) {
+		hasNotFoundWin = false;
+		winMethod[0] = 'S';
+		winMethod[1] = 'T';
+		finalOrderedCards[0] = '?';
+	}
 
 	// Three of a kind: "TA"
-	if(hasNotFoundWin)
+	if(hasNotFoundWin) {
+		for(int i = 0; i < 3; i++) {
+			// i2, i3 represent the locations
+			// of the cards that wouldnt be part of the TOK
+			if(i == 0) {
+				i2 = 3;
+				i3 = 4;
+			} else if(i == 1) {
+				i2 = 0;
+				i3 = 4;
+			} else {
+				i2 = 0;
+				i3 = 1;
+			}
+		}
+	}
 
 	// Two Pair: "TP"
-	if(hasNotFoundWin)
+	if(hasNotFoundWin) {
+		//TODO
+	}
 
 	// Pair: "WW"
-	if(hasNotFoundWin)
+	if(hasNotFoundWin) {
+		//TODO
+	}
 
 	// High Card: "XC"
-	if(hasNotFoundWin)
+	if(hasNotFoundWin) {
+		hasNotFoundWin = false;
+		winMethod[0] = 'X';
+		winMethod[1] = 'C';
+		// Tag for sorting
+		finalOrderedCards[0] = '?';
 
+	}
+
+
+	// If the orderedCards[] needs to be ordered by value, then do it...
+	if(finalOrderedCards[0] == '?') {
+		//Transfer the sorted values in
+		for(int i = 0; i < 5; i++) {
+			finalOrderedCards[i] = tempOrderedCards[i];
+//			cout << finalOrderedCards[i] << "\n";
+		}
+	}
 	tempChars[0] = winMethod[0];
 	tempChars[1] = winMethod[1];
 	tempChars[2] = '-';
 	for (int i = 0; i < 5; i++) {
-		tempChars[i + 3] = orderedCards[i];
+		tempChars[i + 3] = finalOrderedCards[i];
 	}
+	tempChars[8] = '\0'; // Make it a string
 }
 void evalWinMethod_Player() {
 	evalWinMethod(hand_player);
@@ -392,6 +539,8 @@ int main() {
 	//TODO: Determine the winner, And how they won.
 	evalWinMethod_Player();
 	evalWinMethod_Dealer();
+	cout << "Player: " << outcome_player << "\n";
+	cout << "Dealer: " << outcome_dealer << "\n";
 
 
 	//TODO: Implement Betting (See sheet)
