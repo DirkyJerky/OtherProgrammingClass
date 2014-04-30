@@ -27,7 +27,7 @@ char readableCardVals[] = {'A', 'K', 'Q', 'J', '0', '9', '8',
 		'7', '6', '5', '4', '3', '2',};
 
 // Representation of the 13 card values in a lexographic ordered format
-char orderedCardVals[] = {'A', 'C', 'E', 'J', 'L', 'N', 'O',
+char rawCardVals[] = {'A', 'C', 'E', 'J', 'L', 'N', 'O',
 		'S', 'T', 'V', 'X', 'Y', 'Z',};
 
 // Number of card values constant
@@ -65,7 +65,7 @@ int fillDeck() {
 	for(int i = 0; i < numCardValues; i++) {
 		// Iter over readableSuits[]
 		for(int j = 0; j < numSuits; j++) {
-			cardDeck[cardsInDeck][0] = orderedCardVals[i];
+			cardDeck[cardsInDeck][0] = rawCardVals[i];
 			cardDeck[cardsInDeck][1] = readableSuits[j];
 			cardsInDeck++;
 		}
@@ -84,7 +84,7 @@ char getCardChar(char readableChar) {
 		if(val != readableCardVals[i]) {
 			continue;
 		} else {
-			return orderedCardVals[i];
+			return rawCardVals[i];
 		}
 	}
 	// If its not in readableCharVals[]; return null
@@ -93,7 +93,7 @@ char getCardChar(char readableChar) {
 char getReadableCardChar(char orderedChar) {
 	char val = toupper(orderedChar);
 	for(int i = 0; i < numCardValues; i++) {
-		if(val != orderedCardVals[i]) {
+		if(val != rawCardVals[i]) {
 			continue;
 		} else {
 			return readableCardVals[i];
@@ -238,8 +238,17 @@ void discardStep() {
 		hand_player[i][1] = hold_card[1];
 	}
 }
+
+int nCardVal(char card) {
+	for(int i = 0; i < 13; i++) {
+		if(card == rawCardVals[i]) {
+			return i;
+		}
+	}
+	return -1;
+}
 char tempChars[9]; // Used for transfering stuff
-void evalWinMethod(char hand[5][2]) {
+void evalWinMethod(char hand[5][2]) {//TODO: Test
 	//FunFunFun!
 	bool hasNotFoundWin = true;
 	// Counters!
@@ -253,10 +262,10 @@ void evalWinMethod(char hand[5][2]) {
 	char finalOrderedCards[5];
 
 	// Used for evaluating based on order
-	char tempOrderedCards[5];
+	char handOrdered[5];
 	// Init
 	for(int i = 0; i < 5; i++) {
-		tempOrderedCards[i] = hand[i][0];
+		handOrdered[i] = hand[i][0];
 	}
 
 	// 5 times...
@@ -265,63 +274,43 @@ void evalWinMethod(char hand[5][2]) {
 		for(int j = 0; j < 4; j++) {
 			//IF the next card is of GREATER VALUE
 			// (lesser weight computationally);
-			if(tempOrderedCards[j] > tempOrderedCards[j + 1]) {
-				//SWAP
-				i1 = tempOrderedCards[j];
-				tempOrderedCards[j] = tempOrderedCards[j + 1];
-				tempOrderedCards[j + 1] = i1;
+			if(handOrdered[j] > handOrdered[j + 1]) {
+				// Then swap them
+				i1 = handOrdered[j];
+				handOrdered[j] = handOrdered[j + 1];
+				handOrdered[j + 1] = i1;
 			}
 		}
 	}
 
 	// Four of a kind: "FA"
-	// We only need to check 2 cards in the hand;
-	// For if its 4 of a kind there will only be 2 distinct values
-	// in the hand, We just need to make sure we compare atleast
-	// once with each card value then.
-	// If its not a FOAK hand, this will just silently stop after 2 tries.
-
-	// TODO: Redo using tempOrderedCards[] TO eliminate complex logic
-	// Like the "else if (i1 != 4)" block
-	for(int i = 0; i < 2; i++) {
-		i1 = 0; // Similarity counter
-		i2 = 0; // Value tracker
-		i3 = -1; // Location of the odd card
-		for(int j = 0; j < 5; j++) { // For each card in the hand ...
-			// Count the number of card values in hand
-			// equal to card #i's value
-			if(hand[i][0] == hand[j][0]) {
-				i1++;
-				if(i1 == 4) {
-					// Hold the value, its a winner!
-					i2 = hand[i][0];
-				}
-			} else if (i1 != 4) {
-				// If there is a FOAK, And we found an odd card
-				// The only possibility is that this is the last card
-				// and its not part of the FOAK, So we do
-				// NOT Want to track the OTHER cards as the odd card,
-				// For they are part of the FOAK
-				i3 = j;
-			}
+	i1 = true;
+	// If the middle three cards are the same...
+	if((handOrdered[1] == handOrdered[2]) &&
+			(handOrdered[2] == handOrdered[3])) {
+		// Location of the odd card
+		// -1 = handOrdered[0]
+		// 0 = No FOAK
+		// 1 = handOrdered[4]
+		i1 = 0;
+		if(handOrdered[0] == handOrdered[2]) {
+			i1 = 1;
+		} else if(handOrdered[2] == handOrdered[4]) {
+			i1 = -1;
 		}
-		// If we have 4 of a card value, then we have a FOAK!
-		if(i1 == 4) {
+
+		if(i1 != 0) {
 			hasNotFoundWin = false;
-			winMethod[0] = 'F'; // Four of
-			winMethod[1] = 'A'; // A kind
-			if(i3 == 0) {
-				// Use other than the 'odd' card for value tracking
-				finalOrderedCards[0] = hand[1][0];
+			winMethod[0] = 'F';
+			winMethod[1] = 'A';
+			for(int i = 0; i < 4; i++) {
+				finalOrderedCards[i] = handOrdered[2];
+			}
+			if(i1 == -1) {
+				finalOrderedCards[4] = handOrdered[0];
 			} else {
-				finalOrderedCards[0] = hand[0][0];
+				finalOrderedCards[4] = handOrdered[4];
 			}
-			for(int i = 1; i < 4; i++) {
-				finalOrderedCards[i] = finalOrderedCards[0];
-				// Fill the rest of the other 3 slots
-			}
-			finalOrderedCards[4] = hand[i3][0];
-			// Put the odd card into the LAST ordered slot
 		}
 	}
 
@@ -348,7 +337,7 @@ void evalWinMethod(char hand[5][2]) {
 		// For each card but the last
 		for(int i = 0; i < 4; i++) {
 			// If the next card is not consecutivly after this card..
-			if((tempOrderedCards[i] + 1) != tempOrderedCards[i + 1]) {
+			if((nCardVal(handOrdered[i]) + 1) != nCardVal(handOrdered[i + 1])) {
 				// Then its not consecutive
 				i1 = false;
 			}
@@ -378,17 +367,18 @@ void evalWinMethod(char hand[5][2]) {
 		// If the TOK comes BEFORE the pair in the FH (sorted hand)
 		// -1 = TOK - WW
 		// 1 = WW - TOK
+		// (0 = no full house)
 		i1 = 0;
 
 		i2 = 0; // Value of the triplet
 		i3 = 0; // Value of the pair
 
 		// Ordered, the first 2 cards and the last 2 cards need to match
-		if((tempOrderedCards[0] == tempOrderedCards[1]) &&
-				(tempOrderedCards[3] == tempOrderedCards[4])) {
-			if(tempOrderedCards[2] == tempOrderedCards[0]) {
+		if((handOrdered[0] == handOrdered[1]) &&
+				(handOrdered[3] == handOrdered[4])) {
+			if(handOrdered[2] == handOrdered[0]) {
 				i1 = -1; // Triplet comes first
-			} else if(tempOrderedCards[2] == tempOrderedCards[4]) {
+			} else if(handOrdered[2] == handOrdered[4]) {
 				i1 = 1; // Triplet comes second
 			}
 			// If there is a TOK and a Pair, we have a FH
@@ -399,14 +389,14 @@ void evalWinMethod(char hand[5][2]) {
 				// If triplet comes second
 				if(i1 == 1) {
 					// Triplet comes second;
-					i2 = tempOrderedCards[4];
+					i2 = handOrdered[4];
 					// Pair comes first
-					i3 = tempOrderedCards[0];
+					i3 = handOrdered[0];
 				} else {
 					// Triplet comes first
-					i2 = tempOrderedCards[0];
+					i2 = handOrdered[0];
 					// Pair comes second;
-					i3 = tempOrderedCards[4];
+					i3 = handOrdered[4];
 				}
 
 				// Set the triplet as the first 3
@@ -447,30 +437,129 @@ void evalWinMethod(char hand[5][2]) {
 	// Three of a kind: "TA"
 	if(hasNotFoundWin) {
 		for(int i = 0; i < 3; i++) {
-			// i2, i3 represent the locations
-			// of the cards that wouldnt be part of the TOK
-			if(i == 0) {
-				i2 = 3;
-				i3 = 4;
-			} else if(i == 1) {
-				i2 = 0;
-				i3 = 4;
-			} else {
-				i2 = 0;
-				i3 = 1;
+			// If the checking card and the 2 next cards are equal...
+			// Then we have a TOK!
+			if((handOrdered[i] == handOrdered[i + 1]) &&
+					(handOrdered[i + 1] == handOrdered[i + 2])) {
+				// i2, i3 represent the locations
+				// of the cards that wouldnt be part of the TOK
+				if(i == 0) {
+					i2 = 3;
+					i3 = 4;
+				} else if(i == 1) {
+					i2 = 0;
+					i3 = 4;
+				} else {
+					i2 = 0;
+					i3 = 1;
+				}
+
+				hasNotFoundWin = false;
+				winMethod[0] = 'T';
+				winMethod[1] = 'A';
+				finalOrderedCards[0] = handOrdered[i];
+				finalOrderedCards[1] = handOrdered[i];
+				finalOrderedCards[2] = handOrdered[i];
+				if(handOrdered[i2] < handOrdered[i3]) {
+					finalOrderedCards[3] = handOrdered[i2];
+					finalOrderedCards[4] = handOrdered[i3];
+				} else {
+					finalOrderedCards[3] = handOrdered[i3];
+					finalOrderedCards[4] = handOrdered[i2];
+				}
+				break; // Break from our loop
+			}
+		}
+	}
+	// Two Pair: "TP"
+	if(hasNotFoundWin) {
+		// Locations of the first and second pairs
+		i1 = -1;
+		i2 = -1;
+		// For each card but the last one...
+		for(int i = 0; i < 4; i++) {
+			// If this and the next card is the same
+			if(handOrdered[i] == handOrdered[i + 1]) {
+				i1 = i;// We found the first pair
+				// Start again, but after the occurence
+				for(int j = i + 1; j < 4; j++) {
+					if(handOrdered[j] == handOrdered[j + 1]) {
+						i2 = j;// We found a second pair!
+					}
+					// If weve found a second pair; break
+					if(i2 != -1) {
+						break;
+					}
+				}
+			}
+			// If weve found a first pair; break
+			if(i1 != -1) {
+				break;
+			}
+		}
+		// If we found the first pair...
+		if(i1 != -1) {
+			//If we found a second pair...
+			if(i2 != -1) {
+				// Then we have a Two Pair!
+				hasNotFoundWin = false;
+				winMethod[0] = 'T';
+				winMethod[1] = 'P';
+				finalOrderedCards[0] = handOrdered[i1];
+				finalOrderedCards[1] = handOrdered[i1 + 1];
+				finalOrderedCards[2] = handOrdered[i2];
+				finalOrderedCards[3] = handOrdered[i2 + 1];
+				// If the odd card is the first card...
+				if(i1 == 1) {
+					finalOrderedCards[4] = handOrdered[0];
+				} else if (i2 == 2) { // Or if the odd card is the last card...
+					finalOrderedCards[4] = handOrdered[4];
+				} else { // If not, then it has  to be the middle card
+					finalOrderedCards[4] = handOrdered[2];
+				}
+			} else { // If not, we still found a pair...
+				// So we have a Pair!
+				hasNotFoundWin = false;
+				winMethod[0] = 'W';
+				winMethod[1] = 'W';
+				finalOrderedCards[0] = handOrdered[i1];
+				finalOrderedCards[1] = handOrdered[i1 + 1];
+				switch(i1) {
+					case 0: {
+						finalOrderedCards[2] = handOrdered[2];
+						finalOrderedCards[3] = handOrdered[3];
+						finalOrderedCards[4] = handOrdered[4];
+						break;
+					}
+					case 1: {
+						finalOrderedCards[2] = handOrdered[0];
+						finalOrderedCards[3] = handOrdered[3];
+						finalOrderedCards[4] = handOrdered[4];
+						break;
+					}
+					case 2: {
+						finalOrderedCards[2] = handOrdered[0];
+						finalOrderedCards[3] = handOrdered[1];
+						finalOrderedCards[4] = handOrdered[4];
+						break;
+					}
+					case 3: {
+						finalOrderedCards[2] = handOrdered[0];
+						finalOrderedCards[3] = handOrdered[1];
+						finalOrderedCards[4] = handOrdered[2];
+						break;
+					}
+				}
+
 			}
 		}
 	}
 
-	// Two Pair: "TP"
-	if(hasNotFoundWin) {
-		//TODO
-	}
-
+	// Functionallity in Two Pair checking
 	// Pair: "WW"
-	if(hasNotFoundWin) {
-		//TODO
-	}
+//	if(hasNotFoundWin) {
+//		//
+//	}
 
 	// High Card: "XC"
 	if(hasNotFoundWin) {
@@ -487,7 +576,7 @@ void evalWinMethod(char hand[5][2]) {
 	if(finalOrderedCards[0] == '?') {
 		//Transfer the sorted values in
 		for(int i = 0; i < 5; i++) {
-			finalOrderedCards[i] = tempOrderedCards[i];
+			finalOrderedCards[i] = handOrdered[i];
 //			cout << finalOrderedCards[i] << "\n";
 		}
 	}
@@ -513,7 +602,7 @@ void evalWinMethod_Dealer() {
  */
 int main() {
 
-	srand(time('\0')); // Seed the rand()
+	srand(time(0)); // Seed the rand()
 	fillDeck();
 	// Step 1
 //	for(int i = 0; i < cardsInDeck; i++) {
@@ -528,19 +617,48 @@ int main() {
 //		cout << "" << "\n";
 //	}
 
-	discardStep();
+//	discardStep();
 	// Step 4
 //	for(int i = 0; i < 5; i++) {
 //		cout << "Card " << i + 1 << ": ";
 //		printFullCard(hand_player[i]);
 //		cout << "" << "\n";
 //	}
-
+	cout << "DEBUG: Enter the dealers hand; 10 chars, in the form:" << "\n";
+	cout << "\t0HAHQSKD5C --> Ten of hearts, ace hearts, queen spades, king diamonds, five clubs, etc" << "\n";
+	for(int i = 0; i < 5; i++) {
+		char stuff;
+		cin >> stuff;
+		hand_dealer[i][0] = getCardChar(stuff);
+		cin >> hand_dealer[i][1];
+	}
+	cout << "You now have the following cards:" << "\n";
+	for(int i = 0; i < 5; i++) {
+		cout << i + 1 << ": ";
+		printFullCard(hand_player[i]);
+		cout << "\n";
+	}
+	cout << "The dealer has the following cards:" << "\n";
+	for(int i = 0; i < 5; i++) {
+		cout << i + 1 << ": ";
+		printFullCard(hand_dealer[i]);
+		cout << "\n";
+	}
 	//TODO: Determine the winner, And how they won.
 	evalWinMethod_Player();
 	evalWinMethod_Dealer();
 	cout << "Player: " << outcome_player << "\n";
 	cout << "Dealer: " << outcome_dealer << "\n";
+
+
+	int result = strcmp(outcome_player, outcome_dealer);
+	if(result < 0) {
+		cout << "Player wins!" << "\n";
+	} else if (result > 0) {
+		cout << "Dealer wins!" << "\n";
+	} else {
+		cout << "It was a Tie!...." << "\n";
+	}
 
 
 	//TODO: Implement Betting (See sheet)
