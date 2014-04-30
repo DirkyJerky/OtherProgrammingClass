@@ -795,49 +795,7 @@ void printWinMethod() {
 	}
 }
 
-/**
- * @return If the program ended succesfully
- */
-int main() {
-
-	srand(time(0)); // Seed the rand()
-	fillDeck();
-	// Step 1
-//	for(int i = 0; i < cardsInDeck; i++) {
-//		cout << "\nCard " << i + 1 << ": ";
-//        printCard(cardDeck[i]);
-//	}
-	fillHandsInit();
-	// Step 3
-//	for(int i = 0; i < 5; i++) {
-//		cout << "Card " << i + 1 << ": ";
-//		printFullCard(hand_player[i]);
-//		cout << "" << "\n";
-//	}
-
-//	discardStep();
-	// Step 4
-//	for(int i = 0; i < 5; i++) {
-//		cout << "Card " << i + 1 << ": ";
-//		printFullCard(hand_player[i]);
-//		cout << "" << "\n";
-//	}
-	cout << "DEBUG: Enter the dealers hand; 10 chars, in the form:" << "\n";
-	cout << "\t0HASQDKD5C --> Ten of hearts, ace of hearts, " <<
-			"queen of diamonds, etc" << "\n";
-	char stuff;
-	for(int i = 0; i < 5; i++) {
-		char stuff;
-		cin >> stuff;
-		hand_dealer[i][0] = getCardChar(stuff);
-		cin >> hand_dealer[i][1];
-	}
-	cout << "DEBUG: Enter the players hand; 10 chars:" << "\n";
-	for(int i = 0; i < 5; i++) {
-		cin >> stuff;
-		hand_player[i][0] = getCardChar(stuff);
-		cin >> hand_player[i][1];
-	}
+void printAllHands() {
 	cout << "You now have the following cards:" << "\n";
 	for(int i = 0; i < 5; i++) {
 		cout << i + 1 << ": ";
@@ -850,12 +808,24 @@ int main() {
 		printFullCard(hand_dealer[i]);
 		cout << "\n";
 	}
+}
+
+/**
+ * @return If the program ended succesfully
+ */
+int main() {
+
+	srand(time(0)); // Seed the rand()
+	fillDeck();
+	fillHandsInit();
+	discardStep();
+	printAllHands();
 	evalWinMethod_Player();
 	evalWinMethod_Dealer();
-	cout << "Player Outcome: " << outcome_player << "\n";
-	cout << "Dealer Outcome: " << outcome_dealer << "\n";
-
 	printWinMethod();
+//	cout << "Player Outcome: " << outcome_player << "\n";
+//	cout << "Dealer Outcome: " << outcome_dealer << "\n";
+
 
 
 	//TODO: Implement Betting (See sheet)
