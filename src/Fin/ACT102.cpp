@@ -15,10 +15,10 @@ int main() {
 	char string[61];
 	cout << "Please input a string." << "\n";
 	cin >> string;
-	for(int i = strlen(string); i <= 60; i++) {
+	for(int i = strlen(string); i < 60; i++) {
 		string[i] = '.';
 	}
-	string[61] = ' '; //The null char acts very weird
+	string[60] = '\0';
 	cout << "Your padded string is:" << "\n";
 	cout << string << "\n";
 	return 0;
