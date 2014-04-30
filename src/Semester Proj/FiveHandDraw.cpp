@@ -215,12 +215,6 @@ bool yesNo() {
 
 void discardStep() {
 	bool shouldDiscard[5];
-	cout << "You have the following cards:" << "\n";
-	for(int i = 0; i < 5; i++) {
-		cout << i + 1 << ": ";
-		printFullCard(hand_player[i]);
-		cout << "\n";
-	}
 	cout << "Do you want to discard: " << "\n";
 	for(int i = 0; i < 5; i++) {
 		cout << "\tCard #" << i + 1 << ", the ";
@@ -252,7 +246,7 @@ int nCardVal(char card) {
 	return -1;
 }
 char tempChars[9]; // Used for transfering stuff
-void evalWinMethod(char hand[5][2]) {//TODO: Test
+void evalWinMethod(char hand[5][2]) {
 	//FunFunFun!
 	bool hasNotFoundWin = true;
 	// Counters!
@@ -763,16 +757,17 @@ void printHandMethod(char topOutcome[9], char bottomOutcome[9]) {
 	cout << "." << "\n";
 }
 
-void printWinMethod() {
+int printWinMethod() {
 	int result = strcmp(outcome_player, outcome_dealer);
 	char winnersOutcome[9];
 	char losersOutcome[9];
+	cout << "\n\n";
 	if(result < 0) {
 		for(int i = 0; i < 9; i++) {
 			winnersOutcome[i] = outcome_player[i];
 			losersOutcome[i] = outcome_dealer[i];
 		}
-		cout << "Player wins with a:" << "\n\t";
+		cout << "You win with a:" << "\n\t";
 		printHandMethod(winnersOutcome, losersOutcome);
 		cout << "The dealer got a:" << "\n\t";
 		printHandMethod(losersOutcome, winnersOutcome);
@@ -783,25 +778,21 @@ void printWinMethod() {
 		}
 		cout << "Dealer wins with a:" << "\n\t";
 		printHandMethod(winnersOutcome, losersOutcome);
-		cout << "The player got a:" << "\n\t";
+		cout << "You got a:" << "\n\t";
 		printHandMethod(losersOutcome, winnersOutcome);
 	} else {
 		for(int i = 0; i < 9; i++) {
 			winnersOutcome[i] = outcome_player[i];
 			losersOutcome[i] = outcome_player[i];
 		}
-		cout << "It was a Tie!... Both players got a:" << "\n\t";
+		cout << "It was a Tie!... You and the dealer got a:" << "\n\t";
 		printHandMethod(winnersOutcome, losersOutcome);
 	}
+	return result;
 }
 
-void printAllHands() {
-	cout << "You now have the following cards:" << "\n";
-	for(int i = 0; i < 5; i++) {
-		cout << i + 1 << ": ";
-		printFullCard(hand_player[i]);
-		cout << "\n";
-	}
+void printDealersHand() {
+	cout << "\n";
 	cout << "The dealer has the following cards:" << "\n";
 	for(int i = 0; i < 5; i++) {
 		cout << i + 1 << ": ";
@@ -810,24 +801,73 @@ void printAllHands() {
 	}
 }
 
+int bettingMoney = 50;
+
+int betDiscardBet() {
+	cout << "\n\n\n\n\n";
+	cout << "You have the following cards:" << "\n";
+	for(int i = 0; i < 5; i++) {
+		cout << i + 1 << ": ";
+		printFullCard(hand_player[i]);
+		cout << "" << "\n";
+	}
+	int theBet, newBet;
+	cout << "\n(You can bet between 1 and " << bettingMoney << " dollars)" << "\n";
+	cout << "How much dollars do you bet on your hand?: ";
+	cin >> theBet;
+
+	discardStep();
+
+	cout << "You now have the following cards after discarding:" << "\n";
+	for(int i = 0; i < 5; i++) {
+		cout << i + 1 << ": ";
+		printFullCard(hand_player[i]);
+		cout << "" << "\n";
+	}
+	cout << "How much more dollars do you bet now, if any?: ";
+	cin >> newBet;
+
+	if(theBet < 1) theBet = 1;
+	if(theBet > bettingMoney) theBet = bettingMoney;
+	if(newBet < 0) newBet = 0;
+
+	theBet = theBet + newBet;
+	if(theBet > bettingMoney) theBet = bettingMoney;
+	return theBet;
+}
 /**
  * @return If the program ended succesfully
  */
 int main() {
-
-	srand(time(0)); // Seed the rand()
+	cout << "You sit down at the five card draw table with 50 dollars." << "\n";
 	fillDeck();
-	fillHandsInit();
-	discardStep();
-	printAllHands();
-	evalWinMethod_Player();
-	evalWinMethod_Dealer();
-	printWinMethod();
+	int bet, winner;
+	do {
+		srand(time(0)); // Seed the rand()
+		fillHandsInit();
+		bet = betDiscardBet();
+		printDealersHand();
+		evalWinMethod_Player();
+		evalWinMethod_Dealer();
+		winner = printWinMethod();
+		cout << "\n";
+		if(winner < 0) {
+			cout << "You win " << bet << " dollars!" << "\n";
+			bettingMoney += bet;
+		} else if (winner > 0) {
+			cout << "You lose " << bet << " dollars." << "\n";
+			bettingMoney -= bet;
+		} else {
+			cout << "You keep your bet" << "\n";
+		}
+		if(bettingMoney > 0) {
+			cout << "You now have " << bettingMoney << " Dollars." << "\n";
+			cout << "Do you want to continue playing? ";
+		}
+		// If we dont have enough money it will skip yesNo()
+	} while((bettingMoney > 0) && yesNo());
+	cout << "You leave the five card draw table with " << bettingMoney << " dollars in your pocket." << "\n";
 //	cout << "Player Outcome: " << outcome_player << "\n";
 //	cout << "Dealer Outcome: " << outcome_dealer << "\n";
-
-
-
-	//TODO: Implement Betting (See sheet)
 	return 0;
 }
