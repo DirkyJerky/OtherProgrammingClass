@@ -157,11 +157,9 @@ void fillHandsInit() {
 		hand_dealer[i][1] = hold_card[1];
 	}
 }
-
-void printFullCard(char card[2], bool full) {
-	char name[10], suit[10];
-	//Val
-	switch(getReadableCardChar(card[0])) {
+void printCardValue(char cardValue) {
+	char name[10];
+	switch(getReadableCardChar(cardValue)) {
 		case 'A': strcpy(name, "Ace"); break;
 		case 'K': strcpy(name, "King"); break;
 		case 'Q': strcpy(name, "Queen"); break;
@@ -178,6 +176,13 @@ void printFullCard(char card[2], bool full) {
 		case '\0': strcpy(name, "\0"); break;
 		default: strcpy(name, "\0"); break;
 	}
+	cout << name;
+}
+
+void printFullCard(char card[2], bool full) {
+	char suit[10];
+	//Val
+
 	//Suit
 	switch(card[1]) {
 		case 'C': strcpy(suit, "Clubs"); break;
@@ -187,10 +192,9 @@ void printFullCard(char card[2], bool full) {
 		case '\0': strcpy(suit, "\0"); break;
 		default: strcpy(suit, "\0"); break;
 	}
+	printCardValue(card[0]);
 	if(full) {
-		cout << name << " of " << suit;
-	} else {
-		cout << name;
+		cout << " of " << suit;
 	}
 }
 void printFullCard(char card[2]) {
@@ -597,6 +601,200 @@ void evalWinMethod_Dealer() {
 	strcpy(outcome_dealer, tempChars);
 }
 
+void printHandMethod(char topOutcome[9], char bottomOutcome[9]) {
+
+	switch(topOutcome[0]) {
+		case 'S': { // Straight
+			cout << "Straight";
+			if(topOutcome[0] == bottomOutcome[0]) {
+				cout << " with High card ";
+				printCardValue(topOutcome[3]);
+			}
+			break; // case 'S'
+		}
+		case 'W': { // Pair
+			cout << "Pair";
+			if(topOutcome[0] == bottomOutcome[0]) {
+				cout << " of ";
+				printCardValue(topOutcome[3]);
+				cout << "s";
+				if(topOutcome[3] == bottomOutcome[3]) {
+					cout << ", high card ";
+					printCardValue(topOutcome[5]);
+					if(topOutcome[5] == bottomOutcome[5]) {
+						cout << ", second high card ";
+						printCardValue(topOutcome[6]);
+						if(topOutcome[6] == bottomOutcome[6]) {
+							cout << ", and low card ";
+							printCardValue(topOutcome[7]);
+						}
+					}
+				}
+			}
+
+			break; // case 'W'
+		}
+		case 'X': { // High card
+			cout << "High Card ";
+			printCardValue(topOutcome[3]);
+			if(topOutcome[3] == bottomOutcome[3]) {
+				cout << ", second high card ";
+				printCardValue(topOutcome[4]);
+				if(topOutcome[4] == bottomOutcome[4]) {
+					cout << ", third high card ";
+					printCardValue(topOutcome[5]);
+					if(topOutcome[5] == bottomOutcome[5]) {
+						cout << ", fourth high card ";
+						printCardValue(topOutcome[6]);
+						if(topOutcome[6] == bottomOutcome[6]) {
+							cout << ", and low card ";
+							printCardValue(topOutcome[7]);
+						}
+					}
+				}
+			}
+			break; // case 'X'
+		}
+		case 'F': { // FOAK, SF, FH, FL
+			switch(topOutcome[1]) {
+				case 'A': {
+					cout << "Four of a Kind";
+					if(topOutcome[0] == bottomOutcome[0] &&
+							topOutcome[1] == bottomOutcome[1]) {
+						cout << " of ";
+						printCardValue(topOutcome[3]);
+						cout << "s";
+					}
+					break; // case 'FA'
+				}
+				case 'C': {
+					cout << "Straight Flush";
+					if(topOutcome[0] == bottomOutcome[0] &&
+							topOutcome[1] == bottomOutcome[1]) {
+						cout << " of high ";
+						printCardValue(topOutcome[3]);
+					}
+					break; // case 'FC'
+				}
+				case 'H': {
+					cout << "Full House";
+					if(topOutcome[0] == bottomOutcome[0] &&
+							topOutcome[1] == bottomOutcome[1]) {
+						cout << " with Triple ";
+						printCardValue(topOutcome[3]);
+						cout << "s";
+					}
+					break; // case 'FH'
+				}
+				case 'L': {
+					cout << "Flush";
+					if(topOutcome[0] == bottomOutcome[0] &&
+							topOutcome[1] == bottomOutcome[1]) {
+						cout << " with high card ";
+						printCardValue(topOutcome[3]);
+						if(topOutcome[3] == bottomOutcome[3]) {
+							cout << ", second high card ";
+							printCardValue(topOutcome[4]);
+							if(topOutcome[4] == bottomOutcome[4]) {
+								cout << ", third high card ";
+								printCardValue(topOutcome[5]);
+								if(topOutcome[5] == bottomOutcome[5]) {
+									cout << ", fourth high card ";
+									printCardValue(topOutcome[6]);
+									if(topOutcome[6] == bottomOutcome[6]) {
+										cout << ", and low card ";
+										printCardValue(topOutcome[7]);
+									}
+								}
+							}
+						}
+					}
+					break; // case 'FL'
+				}
+				default: {
+					cout << "UNKNOWN WIN METHOD: " << topOutcome[0] << topOutcome[1];
+				}
+			}
+			break; // case 'F'
+		}
+		case 'T': {
+			switch(topOutcome[1]) {
+				case 'A': {
+					cout << "Three of a kind";
+					if(topOutcome[0] == bottomOutcome[0] &&
+							topOutcome[1] == bottomOutcome[1]) {
+						cout << " of ";
+						printCardValue(topOutcome[3]);
+						cout << "s";
+					}
+					break; // case 'TA'
+				}
+				case 'P': {
+					cout << "Two Pair";
+					if(topOutcome[0] == bottomOutcome[0] &&
+							topOutcome[1] == bottomOutcome[1]) {
+						cout << ", with High pair of ";
+						printCardValue(topOutcome[3]);
+						cout << "s";
+						if(topOutcome[3] == bottomOutcome[3]) {
+							cout << ", Low pair of ";
+							printCardValue(topOutcome[5]);
+							cout << "s";
+							if(topOutcome[5] == bottomOutcome[5]) {
+								cout << ", and high card ";
+								printCardValue(topOutcome[7]);
+
+							}
+						}
+					}
+					break; // case 'TP'
+				}
+
+				default: {
+					cout << "UNKNOWN WIN METHOD: " << topOutcome[0] << topOutcome[1];
+				}
+			}
+			break; // case 'T'
+		}
+		default: {
+			cout << "UNKNOWN WIN METHOD: " << topOutcome[0] << topOutcome[1];
+		}
+	}
+	cout << "." << "\n";
+}
+
+void printWinMethod() {
+	int result = strcmp(outcome_player, outcome_dealer);
+	char winnersOutcome[9];
+	char losersOutcome[9];
+	if(result < 0) {
+		for(int i = 0; i < 9; i++) {
+			winnersOutcome[i] = outcome_player[i];
+			losersOutcome[i] = outcome_dealer[i];
+		}
+		cout << "Player wins with a:" << "\n\t";
+		printHandMethod(winnersOutcome, losersOutcome);
+		cout << "The dealer got a:" << "\n\t";
+		printHandMethod(losersOutcome, winnersOutcome);
+	} else if (result > 0) {
+		for(int i = 0; i < 9; i++) {
+			winnersOutcome[i] = outcome_dealer[i];
+			losersOutcome[i] = outcome_player[i];
+		}
+		cout << "Dealer wins with a:" << "\n\t";
+		printHandMethod(winnersOutcome, losersOutcome);
+		cout << "The player got a:" << "\n\t";
+		printHandMethod(losersOutcome, winnersOutcome);
+	} else {
+		for(int i = 0; i < 9; i++) {
+			winnersOutcome[i] = outcome_player[i];
+			losersOutcome[i] = outcome_player[i];
+		}
+		cout << "It was a Tie!... Both players got a:" << "\n\t";
+		printHandMethod(winnersOutcome, losersOutcome);
+	}
+}
+
 /**
  * @return If the program ended succesfully
  */
@@ -625,12 +823,20 @@ int main() {
 //		cout << "" << "\n";
 //	}
 	cout << "DEBUG: Enter the dealers hand; 10 chars, in the form:" << "\n";
-	cout << "\t0HAHQSKD5C --> Ten of hearts, ace hearts, queen spades, king diamonds, five clubs, etc" << "\n";
+	cout << "\t0HASQDKD5C --> Ten of hearts, ace of hearts, " <<
+			"queen of diamonds, etc" << "\n";
+	char stuff;
 	for(int i = 0; i < 5; i++) {
 		char stuff;
 		cin >> stuff;
 		hand_dealer[i][0] = getCardChar(stuff);
 		cin >> hand_dealer[i][1];
+	}
+	cout << "DEBUG: Enter the players hand; 10 chars:" << "\n";
+	for(int i = 0; i < 5; i++) {
+		cin >> stuff;
+		hand_player[i][0] = getCardChar(stuff);
+		cin >> hand_player[i][1];
 	}
 	cout << "You now have the following cards:" << "\n";
 	for(int i = 0; i < 5; i++) {
@@ -644,25 +850,14 @@ int main() {
 		printFullCard(hand_dealer[i]);
 		cout << "\n";
 	}
-	//TODO: Determine the winner, And how they won.
 	evalWinMethod_Player();
 	evalWinMethod_Dealer();
-	cout << "Player: " << outcome_player << "\n";
-	cout << "Dealer: " << outcome_dealer << "\n";
+	cout << "Player Outcome: " << outcome_player << "\n";
+	cout << "Dealer Outcome: " << outcome_dealer << "\n";
 
-
-	int result = strcmp(outcome_player, outcome_dealer);
-	if(result < 0) {
-		cout << "Player wins!" << "\n";
-	} else if (result > 0) {
-		cout << "Dealer wins!" << "\n";
-	} else {
-		cout << "It was a Tie!...." << "\n";
-	}
+	printWinMethod();
 
 
 	//TODO: Implement Betting (See sheet)
-
-	//TODO: EC: Do the game until the player reaches $0 or decides to quit.
 	return 0;
 }
