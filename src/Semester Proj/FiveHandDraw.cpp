@@ -840,9 +840,9 @@ int betDiscardBet() {
  */
 int main() {
 	cout << "You sit down at the five card draw table with 50 dollars." << "\n";
-	fillDeck();
 	int bet, winner;
 	do {
+		fillDeck();
 		srand(time(0)); // Seed the rand()
 		fillHandsInit();
 		bet = betDiscardBet();
