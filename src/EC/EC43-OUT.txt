@@ -1,0 +1,47 @@
+How many flower pots do you need to be shipped?
+88
+You will need...
+    9 big boxes,
+    1 medium boxes,
+    3 small boxes.
+Thank you for your order!
+|||||||||||||||||||||||||||||||||||||||||||||||
+How many flower pots do you need to be shipped?
+0
+You will need...
+    0 big boxes,
+    0 medium boxes,
+    0 small boxes.
+Thank you for your order!
+|||||||||||||||||||||||||||||||||||||||||||||||
+How many flower pots do you need to be shipped?
+-353
+You will need...
+    0 big boxes,
+    0 medium boxes,
+    0 small boxes.
+Thank you for your order!
+|||||||||||||||||||||||||||||||||||||||||||||||
+How many flower pots do you need to be shipped?
+353
+You will need...
+    39 big boxes,
+    0 medium boxes,
+    2 small boxes.
+Thank you for your order!
+|||||||||||||||||||||||||||||||||||||||||||||||
+How many flower pots do you need to be shipped?
+9997
+You will need...
+    1110 big boxes,
+    1 medium boxes,
+    3 small boxes.
+Thank you for your order!
+|||||||||||||||||||||||||||||||||||||||||||||||
+How many flower pots do you need to be shipped?
+99998
+You will need...
+    11110 big boxes,
+    2 medium boxes,
+    0 small boxes.
+Thank you for your order!

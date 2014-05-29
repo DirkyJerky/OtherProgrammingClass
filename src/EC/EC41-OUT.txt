@@ -1,0 +1,29 @@
+Please enter 3 numbers:
+1: 5643
+2: 343
+3: 6412
+The largest of those three numbers is: 6412.
+|||||||||||||||||||||||||||||||||||||||||||||||
+Please enter 3 numbers:
+1: 0
+2: 0
+3: 1
+The largest of those three numbers is: 1.
+|||||||||||||||||||||||||||||||||||||||||||||||
+Please enter 3 numbers:
+1: 5
+2: 5
+3: 5
+The largest of those three numbers is: 5.
+|||||||||||||||||||||||||||||||||||||||||||||||
+Please enter 3 numbers:
+1: -1
+2: -10
+3: -100
+The largest of those three numbers is: -1.
+|||||||||||||||||||||||||||||||||||||||||||||||
+Please enter 3 numbers:
+1: 333
+2: 324
+3: 342
+The largest of those three numbers is: 342.
