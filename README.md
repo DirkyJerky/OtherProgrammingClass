@@ -1,4 +1,4 @@
 OtherProgrammingClass
 =====================
 
-In-School prerequisite programming class (Pascal)
+In-School prerequisite programming class (Pascal and C++)
